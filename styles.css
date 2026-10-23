@@ -1,4 +1,6 @@
-/* ---------- Tokens ---------- */
+/* ---------- Tokens ----------
+   Palette: #213448 (ink) · #547792 (blue) · #94B4C1 (teal) · #EAE0CF (cream)
+   Every shade below is derived from these four via color-mix. */
 :root {
   color-scheme: dark;
   --font-head: "Source Serif 4", Georgia, "Times New Roman", serif;
@@ -7,45 +9,54 @@
   --radius: 14px;
   --radius-sm: 9px;
 
-  --bg: #213448;
-  --bg-alt: #1b2b3a;
-  --surface: #293e50;
-  --surface-2: #32495d;
-  --text: #eae0cf;
-  --muted: #a7bec9;
-  --muted-2: #93adba;
-  --accent: #94b4c1;
-  --border: rgba(234, 224, 207, 0.16);
-  --border-strong: rgba(234, 224, 207, 0.32);
-  --accent-soft: rgba(148, 180, 193, 0.14);
-  --button-bg: #eae0cf;
-  --button-text: #213448;
-  --header-bg: rgba(27, 43, 58, 0.92);
-  --backdrop: rgba(16, 27, 37, 0.72);
-  --input-bg: rgba(234, 224, 207, 0.05);
+  --c-ink: #213448;
+  --c-blue: #547792;
+  --c-teal: #94b4c1;
+  --c-cream: #eae0cf;
+
+  --bg: var(--c-ink);
+  --bg-alt: color-mix(in srgb, var(--c-blue) 12%, var(--c-ink));
+  --surface: color-mix(in srgb, var(--c-blue) 16%, var(--c-ink));
+  --surface-2: color-mix(in srgb, var(--c-teal) 14%, var(--c-ink));
+  --text: var(--c-cream);
+  --muted: color-mix(in srgb, var(--c-teal) 55%, var(--c-cream));
+  --muted-2: color-mix(in srgb, var(--c-teal) 75%, var(--c-cream));
+  --accent: var(--c-teal);
+  --border: rgba(148, 180, 193, 0.2);
+  --border-strong: rgba(148, 180, 193, 0.38);
+  --accent-soft: rgba(84, 119, 146, 0.3);
+  --button-bg: var(--c-teal);
+  --button-text: var(--c-ink);
+  --button-bg-hover: color-mix(in srgb, var(--c-teal) 82%, var(--c-cream));
+  --header-bg: rgba(33, 52, 72, 0.92);
+  --backdrop: rgba(33, 52, 72, 0.75);
+  --input-bg: rgba(84, 119, 146, 0.16);
+  --tag-bg: rgba(84, 119, 146, 0.18);
   --danger: #e5a191;
   --danger-border: rgba(229, 161, 145, 0.6);
-  --shadow: 0 18px 44px -32px rgba(8, 16, 24, 0.9);
+  --shadow: 0 18px 44px -32px rgba(12, 20, 30, 0.85);
 }
 
 [data-theme="light"] {
   color-scheme: light;
-  --bg: #eae0cf;
-  --bg-alt: #e1d5c1;
-  --surface: #f3ece1;
-  --surface-2: #f8f3ea;
-  --text: #213448;
-  --muted: #43637a;
-  --muted-2: #46677f;
-  --accent: #46677f;
-  --border: rgba(33, 52, 72, 0.18);
-  --border-strong: rgba(33, 52, 72, 0.34);
-  --accent-soft: rgba(84, 119, 146, 0.12);
-  --button-bg: #213448;
-  --button-text: #eae0cf;
+  --bg: var(--c-cream);
+  --bg-alt: color-mix(in srgb, var(--c-teal) 20%, var(--c-cream));
+  --surface: color-mix(in srgb, var(--c-teal) 10%, var(--c-cream));
+  --surface-2: color-mix(in srgb, var(--c-teal) 22%, var(--c-cream));
+  --text: var(--c-ink);
+  --muted: color-mix(in srgb, var(--c-ink) 40%, var(--c-blue));
+  --muted-2: var(--c-blue);
+  --accent: var(--c-blue);
+  --border: rgba(84, 119, 146, 0.28);
+  --border-strong: rgba(84, 119, 146, 0.45);
+  --accent-soft: rgba(84, 119, 146, 0.14);
+  --button-bg: var(--c-ink);
+  --button-text: var(--c-cream);
+  --button-bg-hover: color-mix(in srgb, var(--c-ink) 85%, var(--c-teal));
   --header-bg: rgba(234, 224, 207, 0.94);
   --backdrop: rgba(234, 224, 207, 0.8);
-  --input-bg: rgba(33, 52, 72, 0.045);
+  --input-bg: rgba(84, 119, 146, 0.06);
+  --tag-bg: rgba(84, 119, 146, 0.08);
   --danger: #9b3d29;
   --danger-border: rgba(155, 61, 41, 0.5);
   --shadow: 0 18px 44px -34px rgba(33, 52, 72, 0.4);
@@ -214,7 +225,7 @@ ul {
 }
 
 .btn-primary:hover {
-  opacity: 0.9;
+  background: var(--button-bg-hover);
 }
 
 .btn-secondary {
@@ -302,12 +313,13 @@ body.menu-open .site-header::after {
   place-items: center;
   width: 34px;
   height: 34px;
-  border: 1px solid var(--border-strong);
+  border-style: solid;
+  border-color: transparent;
   border-radius: var(--radius-sm);
-  background: var(--accent-soft);
-  color: var(--text);
+  background: var(--accent);
+  color: var(--bg);
   font-size: 1rem;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .nav-menu {
@@ -793,8 +805,9 @@ body.menu-open .site-header::after {
   padding: 3px 7px;
   border: 1px solid var(--border);
   border-radius: 5px;
+  background: var(--tag-bg);
   font-size: 0.66rem;
-  color: var(--muted);
+  color: var(--text);
 }
 
 .project-tags li {
