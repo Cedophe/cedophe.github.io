@@ -94,8 +94,7 @@ body {
   transition: background-color 0.25s ease, color 0.25s ease;
 }
 
-body.menu-open,
-body.dialog-open {
+body.menu-open {
   overflow: hidden;
 }
 
@@ -713,6 +712,14 @@ body.menu-open .site-header::after {
   line-height: 1.5;
 }
 
+.profile-facts dd a {
+  color: inherit;
+}
+
+.profile-facts dd a:hover {
+  color: var(--accent);
+}
+
 .profile-certs {
   display: flex;
   flex-wrap: wrap;
@@ -789,33 +796,20 @@ body.menu-open .site-header::after {
   color: var(--muted);
 }
 
-.skill-tags,
-.project-tags {
+.skill-tags {
   display: flex;
   flex-wrap: wrap;
   gap: 6px;
-}
-
-.skill-tags {
   margin-top: 18px;
 }
 
-.skill-tags li,
-.project-tags li {
+.skill-tags li {
   padding: 3px 7px;
   border: 1px solid var(--border);
   border-radius: 5px;
   background: var(--tag-bg);
   font-size: 0.66rem;
   color: var(--text);
-}
-
-.project-tags li {
-  border-radius: 999px;
-  font-size: 0.6rem;
-  font-weight: 500;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
 }
 
 .cert-panel {
@@ -891,16 +885,94 @@ body.menu-open .site-header::after {
   color: var(--accent);
 }
 
-/* ---------- Projects ---------- */
-.projects-grid {
+/* ---------- Experience timeline ---------- */
+.timeline {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
   gap: 18px;
 }
 
-.project-card {
+.timeline-entry {
+  padding: 26px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+  transition:
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.timeline-entry:hover {
+  border-color: var(--border-strong);
+  transform: translateY(-2px);
+}
+
+.timeline-top {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+
+.timeline-period {
+  padding: 4px 10px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--tag-bg);
+  font-size: 0.6rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.timeline-entry h3 {
+  margin-top: 15px;
+  font-family: var(--font-head);
+  font-size: 1.45rem;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.timeline-role {
+  margin-top: 3px;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.timeline-points {
+  margin-top: 20px;
+  border-top: 1px solid var(--border);
+}
+
+.timeline-points li {
   display: flex;
   flex-direction: column;
+  gap: 2px;
+  padding: 13px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.timeline-points strong {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.timeline-points span {
+  font-size: 0.85rem;
+  line-height: 1.65;
+  color: var(--muted);
+}
+
+/* ---------- Education & languages ---------- */
+.edu-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  margin-top: 18px;
+}
+
+.edu-card {
   padding: 24px;
   border: 1px solid var(--border);
   border-radius: var(--radius);
@@ -910,164 +982,64 @@ body.menu-open .site-header::after {
     transform 0.2s ease;
 }
 
-.project-card:hover {
+.edu-card:hover {
   border-color: var(--border-strong);
   transform: translateY(-2px);
 }
 
-.project-card h3 {
-  margin-top: 16px;
+.edu-card h4 {
+  font-size: 0.6rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.edu-degree {
+  margin-top: 14px;
   font-family: var(--font-head);
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   font-weight: 600;
   line-height: 1.25;
 }
 
-.project-card > p {
-  flex: 1;
-  margin-top: 8px;
-  font-size: 0.86rem;
+.edu-school {
+  margin-top: 3px;
+  font-size: 0.82rem;
+  color: var(--muted-2);
+}
+
+.edu-note {
+  margin-top: 16px;
+  padding-top: 14px;
+  border-top: 1px solid var(--border);
+  font-size: 0.82rem;
   line-height: 1.65;
   color: var(--muted);
 }
 
-.project-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  align-self: flex-start;
-  margin-top: 20px;
-  padding: 0;
-  border: 0;
-  background: none;
-  color: var(--text);
-  font-size: 0.8rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition:
-    gap 0.2s ease,
-    color 0.2s ease;
+.edu-lang {
+  margin-top: 14px;
 }
 
-.project-link svg {
-  width: 15px;
-  height: 15px;
-  fill: none;
-  stroke: currentColor;
-  stroke-width: 2;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-}
-
-.project-link:hover {
-  gap: 9px;
-  color: var(--accent);
-}
-
-/* ---------- Dialogs ---------- */
-.project-dialog {
-  position: relative;
-  width: min(560px, calc(100% - 32px));
-  margin: auto;
-  padding: 30px;
-  border: 1px solid var(--border-strong);
-  border-radius: var(--radius);
-  background: var(--surface);
-  color: var(--text);
-  box-shadow: 0 30px 80px -40px rgba(0, 0, 0, 0.8);
-}
-
-.project-dialog[open] {
-  animation: dialogIn 0.22s ease;
-}
-
-.project-dialog::backdrop {
-  background: var(--backdrop);
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
-}
-
-.dialog-close {
-  position: absolute;
-  top: 16px;
-  right: 16px;
-  display: grid;
-  place-items: center;
-  width: 34px;
-  height: 34px;
-  padding: 0;
-  border: 1px solid var(--border);
-  border-radius: 50%;
-  background: transparent;
-  cursor: pointer;
-  transition:
-    border-color 0.2s ease,
-    color 0.2s ease;
-}
-
-.dialog-close svg {
-  width: 15px;
-  height: 15px;
-  fill: none;
-  stroke: currentColor;
-  stroke-width: 2;
-  stroke-linecap: round;
-}
-
-.dialog-close:hover {
-  border-color: var(--accent);
-  color: var(--accent);
-}
-
-.dialog-kicker {
-  padding-right: 40px;
-  font-size: 0.64rem;
-  font-weight: 600;
-  letter-spacing: 0.13em;
-  text-transform: uppercase;
-  color: var(--accent);
-}
-
-.project-dialog h3 {
-  margin-top: 8px;
-  font-family: var(--font-head);
-  font-size: 1.65rem;
-  font-weight: 600;
-  line-height: 1.15;
-}
-
-.dialog-intro {
-  margin-top: 12px;
-  font-size: 0.9rem;
-  line-height: 1.7;
-  color: var(--muted);
-}
-
-.dialog-points {
-  margin-top: 20px;
-  border-top: 1px solid var(--border);
-}
-
-.dialog-points li {
+.edu-lang li {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
   padding: 12px 0;
   border-bottom: 1px solid var(--border);
-  font-size: 0.85rem;
-  line-height: 1.6;
+  font-size: 0.88rem;
+}
+
+.edu-lang li:last-child {
+  border-bottom: 0;
+}
+
+.edu-lang span {
+  font-size: 0.78rem;
   color: var(--muted);
-}
-
-.dialog-points strong {
-  display: block;
-  margin-bottom: 2px;
-  font-size: 0.62rem;
-  font-weight: 600;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--text);
-}
-
-.project-dialog .project-tags {
-  margin-top: 20px;
+  text-align: right;
 }
 
 /* ---------- Contact ---------- */
@@ -1424,18 +1396,6 @@ a.contact-item:hover .contact-arrow {
   color: var(--accent);
 }
 
-/* ---------- Animations ---------- */
-@keyframes dialogIn {
-  from {
-    opacity: 0;
-    transform: translateY(8px);
-  }
-  to {
-    opacity: 1;
-    transform: none;
-  }
-}
-
 /* ---------- Tablet ---------- */
 @media (max-width: 1000px) {
   .about-grid {
@@ -1531,14 +1491,6 @@ a.contact-item:hover .contact-arrow {
     max-width: 560px;
   }
 
-  .projects-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .project-card:last-child {
-    grid-column: span 2;
-  }
-
   .contact-grid {
     gap: 36px;
   }
@@ -1573,6 +1525,10 @@ a.contact-item:hover .contact-arrow {
   }
 
   .skills-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .edu-grid {
     grid-template-columns: minmax(0, 1fr);
   }
 
@@ -1622,12 +1578,12 @@ a.contact-item:hover .contact-arrow {
     grid-template-columns: 1fr;
   }
 
-  .projects-grid {
-    grid-template-columns: 1fr;
+  .skills-grid {
+    grid-template-columns: minmax(0, 1fr);
   }
 
-  .project-card:last-child {
-    grid-column: auto;
+  .edu-grid {
+    grid-template-columns: minmax(0, 1fr);
   }
 
   .form-card {
@@ -1639,12 +1595,8 @@ a.contact-item:hover .contact-arrow {
     gap: 0;
   }
 
-  .project-dialog {
-    padding: 24px 20px;
-  }
-
-  .project-dialog h3 {
-    font-size: 1.4rem;
+  .timeline-entry {
+    padding: 20px;
   }
 
   .contact-item {
@@ -1716,7 +1668,6 @@ a.contact-item:hover .contact-arrow {
 @media print {
   .site-header,
   .hero-actions,
-  .project-link,
   .copy-btn,
   .form-card,
   .footer-socials,

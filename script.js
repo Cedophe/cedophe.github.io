@@ -1,20 +1,20 @@
 (() => {
-  const CONTACT_EMAIL = "contact@cedophe.dev";
+  const CONTACT_EMAIL = "cedophe@gmail.com";
   const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
   const translations = {
     fr: {
       skip: "Aller au contenu",
-      "meta.title": "Cedophe | IT et cybersécurité",
+      "meta.title": "Cédophe ZOHOUN | Ingénieur Réseaux & Cybersécurité",
       "meta.description":
-        "Portfolio de Cedophe, professionnel IT et cybersécurité chez IMPROTECH. Réseaux, sécurité, cloud AWS et mentorat.",
+        "Portfolio de Cédophe ZOHOUN, ingénieur réseaux et cybersécurité à Accra : infrastructures enterprise, pare-feu Palo Alto & FortiGate, cloud AWS & Azure, formation certifiée CCNA, CCNP, AZ-104 et NSE 3.",
 
       "nav.aria": "Navigation principale",
-      "brand.aria": "Cedophe, retour à l'accueil",
+      "brand.aria": "Cédophe, retour à l'accueil",
       "nav.home": "Accueil",
       "nav.about": "À propos",
       "nav.skills": "Compétences",
-      "nav.projects": "Projets",
+      "nav.projects": "Parcours",
       "nav.contact": "Contact",
       "nav.cta": "Me contacter",
       "lang.aria": "Langue",
@@ -23,134 +23,121 @@
       "theme.toLight": "Passer au thème clair",
       "theme.toDark": "Passer au thème sombre",
 
-      "hero.eyebrow": "IMPROTECH · IT et cybersécurité",
+      "hero.eyebrow": "Ingénieur Réseaux & Cybersécurité · Accra, Ghana",
       "hero.lead":
-        "Je travaille sur les réseaux et la sécurité informatique. Concrètement : concevoir des infrastructures fiables, les protéger, et transmettre ce que j'apprends.",
+        "Je déploie des infrastructures enterprise, j'opère des pare-feu next-generation et je forme des équipes certifiées — au plus près du terrain, à travers l'Afrique de l'Ouest.",
       "hero.ctaContact": "Me contacter",
-      "hero.ctaProjects": "Voir mes projets",
-      "hero.metaStatus": "CCNP et AWS en préparation",
-      "hero.metaNetworks": "Réseaux",
-      "hero.metaSecurity": "Sécurité",
-      "hero.metaMentoring": "Mentorat",
+      "hero.ctaProjects": "Voir mon parcours",
+      "hero.metaExperience": "3+ ans d'expérience",
+      "hero.metaDomains": "Réseaux · Sécurité · Cloud",
+      "hero.metaLanguages": "Bilingue FR/EN",
+      "hero.metaTrainees": "50+ apprenants formés",
 
       "about.eyebrow": "À propos",
-      "about.title": "Un travail technique, avec une part de transmission.",
-      "about.p1": `Je suis professionnel IT et cybersécurité chez <strong>IMPROTECH</strong>. Mon quotidien se partage entre les infrastructures réseau et la protection des systèmes : concevoir des environnements qui tiennent, déployer des solutions de sécurité adaptées et aider les équipes à monter en compétence.`,
-      "about.p2": `J'aime autant chercher pourquoi un routage ne passe pas que rendre une solution compréhensible pour quelqu'un qui n'est pas du métier. Les deux font partie du même travail.`,
-      "about.p3": `Je prépare les certifications <strong>CCNP</strong> et <strong>AWS</strong> pour aller plus loin sur les réseaux d'entreprise et le cloud.`,
-      "about.focus1": "Concevoir et maintenir des infrastructures réseau",
-      "about.focus2": "Déployer et durcir des solutions de sécurité",
-      "about.focus3": "Former, mentorer et documenter",
+      "about.title": "Infrastructures fiables, sécurité appliquée, savoir transmis.",
+      "about.p1": `Ingénieur réseaux et cybersécurité avec <strong>plus de 3 ans d'expérience</strong> en déploiement d'infrastructures enterprise, sécurité next-generation et formation technique certifiée.`,
+      "about.p2": `Bilingue français/anglais, j'interviens dans des <strong>contextes multi-clients et multi-sites</strong> à travers l'Afrique de l'Ouest : universités, entreprises et groupes de plus de 16 agences.`,
+      "about.p3": `Certifié <strong>CCNP Enterprise</strong>, <strong>CCNA</strong>, <strong>AZ-104</strong> et <strong>Fortinet NSE 3</strong>, je conçois et j'anime des formations Cisco &amp; AWS.`,
+      "about.focus1": "Déployer et maintenir des infrastructures réseau enterprise",
+      "about.focus2": "Opérer des pare-feu next-generation (Palo Alto, FortiGate)",
+      "about.focus3": "Former et certifier : CCNA, CCNP, AWS",
 
-      "profile.aria": "Fiche profil de Cedophe",
-      "profile.role": "IT et cybersécurité",
-      "profile.factCompany": "Entreprise",
-      "profile.factExpertise": "Expertises",
-      "profile.expertiseValue": "Réseaux, sécurité, cloud",
-      "profile.factCerts": "Certifications visées",
-      "profile.certValue": "CCNP et AWS",
-      "profile.factDrive": "Ce qui m'anime",
-      "profile.driveValue": "Apprendre et transmettre",
-      "profile.certCcnpStatus": "En préparation",
-      "profile.certAwsStatus": "En cours",
+      "profile.aria": "Fiche profil de Cédophe ZOHOUN",
+      "profile.role": "Ingénieur Réseaux & Cybersécurité",
+      "profile.factLocation": "Base",
+      "profile.locationValue": "Accra, Ghana",
+      "profile.factLanguages": "Langues",
+      "profile.langValue": "Français natif · Anglais C1",
+      "profile.factPhone": "Téléphone",
+      "profile.certOk": "Certifié",
 
       "skills.eyebrow": "Compétences",
-      "skills.title": "Les domaines sur lesquels je travaille le plus.",
-      "skills.intro": "Une expérience construite sur le terrain, complétée par des certifications.",
+      "skills.title": "Réseaux, sécurité, cloud et automatisation.",
+      "skills.intro": "Des compétences construites sur des projets réels, adossées à des certifications actives.",
       "skills.card1.title": "Réseaux et infrastructure",
-      "skills.card1.level": "Expert",
-      "skills.card1.desc": "Conception, routage, switching et haute disponibilité.",
-      "skills.card1.tag2": "Routage",
+      "skills.card1.level": "Terrain · 3+ ans",
+      "skills.card1.desc": "Routage, switching, haute disponibilité et interconnexion multi-sites.",
       "skills.card2.title": "Cybersécurité",
-      "skills.card2.level": "Avancé",
-      "skills.card2.desc": "Déploiement, durcissement et segmentation.",
-      "skills.card2.tag1": "Pare-feu",
-      "skills.card2.tag3": "Politiques d'accès",
-      "skills.card2.tag4": "Bonnes pratiques",
-      "skills.card3.title": "Cloud AWS",
-      "skills.card3.level": "En progression",
-      "skills.card3.desc": "Les bases du cloud, la sécurité et les bonnes pratiques.",
-      "skills.card4.title": "Mentorat et formation",
-      "skills.card4.level": "Avancé",
-      "skills.card4.desc": "Accompagner, expliquer et documenter.",
-      "skills.card4.tag1": "Formation AWS",
-      "skills.card4.tag4": "Vulgarisation",
+      "skills.card2.level": "Next-gen",
+      "skills.card2.desc": "Déploiement et opération de pare-feu nouvelle génération.",
+      "skills.card3.title": "Cloud",
+      "skills.card3.level": "AWS · Azure",
+      "skills.card3.desc": "Administration de services cloud et sécurité des infrastructures.",
+      "skills.card4.title": "Automatisation & scripting",
+      "skills.card4.level": "Python · Bash",
+      "skills.card4.desc": "Outillage, déploiement automatisé et documentation du parc.",
+      "skills.card5.title": "Équipements",
+      "skills.card5.level": "Multi-marques",
+      "skills.card5.desc": "Configuration, administration et support au quotidien.",
+      "skills.card6.level": "3CX · SIP",
+      "skills.card6.desc": "Téléphonie IP multi-sites et centralisation SIP.",
+      "skills.card7.title": "Systèmes",
+      "skills.card7.level": "Win · Linux",
+      "skills.card7.desc": "Administration Windows et Linux au quotidien.",
 
-      "cert.eyebrow": "Objectifs",
-      "cert.title": "Certifications en préparation",
-      "cert.ccnpStatus": "En préparation",
-      "cert.awsStatus": "En cours",
+      "cert.eyebrow": "Certifications",
+      "cert.title": "Certifications obtenues",
+      "cert.status": "Certifié",
 
-      "projects.eyebrow": "Projets",
-      "projects.title": "Trois projets qui résument mon travail.",
+      "projects.eyebrow": "Parcours",
+      "projects.title": "Ingénieur réseaux et cybersécurité depuis 2023.",
       "projects.intro":
-        "Rendre le réseau visible, limiter la surface d'attaque et faire monter les équipes en compétence.",
-      "projects.detail": "Voir le détail",
-      "projects.card1.tag1": "Réseaux",
-      "projects.card1.tag2": "Supervision",
-      "projects.card1.tag3": "Fiabilité",
-      "projects.card1.title": "Supervision réseau multi-sites",
-      "projects.card1.desc":
-        "Une vue commune de la santé du réseau pour repérer les incidents plus tôt, sur plusieurs sites.",
-      "projects.card2.tag1": "Cybersécurité",
-      "projects.card2.tag2": "Pare-feu",
-      "projects.card2.title": "Segmentation et durcissement",
-      "projects.card2.desc": "Découper le réseau en zones et n'ouvrir que les flux nécessaires.",
-      "projects.card3.tag2": "Formation",
-      "projects.card3.tag3": "Mentorat",
-      "projects.card3.title": "Atelier AWS et mentorat",
-      "projects.card3.desc":
-        "Des ateliers pratiques pour rendre le cloud plus concret et transmettre les bons réflexes.",
+        "Des déploiements et des opérations réelles : pare-feu nouvelle génération, réseaux multi-sites, téléphonie IP et formation certifiante.",
 
-      "dialog.close": "Fermer la fenêtre",
-      "dialog1.kicker": "Projet · Réseaux",
-      "dialog1.title": "Supervision réseau multi-sites",
-      "dialog1.intro":
-        "Une lecture claire de l'état de l'infrastructure sur plusieurs sites, pour agir avant que les incidents n'impactent les utilisateurs.",
-      "dialog1.p1label": "Objectif",
-      "dialog1.p1text": "Centraliser l'état des équipements et des liens dans une vue unique.",
-      "dialog1.p2label": "Approche",
-      "dialog1.p2text":
-        "Cartographie des flux, supervision des équipements critiques, tableaux de bord et alertes hiérarchisées.",
-      "dialog1.p3label": "Résultat",
-      "dialog1.p3text": "Un diagnostic plus rapide et des incidents traités avec plus de sérénité.",
-      "dialog1.tag1": "Supervision",
-      "dialog1.tag4": "Haute disponibilité",
-      "dialog2.kicker": "Projet · Cybersécurité",
-      "dialog2.title": "Segmentation et durcissement",
-      "dialog2.intro":
-        "Découper le réseau en zones de confiance et n'autoriser que les flux réellement nécessaires, pour limiter la propagation en cas d'incident.",
-      "dialog2.p1label": "Objectif",
-      "dialog2.p1text": "Réduire la surface d'attaque et clarifier les règles d'accès entre les zones.",
-      "dialog2.p2label": "Approche",
-      "dialog2.p2text":
-        "Découpage en VLAN, matrice de flux, règles de pare-feu et durcissement des équipements.",
-      "dialog2.p3label": "Résultat",
-      "dialog2.p3text": "Un réseau plus lisible, plus segmenté et plus simple à auditer.",
-      "dialog2.tag2": "Pare-feu",
-      "dialog2.tag3": "Matrice de flux",
-      "dialog2.tag4": "Durcissement",
-      "dialog3.kicker": "Projet · Cloud et transmission",
-      "dialog3.title": "Atelier AWS et mentorat",
-      "dialog3.intro":
-        "Rendre le cloud concret et accessible grâce à des ateliers pratiques, pensés pour faire monter les équipes en compétence à leur rythme.",
-      "dialog3.p1label": "Objectif",
-      "dialog3.p1text": "Partager les fondamentaux AWS et ancrer les bonnes pratiques de sécurité.",
-      "dialog3.p2label": "Approche",
-      "dialog3.p2text": "Ateliers guidés, cas pratiques, échanges et accompagnement individuel.",
-      "dialog3.p3label": "Résultat",
-      "dialog3.p3text": "Des équipes plus autonomes et une culture cloud partagée.",
-      "dialog3.tag4": "Mentorat",
+      "x1.period": "2023 — Aujourd'hui",
+      "x1.role": "Ingénieur Réseaux & Cybersécurité",
+      "x1.p1title": "Déploiement Palo Alto NGFW · ATU",
+      "x1.p1text":
+        "Mise en production d'un pare-feu Palo Alto pour l'Accra Technical University (500+ utilisateurs) : politiques de sécurité, Threat Prevention, URL Filtering et VPN GlobalProtect.",
+      "x1.p2title": "Support FortiGate multi-sites · COMO",
+      "x1.p2text":
+        "Supervision de pare-feu FortiGate sur 16+ agences via FortiManager : dépannage VPN IPsec/SSL, politiques de sécurité, routage et monitoring.",
+      "x1.p3title": "Pare-feu Palo Alto interne · IMPROTECH",
+      "x1.p3text": "Administration du pare-feu interne : maintenance des règles de sécurité, contrôle d'accès et monitoring continu.",
+      "x1.p4title": "WiFi entreprise Ubiquiti · IMPROTECH",
+      "x1.p4text":
+        "Déploiement et gestion du réseau sans fil via le contrôleur UniFi : configuration des points d'accès, segmentation réseau et supervision centralisée.",
+      "x1.p5title": "MikroTik & load-balancing · Lycée Français d'Accra",
+      "x1.p5text":
+        "Installation de points d'accès MikroTik et configuration du load-balancing sur deux liens FAI, pour la redondance et la continuité de service.",
+      "x1.p6title": "Script d'inventaire Python",
+      "x1.p6text":
+        "Outil d'automatisation de la documentation pour ~50 équipements : ping, SSH, collecte hostname/MAC et génération d'un rapport d'inventaire complet.",
+      "x1.p7title": "Administration 3CX multi-sites · COMO",
+      "x1.p7text": "Gestion du système de téléphonie IP de toutes les agences : configuration des postes, trunks SIP et support voix.",
+      "x1.p8title": "Support réseau & voix · COMO",
+      "x1.p8text": "Support technique de niveau 2/3 sur 16+ sites.",
+      "x1.p9title": "Formateur certifié Cisco & AWS",
+      "x1.p9text": "Conception et animation de formations CCNA, CCNP ENCOR et AWS Cloud Practitioner : 50+ apprenants formés.",
+
+      "x2.period": "Mars — Juin 2021",
+      "x2.company": "Ministère de l'Économie et des Finances",
+      "x2.role": "Stagiaire Support Informatique",
+      "x2.p1title": "Support technique",
+      "x2.p1text": "Assistance technique pour plus de 200 agents de l'administration publique.",
+      "x2.p2title": "Résolution d'incidents",
+      "x2.p2text": "Diagnostic et résolution d'incidents matériel et logiciel : Windows, Office, périphériques.",
+      "x2.p3title": "Administration",
+      "x2.p3text": "Installations de systèmes, mises à jour et gestion des comptes utilisateurs.",
+
+      "edu.title1": "Formation",
+      "edu.degree": "Licence en Informatique",
+      "edu.note":
+        "2021–2023 : mobilité au Ghana — formation intensive en anglais et préparation autonome des certifications Cisco et AWS.",
+      "edu.title2": "Langues",
+      "edu.langFr": "Natif",
+      "edu.langEn": "Professionnel (C1)",
 
       "contact.eyebrow": "Contact",
       "contact.title": "Vous voulez en parler ?",
-      "contact.lead":
-        "Une question, un projet ou simplement envie d'échanger sur les réseaux et la sécurité ? Écrivez-moi.",
+      "contact.lead": "Une question, une opportunité ou un projet réseau ? Écrivez-moi ou appelez-moi directement.",
+      "contact.phoneLabel": "Téléphone",
       "contact.linkedinValue": "Profil professionnel",
       "contact.githubValue": "Code et expérimentations",
       "contact.copy": "Copier",
       "contact.copied": "Copié",
       "contact.copyAria": "Copier l'adresse email",
+      "contact.copyPhoneAria": "Copier le numéro de téléphone",
 
       "form.name": "Nom",
       "form.namePlaceholder": "Votre nom",
@@ -171,7 +158,7 @@
       "form.success": "Votre client de messagerie va s'ouvrir avec le message prérempli.",
       "form.defaultSubject": "Contact depuis le portfolio",
 
-      "footer.tagline": `IT et cybersécurité chez IMPROTECH.<br>Réseaux, sécurité et transmission.`,
+      "footer.tagline": `Ingénieur Réseaux &amp; Cybersécurité à Accra.<br>Réseaux, sécurité et formation.`,
       "footer.navAria": "Navigation de pied de page",
       "footer.socialsAria": "Réseaux sociaux",
       "footer.emailAria": "Envoyer un email",
@@ -180,16 +167,16 @@
     },
     en: {
       skip: "Skip to content",
-      "meta.title": "Cedophe | IT and cybersecurity",
+      "meta.title": "Cédophe ZOHOUN | Network & Cybersecurity Engineer",
       "meta.description":
-        "Cedophe works in IT and cybersecurity at IMPROTECH: networks, security, AWS and mentoring.",
+        "Cédophe ZOHOUN's portfolio: a network and cybersecurity engineer based in Accra — enterprise infrastructure, Palo Alto & FortiGate firewalls, AWS & Azure cloud, certified CCNA, CCNP, AZ-104 and NSE 3 training.",
 
       "nav.aria": "Main navigation",
-      "brand.aria": "Cedophe, back to top",
+      "brand.aria": "Cédophe, back to top",
       "nav.home": "Home",
       "nav.about": "About",
       "nav.skills": "Skills",
-      "nav.projects": "Projects",
+      "nav.projects": "Experience",
       "nav.contact": "Contact",
       "nav.cta": "Get in touch",
       "lang.aria": "Language",
@@ -198,133 +185,120 @@
       "theme.toLight": "Switch to light theme",
       "theme.toDark": "Switch to dark theme",
 
-      "hero.eyebrow": "IMPROTECH · IT and cybersecurity",
+      "hero.eyebrow": "Network & Cybersecurity Engineer · Accra, Ghana",
       "hero.lead":
-        "I work on networks and IT security. In practice, that means building infrastructure that holds up, keeping it secure, and passing on what I learn.",
+        "I deploy enterprise infrastructure, run next-generation firewalls and train certified teams — hands-on, across West Africa.",
       "hero.ctaContact": "Get in touch",
-      "hero.ctaProjects": "See my projects",
-      "hero.metaStatus": "CCNP and AWS in progress",
-      "hero.metaNetworks": "Networks",
-      "hero.metaSecurity": "Security",
-      "hero.metaMentoring": "Mentoring",
+      "hero.ctaProjects": "See my experience",
+      "hero.metaExperience": "3+ years of experience",
+      "hero.metaDomains": "Networks · Security · Cloud",
+      "hero.metaLanguages": "Bilingual FR/EN",
+      "hero.metaTrainees": "50+ learners trained",
 
       "about.eyebrow": "About",
-      "about.title": "Technical work, with a teaching side.",
-      "about.p1": `I work in IT and cybersecurity at <strong>IMPROTECH</strong>. My days are split between network infrastructure and protecting systems: designing environments that hold up, deploying security tools that fit the actual need, and helping teams build their skills.`,
-      "about.p2": `I enjoy both digging into why a route is failing and explaining a solution to someone outside the field. In my experience, the two are part of the same job.`,
-      "about.p3": `I am currently preparing the <strong>CCNP</strong> and <strong>AWS</strong> certifications to go further with enterprise networks and cloud.`,
-      "about.focus1": "Design and maintain network infrastructure",
-      "about.focus2": "Deploy and harden security solutions",
-      "about.focus3": "Teach, mentor and document",
+      "about.title": "Reliable infrastructure, applied security, knowledge passed on.",
+      "about.p1": `Network and cybersecurity engineer with <strong>3+ years of experience</strong> in enterprise infrastructure deployment, next-generation security and certified technical training.`,
+      "about.p2": `Bilingual French/English, I work in <strong>multi-client and multi-site environments</strong> across West Africa: universities, businesses and branch networks of 16+ sites.`,
+      "about.p3": `Certified <strong>CCNP Enterprise</strong>, <strong>CCNA</strong>, <strong>AZ-104</strong> and <strong>Fortinet NSE 3</strong>; I design and deliver Cisco &amp; AWS training.`,
+      "about.focus1": "Deploy and maintain enterprise network infrastructure",
+      "about.focus2": "Operate next-generation firewalls (Palo Alto, FortiGate)",
+      "about.focus3": "Train and certify: CCNA, CCNP, AWS",
 
-      "profile.aria": "Cedophe profile",
-      "profile.role": "IT and cybersecurity",
-      "profile.factCompany": "Company",
-      "profile.factExpertise": "Focus",
-      "profile.expertiseValue": "Networks, security, cloud",
-      "profile.factCerts": "Certifications",
-      "profile.certValue": "CCNP and AWS",
-      "profile.factDrive": "What drives me",
-      "profile.driveValue": "Learning and passing it on",
-      "profile.certCcnpStatus": "Preparing",
-      "profile.certAwsStatus": "In progress",
+      "profile.aria": "Cédophe ZOHOUN profile",
+      "profile.role": "Network & Cybersecurity Engineer",
+      "profile.factLocation": "Based in",
+      "profile.locationValue": "Accra, Ghana",
+      "profile.factLanguages": "Languages",
+      "profile.langValue": "Native French · C1 English",
+      "profile.factPhone": "Phone",
+      "profile.certOk": "Certified",
 
       "skills.eyebrow": "Skills",
-      "skills.title": "The areas I work in most.",
-      "skills.intro": "Experience built on the job, backed up by certifications.",
-      "skills.card1.title": "Networks and infrastructure",
-      "skills.card1.level": "Expert",
-      "skills.card1.desc": "Design, routing, switching and high availability.",
-      "skills.card1.tag2": "Routing",
+      "skills.title": "Networking, security, cloud and automation.",
+      "skills.intro": "Skills built on real projects, backed by active certifications.",
+      "skills.card1.title": "Networking & infrastructure",
+      "skills.card1.level": "Field · 3+ yrs",
+      "skills.card1.desc": "Routing, switching, high availability and multi-site interconnection.",
       "skills.card2.title": "Cybersecurity",
-      "skills.card2.level": "Advanced",
-      "skills.card2.desc": "Deployment, hardening and segmentation.",
-      "skills.card2.tag1": "Firewall",
-      "skills.card2.tag3": "Access policies",
-      "skills.card2.tag4": "Best practices",
-      "skills.card3.title": "AWS cloud",
-      "skills.card3.level": "Getting there",
-      "skills.card3.desc": "Cloud fundamentals, security and good practice.",
-      "skills.card4.title": "Mentoring and training",
-      "skills.card4.level": "Advanced",
-      "skills.card4.desc": "Guiding people, explaining and documenting.",
-      "skills.card4.tag1": "AWS training",
-      "skills.card4.tag4": "Plain-language explanations",
+      "skills.card2.level": "Next-gen",
+      "skills.card2.desc": "Deploying and operating next-generation firewalls.",
+      "skills.card3.title": "Cloud",
+      "skills.card3.level": "AWS · Azure",
+      "skills.card3.desc": "Cloud service administration and infrastructure security.",
+      "skills.card4.title": "Automation & scripting",
+      "skills.card4.level": "Python · Bash",
+      "skills.card4.desc": "Tooling, automated deployment and inventory documentation.",
+      "skills.card5.title": "Equipment",
+      "skills.card5.level": "Multi-vendor",
+      "skills.card5.desc": "Configuration, administration and day-to-day support.",
+      "skills.card6.level": "3CX · SIP",
+      "skills.card6.desc": "Multi-site IP telephony and SIP centralization.",
+      "skills.card7.title": "Systems",
+      "skills.card7.level": "Win · Linux",
+      "skills.card7.desc": "Everyday Windows and Linux administration.",
 
-      "cert.eyebrow": "Goals",
-      "cert.title": "Certifications in progress",
-      "cert.ccnpStatus": "Preparing",
-      "cert.awsStatus": "In progress",
+      "cert.eyebrow": "Certifications",
+      "cert.title": "Earned certifications",
+      "cert.status": "Certified",
 
-      "projects.eyebrow": "Projects",
-      "projects.title": "Three projects that sum up my work.",
+      "projects.eyebrow": "Experience",
+      "projects.title": "Network & cybersecurity engineer since 2023.",
       "projects.intro":
-        "Making the network visible, reducing the attack surface, and helping teams get better at what they do.",
-      "projects.detail": "View details",
-      "projects.card1.tag1": "Networks",
-      "projects.card1.tag2": "Monitoring",
-      "projects.card1.tag3": "Reliability",
-      "projects.card1.title": "Multi-site network monitoring",
-      "projects.card1.desc":
-        "One shared view of network health, so incidents are spotted earlier across several sites.",
-      "projects.card2.tag1": "Cybersecurity",
-      "projects.card2.tag2": "Firewall",
-      "projects.card2.title": "Segmentation and hardening",
-      "projects.card2.desc": "Split the network into zones and only open the flows that are actually needed.",
-      "projects.card3.tag2": "Training",
-      "projects.card3.tag3": "Mentoring",
-      "projects.card3.title": "AWS workshop and mentoring",
-      "projects.card3.desc":
-        "Hands-on workshops that make cloud concrete and pass on the right habits.",
+        "Real deployments and operations: next-generation firewalls, multi-site networks, IP telephony and certifying training.",
 
-      "dialog.close": "Close dialog",
-      "dialog1.kicker": "Project · Networks",
-      "dialog1.title": "Multi-site network monitoring",
-      "dialog1.intro":
-        "A clear, immediate view of infrastructure health across several sites, so problems can be handled before users notice.",
-      "dialog1.p1label": "Goal",
-      "dialog1.p1text": "Bring device and link status together in one place.",
-      "dialog1.p2label": "Approach",
-      "dialog1.p2text":
-        "Map the traffic flows, monitor critical equipment, build dashboards and set up tiered alerts.",
-      "dialog1.p3label": "Outcome",
-      "dialog1.p3text": "Faster diagnosis and incidents handled with a calmer head.",
-      "dialog1.tag1": "Monitoring",
-      "dialog1.tag4": "High availability",
-      "dialog2.kicker": "Project · Cybersecurity",
-      "dialog2.title": "Segmentation and hardening",
-      "dialog2.intro":
-        "Divide the network into trust zones and allow only the flows that are truly needed, so an incident is less likely to spread.",
-      "dialog2.p1label": "Goal",
-      "dialog2.p1text": "Reduce the attack surface and make access rules between zones easier to read.",
-      "dialog2.p2label": "Approach",
-      "dialog2.p2text": "VLAN segmentation, a flow matrix, firewall rules and device hardening.",
-      "dialog2.p3label": "Outcome",
-      "dialog2.p3text": "A network that is easier to read, easier to segment and easier to audit.",
-      "dialog2.tag2": "Firewall",
-      "dialog2.tag3": "Flow matrix",
-      "dialog2.tag4": "Hardening",
-      "dialog3.kicker": "Project · Cloud and teaching",
-      "dialog3.title": "AWS workshop and mentoring",
-      "dialog3.intro":
-        "Making cloud concrete and accessible through hands-on workshops, so teams can build their skills at their own pace.",
-      "dialog3.p1label": "Goal",
-      "dialog3.p1text": "Share AWS fundamentals and anchor good security habits.",
-      "dialog3.p2label": "Approach",
-      "dialog3.p2text": "Guided workshops, practical cases, discussion and one-to-one support.",
-      "dialog3.p3label": "Outcome",
-      "dialog3.p3text": "Teams that can work on their own, with a shared understanding of the cloud.",
-      "dialog3.tag4": "Mentoring",
+      "x1.period": "2023 — Present",
+      "x1.role": "Network & Cybersecurity Engineer",
+      "x1.p1title": "Palo Alto NGFW deployment · ATU",
+      "x1.p1text":
+        "Full production deployment of a Palo Alto firewall for Accra Technical University (500+ users): security policies, Threat Prevention, URL Filtering and GlobalProtect VPN.",
+      "x1.p2title": "FortiGate multi-site support · COMO",
+      "x1.p2text":
+        "Supervision of FortiGate firewalls across 16+ branches via FortiManager: IPsec/SSL VPN troubleshooting, security policies, routing and monitoring.",
+      "x1.p3title": "Internal Palo Alto firewall · IMPROTECH",
+      "x1.p3text": "Administration of the internal firewall: security rules maintenance, access control and continuous monitoring.",
+      "x1.p4title": "Enterprise Ubiquiti WiFi · IMPROTECH",
+      "x1.p4text":
+        "Deployment and management of the wireless network via UniFi Controller: AP configuration, network segmentation and centralized supervision.",
+      "x1.p5title": "MikroTik & load-balancing · Lycée Français d'Accra",
+      "x1.p5text":
+        "MikroTik AP installation and load-balancing configuration across two ISP links, for redundancy and service continuity.",
+      "x1.p6title": "Python inventory script",
+      "x1.p6text":
+        "Automated documentation tool for ~50 devices: ping, SSH, hostname/MAC collection and full inventory report generation.",
+      "x1.p7title": "Multi-site 3CX administration · COMO",
+      "x1.p7text": "IP telephony system management for all branches: extension configuration, SIP trunks and voice support.",
+      "x1.p8title": "Network & voice support · COMO",
+      "x1.p8text": "Level 2/3 technical support across 16+ sites.",
+      "x1.p9title": "Certified Cisco & AWS trainer",
+      "x1.p9text": "Design and delivery of CCNA, CCNP ENCOR and AWS Cloud Practitioner training: 50+ learners trained.",
+
+      "x2.period": "March — June 2021",
+      "x2.company": "Ministry of Economy and Finance",
+      "x2.role": "IT Support Intern",
+      "x2.p1title": "Technical support",
+      "x2.p1text": "Technical support for 200+ government agents.",
+      "x2.p2title": "Incident resolution",
+      "x2.p2text": "Hardware/software incident resolution: Windows, Office, peripherals.",
+      "x2.p3title": "Administration",
+      "x2.p3text": "System installations, updates and user account management.",
+
+      "edu.title1": "Education",
+      "edu.degree": "Computer Science degree",  
+      "edu.note": "2021–2023: relocation to Ghana — intensive English training and autonomous preparation for Cisco and AWS certifications.",
+      "edu.title2": "Languages",
+      "edu.langFr": "Native",
+      "edu.langEn": "Professional (C1)",
 
       "contact.eyebrow": "Contact",
       "contact.title": "Want to talk?",
-      "contact.lead":
-        "A question, a project, or just want to compare notes on networks and security? Send me a message.",
+      "contact.lead": "A question, an opportunity or a networking project? Send me a message or call me directly.",
+      "contact.phoneLabel": "Phone",
       "contact.linkedinValue": "Professional profile",
       "contact.githubValue": "Code and experiments",
       "contact.copy": "Copy",
       "contact.copied": "Copied",
       "contact.copyAria": "Copy email address",
+      "contact.copyPhoneAria": "Copy phone number",
 
       "form.name": "Name",
       "form.namePlaceholder": "Your name",
@@ -345,7 +319,7 @@
       "form.success": "Your email app will open with the message already filled in.",
       "form.defaultSubject": "Contact from the portfolio",
 
-      "footer.tagline": `IT and cybersecurity at IMPROTECH.<br>Networks, security and knowledge sharing.`,
+      "footer.tagline": `Network &amp; Cybersecurity Engineer in Accra.<br>Networks, security and training.`,
       "footer.navAria": "Footer navigation",
       "footer.socialsAria": "Social links",
       "footer.emailAria": "Send an email",
@@ -558,7 +532,7 @@
     sections.forEach((section) => navObserver.observe(section));
   }
 
-  document.querySelectorAll(".projects-grid, .skills-grid").forEach((grid) => {
+  document.querySelectorAll(".skills-grid, .timeline, .edu-grid").forEach((grid) => {
     Array.from(grid.children).forEach((child, index) => {
       child.style.setProperty("--delay", `${index * 60}ms`);
     });
@@ -582,42 +556,6 @@
 
     revealElements.forEach((element) => revealObserver.observe(element));
   }
-
-  const dialogs = Array.from(document.querySelectorAll(".project-dialog"));
-
-  document.querySelectorAll("[data-dialog]").forEach((trigger) => {
-    trigger.addEventListener("click", () => {
-      const dialog = document.getElementById(trigger.dataset.dialog);
-      if (!dialog || typeof dialog.showModal !== "function") return;
-      dialog.showModal();
-      document.body.classList.add("dialog-open");
-    });
-  });
-
-  dialogs.forEach((dialog) => {
-    const closeDialog = () => {
-      dialog.close();
-      document.body.classList.remove("dialog-open");
-    };
-
-    dialog.querySelectorAll("[data-close]").forEach((button) => {
-      button.addEventListener("click", closeDialog);
-    });
-
-    dialog.addEventListener("click", (event) => {
-      const rect = dialog.getBoundingClientRect();
-      const isInside =
-        event.clientX >= rect.left &&
-        event.clientX <= rect.right &&
-        event.clientY >= rect.top &&
-        event.clientY <= rect.bottom;
-      if (!isInside) closeDialog();
-    });
-
-    dialog.addEventListener("close", () => {
-      document.body.classList.remove("dialog-open");
-    });
-  });
 
   const fallbackCopy = (text) => {
     const textarea = document.createElement("textarea");
