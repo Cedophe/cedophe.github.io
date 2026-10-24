@@ -1,0 +1,126 @@
+{
+  "title": "Choose the visual world",
+  "question": "The roll assigned The Incident File. Keep it, take an alternate, or re-roll. Three further dealt worlds wait in the re-roll pool: Risograph, Alien Forest, Silk Canopy.",
+  "options": [
+    {
+      "id": "assigned",
+      "kind": "assigned",
+      "label": "The Incident File",
+      "lineage": "declassified case files, field reports, evidence logs",
+      "thesis": "A field record that proves the work before it names the role.",
+      "palette": ["#f3ecdc", "#d4bf90", "#1d2c3b", "#b43b2f"],
+      "materials": ["manila folder", "typewriter ink", "redaction tape", "evidence stamp"],
+      "viewport": "An opened case file: tabbed navigation at left, a typed report with a live topology exhibit, and a record summary at right.",
+      "risk": "The file metaphor becomes costume if the work evidence is not specific.",
+      "raised": [
+        {
+          "from": "Decollage torn billboard",
+          "raise": "Layered evidence: redaction strips peel back to reveal earlier deployments and leave the history visible."
+        },
+        {
+          "from": "Risograph web system",
+          "raise": "Two-ink economy: manila, ink, and one signal red across the whole file; no gradients, glass, or extra accents."
+        },
+        {
+          "from": "Darkroom safelight bay",
+          "raise": "Single-environment commitment: the page never leaves the case-file world, so even quiet sections keep the same material and rules."
+        }
+      ],
+      "html": ".impeccable/mocks/decision/assigned.html"
+    },
+    {
+      "id": "model-pick",
+      "kind": "pick",
+      "label": "The As-Built",
+      "kicker": "IMPECCABLE’S PICK",
+      "lineage": "network as-built drawings, site survey sheets, title blocks",
+      "thesis": "The portfolio as the network drawing it describes.",
+      "palette": ["#f1ede2", "#213448", "#547792", "#c65a2e"],
+      "materials": ["drafting paper", "graphite linework", "survey marks", "revision stamp"],
+      "viewport": "A full drafting sheet: a live network as-built across the field, with the name and role in the title block.",
+      "risk": "Precision turns into wallpaper without real topology data.",
+      "html": ".impeccable/mocks/decision/pick.html"
+    },
+    {
+      "id": "challenger-mondo",
+      "kind": "challenger",
+      "catalogId": "digital-design-canon-mondo-tech-utopian-spread",
+      "label": "Mondo Tech Bulletin",
+      "verdict": "competitive",
+      "lineage": "early-nineties technology magazine spreads",
+      "thesis": "A technical field bulletin where every element is printed in two impossible inks.",
+      "palette": ["#ff3d00", "#00e5ff", "#0a0a0a", "#f5f1e8"],
+      "materials": ["fluorescent duotone", "halftone screen", "angled slabs"],
+      "viewport": "Angled masthead, three-column brief, and a glossary margin; the work reads as a systems bulletin.",
+      "case": "Fuses cleanly: glossary terms explain the stack, but the retro-tech frame can read as style first.",
+      "risk": "Two inks overwhelm the proof if the glossary is not strict.",
+      "hero": "https://impeccable.style/worlds/cards/digital-design-canon-mondo-tech-utopian-spread-hero.webp"
+    },
+    {
+      "id": "challenger-decollage",
+      "kind": "challenger",
+      "catalogId": "design-canon-decollage-torn-billboard",
+      "label": "Decollage Field Layers",
+      "verdict": "declined",
+      "lineage": "torn Paris hoardings and layered campaign posters",
+      "thesis": "A career as layered site records, torn back to expose earlier deployments.",
+      "palette": ["#f2efe6", "#1a1a1a", "#445c7a", "#b34a4a", "#dbc26b"],
+      "materials": ["torn poster layers", "paste board", "rag edge"],
+      "viewport": "Torn bands of type and paper, with the tear line as the reading order.",
+      "case": "Fuses poorly: the tear is expressive but slows the proof; loses both axes against the case file.",
+      "risk": "The metaphor can hide the current role.",
+      "kept": "Layered evidence reveal.",
+      "hero": "https://impeccable.style/worlds/cards/design-canon-decollage-torn-billboard-hero.webp"
+    },
+    {
+      "id": "challenger-darkroom",
+      "kind": "challenger",
+      "catalogId": "signals-instruments-darkroom-safelight-bay",
+      "label": "Safelight Evidence",
+      "verdict": "declined",
+      "lineage": "darkroom safelight bays and developing trays",
+      "thesis": "Security work as a print developing under safelight.",
+      "palette": ["#ffb000", "#e2a352", "#4b2e07", "#0e0e0e", "#f6f1e6"],
+      "materials": ["safelight amber", "fiber paper", "developing tray"],
+      "viewport": "Amber field, timer digits, and a project emerging in the tray.",
+      "case": "Fuses poorly: photographers identify, network buyers do not; the metaphor obscures the service.",
+      "risk": "Atmosphere can outrun clarity.",
+      "kept": "Single-environment immersion.",
+      "hero": "https://impeccable.style/worlds/cards/signals-instruments-darkroom-safelight-bay-hero.webp"
+    },
+    {
+      "id": "challenger-riso",
+      "kind": "challenger",
+      "catalogId": "risograph-web-system",
+      "label": "Riso Service Sheet",
+      "verdict": "declined",
+      "lineage": "risograph spot-ink print systems",
+      "thesis": "A service sheet where two spot inks misregister over warm paper.",
+      "palette": ["#fff6e8", "#ff3ea5", "#1e4fff", "#ffd22a"],
+      "materials": ["risograph grain", "fluorescent spot inks", "misregistration"],
+      "viewport": "Bold display type, cut-paper fields, and a spot-colored index rail.",
+      "case": "Fuses poorly: the inks signal a design studio, not an infrastructure engineer.",
+      "risk": "Reads playful where trust is the job.",
+      "kept": "Two-ink economy.",
+      "hero": "https://impeccable.style/worlds/cards/risograph-web-system-hero.webp"
+    }
+  ],
+  "reroll": {
+    "registers": ["safer", "bolder"]
+  },
+  "buildPath": {
+    "value": "code",
+    "toggle": false
+  },
+  "canon": true,
+  "canonCard": {
+    "kind": "canon",
+    "label": "The category standard",
+    "thesis": "A dark portfolio with a neon accent, gradient buttons, and glass cards, executed cleanly.",
+    "palette": ["#0b1020", "#111827", "#3b82f6", "#22d3ee"],
+    "materials": ["dark glass", "gradient accents", "icon cards"],
+    "viewport": "Centered hero, stat row, equal project cards.",
+    "risk": "Indistinguishable from every other engineer portfolio."
+  },
+  "steer": true
+}

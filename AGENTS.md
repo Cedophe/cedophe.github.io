@@ -1,17 +1,32 @@
 # AGENTS.md
 
-- Static vanilla portfolio: `index.html`, `styles.css`, `script.js`, `assets/favicon.svg`. No framework, package manager, build step, tests, or linters. GitHub Pages ready.
-- Preview locally with `python3 -m http.server 8000` from the repo root, then open `http://localhost:8000`. No JS is required for content: FR text is inline in `index.html` (default), EN lives in `data-en` attributes.
-- Dependency-free apart from Google Fonts (Inter for body, Space Grotesk for headings) loaded by CDN in `index.html`; do not introduce a framework or build tooling unless asked.
-- Strict 4-color palette (no other colors anywhere): `#213448` (deep navy), `#547792` (steel blue), `#94B4C1` (light blue), `#EAE0CF` (warm beige). All shades of surfaces/borders/inputs are derived from these four only, via `color-mix()` or alpha channels. Dark mode: bg navy / text beige / accent steel blue / sub light blue. Light mode: bg beige / text navy / accent steel blue / sub light blue. Theme tokens live in `:root` (dark) and `[data-theme="light"]`.
-- Bilingual FR/EN switch (`data-set-lang` buttons) toggles text via `[data-en]`/`[data-fr]`, aria labels via `[data-en-aria]`/`[data-fr-aria]`, placeholders via `[data-en-ph]`/`[data-fr-ph]`. Section titles/descriptions/meta/title live in the `META` dict in `script.js`. When adding content, add BOTH `data-fr` and `data-en` attributes. Form status/copy feedback strings are in the `MESSAGES`/`COPY_OK` dicts in `script.js`.
-- Theme and language persist in `localStorage` (`theme` = `dark`/`light`, `lang` = `fr`/`en`). The inline `<head>` script applies the saved theme before paint; do not remove it or the page will flash.
-- Section IDs: `#home` (hero), `#about`, `#skills`, `#projects`, `#experience`, `#certifications`, `#contact`. Nav links (with `data-spy-link`) target the last five except certifications (no nav link). Scroll spy observes `main section[id]`; renaming/adding sections means updating nav links too.
-- Layout per section: hero = two columns (copy left, inline SVG network illustration right, float animation); about = copy + 3 `.stat` counters (animated via `[data-count]` + IntersectionObserver, skipped under reduced motion); skills = 6 `.card`s with SVG icon + `.chips`; projects = 3 `.card`s; experience = `.timeline` (3 items, line + dots); certifications = 4 `.cert-card` badge cards; contact = info cards (mailto/tel + `data-copy` buttons) + cosmetic form (client-side validation only, fake success, no backend/mailto).
-- The navbar brand is the user's signature logo: `assets/logo-light.png` (beige strokes, shown in dark theme) and `assets/logo-dark.png` (navy strokes, shown in light theme), swapped via `[data-theme]` CSS on `.brand-logo`. Both were processed from the user's originals (`assets/logo for black background.png`, `assets/logo for white background.png` — do not edit those) into tight 132x142 transparent PNGs tinted with palette colors only. Favicon stays the CZ badge (`assets/favicon.svg`, readable at 16px unlike the signature).
-- Icons come from an inline SVG `<symbol>` sprite at the top of `body` (`#i-shield`, `#i-globe`, `#i-cloud`, `#i-terminal`, `#i-rack`, `#i-phone`, `#i-build`, `#i-code`, `#i-mail`, `#i-pin`, `#i-copy`, `#i-up`, `#i-sun`, `#i-moon`, `#i-download`, `#i-check`); use `<use href="#i-…">`. The hero illustration is a separate inline `<svg class="hero-art">` using `var(--accent)`/`var(--sub)` only.
-- Scroll reveal is CSS-only scroll-driven animation (`.reveal` + `animation-timeline: view()` guarded by `@supports` and `prefers-reduced-motion: no-preference`); unsupported browsers just show content. All motion stops under `@media (prefers-reduced-motion: reduce)`. Card hover = `translateY(-4px)` + border-color change only (no box-shadow, no glow, no gradients).
-- Card hover uses border-color `var(--sub)`; nav active/hover underline uses `var(--accent)`; the "Download CV" button points to `assets/cv.pdf` (file must be added before deploy).
-- Mobile (≤860px) shows the `.burger` and `.nav-menu` dropdown (`.menu-open` on body); Escape closes it. Below 620px grids collapse to one column.
-- Email `cedophe@gmail.com` and phone `+233 593 647 918` appear in `index.html` (mailto/tel links + `data-copy` buttons); update them plus the LinkedIn/GitHub footer links before publishing.
-- No automated tests. Verify by serving the site and checking both themes, both languages, mobile layout, and reduced-motion behavior.
+## Repo
+- Static GitHub Pages portfolio: `index.html`, `styles.css`, `script.js` only. No package manager, build step, tests, or linters; don't add frameworks, build tooling, or dependencies beyond the Google Fonts CDN (3 families).
+- `PRODUCT.md` is the source of truth for audience, positioning, facts, and known gaps. Keep it in sync; never invent evidence (`cv.pdf`, badge images, screenshots, live project links don't exist).
+- `assets/` holds production assets plus the user's originals (`logo for black background.png`, `logo for white background.png`) — never edit the originals.
+- `.impeccable/` is untracked local skill state (review hook, live target, surface briefs); don't hand-edit. The visual direction contract is in `.impeccable/surfaces/index-html.md`.
+
+## Preview and verification
+- Serve the repo root with `python3 -m http.server 8000`, then open `http://localhost:8000`.
+- No automated checks. After UI/content changes verify FR/EN, light/dark, mobile nav at ≤980px, narrow layout at ≤620px, and `prefers-reduced-motion`.
+
+## Architecture
+- Single page. `index.html` holds all markup/content and works without JS; `script.js` enhances theme/lang switching, mobile rail nav, scroll spy, counters, copy buttons, and the cosmetic contact form (client-side validation only, no backend).
+- Layout is a fixed case-file header + left `file-rail` index + `report` sheet, not a centered landing page. At ≤980px the rail becomes the burger dropdown (closed by Escape or resize >980).
+- Keep the inline `<head>` script that applies the saved theme before paint; removing it causes a flash. Default theme is **light**; `localStorage` keys are `theme` (`light`/`dark`) and `lang` (`fr`/`en`).
+- Sections: `#home`, `#about`, `#skills`, `#projects`, `#experience`, `#certifications`, `#contact`. Rail links use `data-spy-link`; the spy observes `main section[id]`; `#certifications` intentionally has no nav link. Update rail numbering/caption when adding or renaming sections.
+- Theme tokens live in `:root` (light) and `:root[data-theme="dark"]` (dark). Use existing tokens; don't hard-code colors.
+
+## Bilingual content
+- French is the inline default. Every user-visible string needs `data-fr` and `data-en`; aria labels use `data-fr-aria`/`data-en-aria`; placeholders use `data-fr-ph`/`data-en-ph`.
+- The switcher replaces `textContent` on every `[data-fr]`/`[data-en]` element — keep those elements text-only, not wrappers around markup you need to preserve.
+- Page title/description translations live in `META`; form status in `MESSAGES`; copy feedback in `COPY_OK` (`script.js`).
+- Icons come from the inline SVG sprite at the top of `<body>`; use `<use href="#i-…">`, not an icon library.
+- Logos swap by theme: `.logo-dark` in light, `.logo-light` in dark (44x47 display, 36x39 ≤620); favicon is the separate CZ badge.
+
+## Design constraints
+- Case-file/manila-paper world: `--desk`/`--folder`/`--paper` surfaces, `--ink` text, `--steel` rules, `--signal` red accent. Use these tokens (with `color-mix()` for tints) instead of introducing colors.
+- Type: Alumni Sans display, Albert Sans body, JetBrains Mono metadata; keep the three Google Fonts families.
+- Breakpoints: 1180 (rail/hero tuning), 980 (rail → burger, single-column shell), 860 (grids/asides/contact stack), 620 (compact header, single-column, larger tap targets), 380 (headline tweaks).
+- All motion must stop under `prefers-reduced-motion: reduce`, and content must remain visible.
+- Known gap before publishing: `assets/cv.pdf` is referenced but missing. Confirmed profiles: GitHub `https://github.com/Cedophe`, LinkedIn `https://www.linkedin.com/in/cedophe-zohoun-914872220/`.

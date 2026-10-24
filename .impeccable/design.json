@@ -1,0 +1,164 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-24T08:24:45Z",
+  "title": "Design System: Cédophe ZOHOUN — Case File Portfolio",
+  "extensions": {
+    "colorMeta": {
+      "signal-red": {"role": "primary", "displayName": "Signal Red", "canonical": "#a9362b", "tonalRamp": ["#3f120d", "#6f1f17", "#a02c21", "#d03a2b", "#dc6559", "#e6928a", "#f1beba", "#fbebea"]},
+      "signal-bright": {"role": "primary", "displayName": "Signal Ember", "canonical": "#b43b2f", "tonalRamp": ["#3f120e", "#6f2018", "#9f2d22", "#cf3b2d", "#db665a", "#e6928a", "#f0bfba", "#faecea"]},
+      "steel-blue": {"role": "secondary", "displayName": "Ledger Steel", "canonical": "#3f6179", "tonalRamp": ["#182934", "#2b485c", "#3e6783", "#5086ab", "#77a1bf", "#9ebcd2", "#c6d8e4", "#eef3f7"]},
+      "desk-manila": {"role": "neutral", "displayName": "Manila Desk", "canonical": "#b7a67e", "tonalRamp": ["#332b1a", "#594c2d", "#806d41", "#a78e54", "#bca87a", "#cfc1a1", "#e3dbc7", "#f6f4ee"]},
+      "folder-tab": {"role": "neutral", "displayName": "Folder Tab", "canonical": "#d4bf90", "tonalRamp": ["#392d13", "#655022", "#907331", "#bc9540", "#ccae69", "#dbc595", "#eaddc0", "#f9f5ec"]},
+      "folder-deep": {"role": "neutral", "displayName": "Folder Fold", "canonical": "#c4ae7b", "tonalRamp": ["#372d16", "#604f26", "#8a7137", "#b49347", "#c6ac70", "#d7c499", "#e7dcc3", "#f8f4ed"]},
+      "report-paper": {"role": "neutral", "displayName": "Report Paper", "canonical": "#f3ecdc", "tonalRamp": ["#3b2e11", "#68521f", "#95752c", "#c29839", "#d1b064", "#dfc791", "#ecdebe", "#f9f5eb"]},
+      "paper-shade": {"role": "neutral", "displayName": "Paper Shade", "canonical": "#e9e0cd", "tonalRamp": ["#372c15", "#614e26", "#8b7036", "#b59147", "#c7ab6f", "#d7c399", "#e7dcc3", "#f8f4ed"]},
+      "ink-navy": {"role": "neutral", "displayName": "Ink Navy", "canonical": "#1d2c3b", "tonalRamp": ["#172635", "#29435e", "#3b6186", "#4d7eae", "#749bc2", "#9cb8d4", "#c5d5e5", "#edf2f7"]},
+      "ink-soft": {"role": "neutral", "displayName": "Ink Soft", "canonical": "#465768", "tonalRamp": ["#1d262f", "#344353", "#4a6177", "#607e9b", "#839bb2", "#a7b8c9", "#cbd5df", "#eff2f5"]},
+      "steel-line": {"role": "secondary", "displayName": "Rule Steel", "canonical": "#8ca4b2", "tonalRamp": ["#1d292f", "#334853", "#4a6777", "#60869c", "#83a1b3", "#a7bcc9", "#cbd8df", "#eff3f5"]},
+      "dark-desk": {"role": "neutral", "displayName": "Night Desk", "canonical": "#0c141b", "tonalRamp": ["#162737", "#264561", "#37638a", "#4781b4", "#6f9ec6", "#99bad7", "#c3d6e7", "#edf3f8"]},
+      "dark-folder": {"role": "neutral", "displayName": "Night Folder", "canonical": "#1a2a35", "tonalRamp": ["#172935", "#29485e", "#3b6786", "#4d87af", "#74a2c2", "#9cbdd4", "#c5d8e5", "#edf3f7"]},
+      "dark-folder-deep": {"role": "neutral", "displayName": "Night Fold", "canonical": "#14212b", "tonalRamp": ["#162836", "#28475f", "#396688", "#4a84b2", "#71a0c4", "#9bbcd5", "#c4d7e6", "#edf3f8"]},
+      "dark-paper": {"role": "neutral", "displayName": "Night Paper", "canonical": "#182631", "tonalRamp": ["#172835", "#29475e", "#3b6586", "#4d84af", "#74a0c2", "#9cbbd4", "#c5d7e5", "#edf3f7"]},
+      "dark-paper-shade": {"role": "neutral", "displayName": "Night Paper Shade", "canonical": "#203441", "tonalRamp": ["#172935", "#29495d", "#3b6886", "#4d88ae", "#74a3c2", "#9cbed3", "#c5d9e5", "#edf3f7"]},
+      "dark-ink": {"role": "neutral", "displayName": "Paper Ink", "canonical": "#f0e7d5", "tonalRamp": ["#3a2d12", "#674f20", "#93722e", "#c0943b", "#d0ac66", "#ddc493", "#ebdcbf", "#f9f4ec"]},
+      "dark-ink-soft": {"role": "neutral", "displayName": "Paper Ink Soft", "canonical": "#c5c5b7", "tonalRamp": ["#2c2c21", "#4d4d3a", "#6e6e53", "#90906c", "#a9a98c", "#c2c2ae", "#dbdbcf", "#f4f4f0"]},
+      "dark-steel": {"role": "secondary", "displayName": "Night Steel", "canonical": "#9ab6c4", "tonalRamp": ["#1b2a32", "#2f4a58", "#436a7e", "#578aa4", "#7ca5b9", "#a2bfce", "#c8d9e2", "#eef4f6"]},
+      "dark-steel-line": {"role": "secondary", "displayName": "Night Rule", "canonical": "#547792", "tonalRamp": ["#1a2832", "#2e4658", "#42647f", "#5683a5", "#7b9fba", "#a2bbce", "#c8d7e2", "#eef3f6"]},
+      "dark-signal": {"role": "primary", "displayName": "Night Signal", "canonical": "#f08a6e", "tonalRamp": ["#481304", "#7f2208", "#b6300b", "#ed3e0f", "#f36842", "#f79479", "#fac0b0", "#feece7"]},
+      "dark-signal-bright": {"role": "primary", "displayName": "Night Ember", "canonical": "#e2785e", "tonalRamp": ["#431509", "#772410", "#aa3417", "#dd441e", "#e76d4f", "#ee9782", "#f5c2b5", "#fcece9"]}
+    },
+    "typographyMeta": {
+      "display": {"displayName": "Display", "purpose": "The hero statement only; uppercase, compressed, and balanced."},
+      "section-title": {"displayName": "Section Title", "purpose": "Section openings paired with a Fiche or Annexe folio."},
+      "heading": {"displayName": "Heading", "purpose": "Deployment, employer, and credential names."},
+      "body": {"displayName": "Body", "purpose": "Reading copy at a 66ch measure."},
+      "body-large": {"displayName": "Lead Body", "purpose": "Hero lede and the first profile paragraph."},
+      "label": {"displayName": "Metadata Label", "purpose": "Functional 11px mono labels, rail tabs, and record keys; never sentence copy."},
+      "note": {"displayName": "Small Note", "purpose": "Sentence-bearing captions, form disclosure, and footer copy at 12px or larger."}
+    },
+    "shadows": [
+      {"name": "report-sheet", "value": "0 22px 54px rgba(29, 44, 59, 0.17), 0 2px 0 rgba(29, 44, 59, 0.08)", "purpose": "Lifts the single report sheet off the manila desk in the light theme."},
+      {"name": "rail-lift", "value": "0 12px 26px rgba(29, 44, 59, 0.13)", "purpose": "A shallow lift for the sticky folder index."},
+      {"name": "scrolled-header", "value": "0 12px 28px rgba(13, 23, 31, 0.14)", "purpose": "Separates the fixed header after the page begins to scroll."},
+      {"name": "report-sheet-dark", "value": "0 24px 66px rgba(0, 0, 0, 0.42), 0 2px 0 rgba(0, 0, 0, 0.2)", "purpose": "The dark-theme sheet elevation with heavier ambient falloff."}
+    ],
+    "motion": [
+      {"name": "state-fast", "value": "0.18s ease", "purpose": "Button, link, hover, and focus-adjacent state changes."},
+      {"name": "surface-shift", "value": "0.22s ease", "purpose": "Header background and shadow change on scroll."},
+      {"name": "declassify", "value": "0.38s cubic-bezier(0.2, 0.8, 0.2, 1)", "purpose": "The one authored entrance for the declassified annex."},
+      {"name": "reduced-motion", "value": "0.001ms", "purpose": "Global stop under prefers-reduced-motion; content remains visible."}
+    ],
+    "breakpoints": [
+      {"name": "rail-tune", "value": "1180px"},
+      {"name": "rail-to-burger", "value": "980px"},
+      {"name": "grids-stack", "value": "860px"},
+      {"name": "compact-header", "value": "620px"},
+      {"name": "narrow-headline", "value": "380px"}
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "The ink action block; used for Download CV.",
+      "html": "<a class='ds-btn ds-btn-primary' href='assets/cv.pdf'><svg viewBox='0 0 24 24' width='15' height='15' fill='none' stroke='currentColor' stroke-width='1.7' stroke-linecap='round' stroke-linejoin='round' aria-hidden='true'><path d='M12 3v12'/><path d='m7 10 5 5 5-5'/><path d='M4 21h16'/></svg><span>Télécharger le CV</span></a>",
+      "css": ".ds-btn{display:inline-flex;align-items:center;justify-content:center;gap:12px;min-height:46px;padding:11px 16px;border:1px solid var(--ink, #1d2c3b);border-radius:0;font-family:var(--font-mono, 'JetBrains Mono', monospace);font-size:11px;font-weight:400;letter-spacing:.08em;line-height:1.3;text-transform:uppercase;text-decoration:none;cursor:pointer;transition:background-color .18s ease,border-color .18s ease,color .18s ease}.ds-btn svg{width:15px;height:15px;flex:none}.ds-btn-primary{background:var(--ink, #1d2c3b);color:var(--paper, #f3ecdc)}.ds-btn-primary:hover{background:var(--signal, #a9362b);border-color:var(--signal, #a9362b);color:var(--paper, #f3ecdc)}.ds-btn-primary:focus-visible{outline:2px solid var(--focus, #a9362b);outline-offset:3px}"
+    },
+    {
+      "name": "Secondary Button",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "The ruled alternate action; used for Open a channel.",
+      "html": "<a class='ds-btn ds-btn-secondary' href='#contact'><span>Ouvrir un canal</span><svg viewBox='0 0 24 24' width='15' height='15' fill='none' stroke='currentColor' stroke-width='1.7' stroke-linecap='round' stroke-linejoin='round' aria-hidden='true'><path d='M4 12h15'/><path d='m13 6 6 6-6 6'/></svg></a>",
+      "css": ".ds-btn{display:inline-flex;align-items:center;justify-content:center;gap:12px;min-height:46px;padding:11px 16px;border:1px solid var(--ink, #1d2c3b);border-radius:0;font-family:var(--font-mono, 'JetBrains Mono', monospace);font-size:11px;font-weight:400;letter-spacing:.08em;line-height:1.3;text-transform:uppercase;text-decoration:none;cursor:pointer;transition:background-color .18s ease,border-color .18s ease,color .18s ease}.ds-btn svg{width:15px;height:15px;flex:none}.ds-btn-secondary{background:transparent;color:var(--ink, #1d2c3b)}.ds-btn-secondary:hover{background:var(--ink, #1d2c3b);color:var(--paper, #f3ecdc)}.ds-btn-secondary:focus-visible{outline:2px solid var(--focus, #a9362b);outline-offset:3px}"
+    },
+    {
+      "name": "Copy Button",
+      "kind": "button",
+      "refersTo": "copy-button",
+      "description": "Small ruled copy action with a copied state.",
+      "html": "<button class='ds-copy' type='button'><svg viewBox='0 0 24 24' width='12' height='12' fill='none' stroke='currentColor' stroke-width='1.7' stroke-linecap='round' stroke-linejoin='round' aria-hidden='true'><rect x='9' y='9' width='11' height='11'/><path d='M15 5H7a2 2 0 0 0-2 2v8'/></svg><span>Copier</span></button>",
+      "css": ".ds-copy{display:inline-flex;align-items:center;gap:5px;padding:6px 8px;border:1px solid var(--rule-strong, rgba(29,44,59,.38));border-radius:0;background:transparent;color:var(--ink-soft, #465768);font-family:var(--font-mono, 'JetBrains Mono', monospace);font-size:11px;letter-spacing:.04em;line-height:1.4;text-transform:uppercase;cursor:pointer}.ds-copy svg{width:12px;height:12px;flex:none}.ds-copy:hover{background:var(--ink, #1d2c3b);border-color:var(--ink, #1d2c3b);color:var(--paper, #f3ecdc)}.ds-copy.is-copied{background:var(--signal, #a9362b);border-color:var(--signal, #a9362b);color:var(--paper, #f3ecdc)}.ds-copy:focus-visible{outline:2px solid var(--focus, #a9362b);outline-offset:3px}"
+    },
+    {
+      "name": "Text Field",
+      "kind": "input",
+      "refersTo": "field",
+      "description": "A ruled single-line field with an indexed mono label.",
+      "html": "<label class='ds-field' for='ds-email'><span class='ds-field-label'><span class='ds-field-no'>02</span> Email</span><input id='ds-email' type='email' placeholder='votre@email.com'></label>",
+      "css": ".ds-field{display:block;font-family:var(--font-body, 'Albert Sans', sans-serif)}.ds-field-label{display:flex;align-items:center;gap:8px;color:var(--steel, #3f6179);font-family:var(--font-mono, 'JetBrains Mono', monospace);font-size:11px;letter-spacing:.06em;text-transform:uppercase}.ds-field-no{color:var(--signal, #a9362b)}.ds-field input{display:block;width:100%;margin-top:4px;padding:8px 0;border:0;border-bottom:1px solid var(--rule-strong, rgba(29,44,59,.38));border-radius:0;background:transparent;color:var(--ink, #1d2c3b);caret-color:var(--signal, #a9362b);font-family:var(--font-body, 'Albert Sans', sans-serif);font-size:16px;line-height:1.5}.ds-field input::placeholder{color:color-mix(in srgb, var(--ink, #1d2c3b) 72%, var(--paper, #f3ecdc));opacity:1}.ds-field input:focus{border-bottom-color:var(--signal, #a9362b);box-shadow:0 1px 0 var(--signal, #a9362b);outline:none}.ds-field input:focus-visible{outline:2px solid var(--focus, #a9362b);outline-offset:3px}"
+    },
+    {
+      "name": "Index Rail",
+      "kind": "nav",
+      "refersTo": "nav-tab",
+      "description": "The sticky folder index with a paper-filled active tab.",
+      "html": "<nav class='ds-rail' aria-label='Index du dossier'><p class='ds-rail-caption'><span>Index</span><span>00—05</span></p><a class='ds-tab is-active' href='#home' aria-current='location'><span class='ds-tab-no'>00</span><span>Couverture</span></a><a class='ds-tab' href='#about'><span class='ds-tab-no'>01</span><span>Profil</span></a><a class='ds-tab' href='#skills'><span class='ds-tab-no'>02</span><span>Compétences</span></a></nav>",
+      "css": ".ds-rail{width:214px;padding:13px 12px 14px;background:var(--folder, #d4bf90);border:1px solid var(--rule-strong, rgba(29,44,59,.38));box-shadow:0 12px 26px rgba(29,44,59,.13);font-family:var(--font-mono, 'JetBrains Mono', monospace)}.ds-rail-caption{display:flex;justify-content:space-between;gap:8px;margin:0;padding:2px 3px 10px;border-bottom:1px solid var(--rule-strong, rgba(29,44,59,.38));color:var(--ink, #1d2c3b);font-size:11px;letter-spacing:.14em;text-transform:uppercase}.ds-tab{display:grid;grid-template-columns:24px minmax(0,1fr);gap:7px;align-items:center;margin-top:2px;padding:11px 8px;border:1px solid transparent;color:var(--ink, #1d2c3b);font-size:11px;letter-spacing:.08em;line-height:1.25;text-transform:uppercase;text-decoration:none}.ds-tab-no{color:color-mix(in srgb, var(--ink, #1d2c3b) 82%, transparent)}.ds-tab:hover{background:color-mix(in srgb, var(--paper, #f3ecdc) 36%, transparent);border-color:rgba(29,44,59,.16)}.ds-tab.is-active,.ds-tab[aria-current]{margin-right:-13px;background:var(--paper, #f3ecdc);border-color:var(--rule-strong, rgba(29,44,59,.38));box-shadow:2px 0 0 var(--signal, #a9362b)}.ds-tab.is-active .ds-tab-no{color:var(--signal, #a9362b)}.ds-tab:focus-visible{outline:2px solid var(--focus, #a9362b);outline-offset:3px}"
+    },
+    {
+      "name": "Section Head with Folio",
+      "kind": "custom",
+      "description": "Display section title with a red-square filing reference.",
+      "html": "<header class='ds-section-head'><h2>Registre des compétences</h2><p class='ds-folio'>Fiche 02</p></header>",
+      "css": ".ds-section-head{display:flex;align-items:flex-start;justify-content:space-between;gap:20px;padding-top:22px;border-top:1px solid var(--rule-strong, rgba(29,44,59,.38))}.ds-section-head h2{max-width:18ch;margin:0;color:var(--ink, #1d2c3b);font-family:var(--font-display, 'Alumni Sans', sans-serif);font-size:clamp(2.2rem, 4.2vw, 3.6rem);font-weight:600;letter-spacing:-.02em;line-height:.9;text-transform:uppercase;text-wrap:balance}.ds-folio{flex:none;margin:3px 0 0;color:var(--steel, #3f6179);font-family:var(--font-mono, 'JetBrains Mono', monospace);font-size:11px;letter-spacing:.09em;text-transform:uppercase;white-space:nowrap}.ds-folio::before{content:'';display:inline-block;width:6px;height:6px;margin-right:8px;background:var(--signal, #a9362b);vertical-align:1px}"
+    },
+    {
+      "name": "Record Summary",
+      "kind": "card",
+      "description": "The left-ruled signaletic summary beside the hero.",
+      "html": "<aside class='ds-summary'><h2>Fiche signalétique</h2><dl><div><dt>Sujet</dt><dd>Cédophe Zohoun</dd></div><div><dt>Fonction</dt><dd>Ingénieur réseaux &amp; cybersécurité</dd></div><div><dt>Base</dt><dd>Accra, Ghana</dd></div><div><dt>Portée</dt><dd>500+ utilisateurs · 16+ sites</dd></div></dl></aside>",
+      "css": ".ds-summary{padding-left:24px;border-left:1px solid var(--rule-strong, rgba(29,44,59,.38));font-family:var(--font-body, 'Albert Sans', sans-serif)}.ds-summary h2{margin:0 0 10px;color:var(--steel, #3f6179);font-family:var(--font-mono, 'JetBrains Mono', monospace);font-size:11px;font-weight:500;letter-spacing:.12em;text-transform:uppercase}.ds-summary dl{margin:0}.ds-summary dl>div{display:grid;grid-template-columns:67px minmax(0,1fr);gap:9px;padding:9px 0;border-top:1px solid var(--rule, rgba(29,44,59,.2))}.ds-summary dt{color:var(--steel, #3f6179);font-family:var(--font-mono, 'JetBrains Mono', monospace);font-size:11px;letter-spacing:.07em;text-transform:uppercase}.ds-summary dd{margin:0;color:var(--ink, #1d2c3b);font-size:14px;line-height:1.4}"
+    },
+    {
+      "name": "Credential Row",
+      "kind": "custom",
+      "description": "A verified credential as a ruled evidence row.",
+      "html": "<ul class='ds-creds'><li><div><h3>CCNA</h3><p class='ds-issuer'>Cisco</p></div><p class='ds-code'>CC</p><p class='ds-status'><svg viewBox='0 0 24 24' width='12' height='12' fill='none' stroke='currentColor' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round' aria-hidden='true'><path d='M20 6 9 17l-5-5'/></svg>Obtenu</p></li></ul>",
+      "css": ".ds-creds{list-style:none;margin:30px 0 0;padding:0;border-bottom:1px solid var(--rule-strong, rgba(29,44,59,.38));font-family:var(--font-body, 'Albert Sans', sans-serif)}.ds-creds li{display:grid;grid-template-columns:minmax(0,1.4fr) 58px 116px;gap:20px;align-items:center;padding:15px 0;border-top:1px solid var(--rule-strong, rgba(29,44,59,.38))}.ds-creds h3{margin:0;color:var(--ink, #1d2c3b);font-family:var(--font-display, 'Alumni Sans', sans-serif);font-size:22px;font-weight:600;letter-spacing:-.01em;line-height:1.1}.ds-issuer{margin:2px 0 0;color:var(--steel, #3f6179);font-family:var(--font-mono, 'JetBrains Mono', monospace);font-size:11px;letter-spacing:.05em;text-transform:uppercase}.ds-code{width:40px;height:40px;display:grid;place-items:center;margin:0;border:1px solid var(--rule-strong, rgba(29,44,59,.38));color:var(--steel, #3f6179);font-family:var(--font-mono, 'JetBrains Mono', monospace);font-size:11px;letter-spacing:.02em}.ds-status{display:flex;align-items:center;gap:6px;margin:0;color:var(--signal, #a9362b);font-family:var(--font-mono, 'JetBrains Mono', monospace);font-size:11px;letter-spacing:.04em;text-transform:uppercase}.ds-status svg{width:12px;height:12px;flex:none}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Working Incident File",
+    "overview": "The site is an open case file on a manila desk, not a portfolio template. A fixed file header, a tabbed index rail, and one continuous report sheet carry the entire story. The visitor should feel they are reading a record that was already in use: stamped headers, ruled registers, typed measurements, punched margins, and a red signal used for status rather than decoration. The world is physical and restrained. Manila board and cream paper establish the surface hierarchy; navy ink carries the argument; steel blue handles metadata and measurement; signal red marks the active tab, the verified credential, and the next action. Depth comes from paper and folder layering, not from floating cards. Rounded containers, soft glass, gradient text, and centered hero scaffolding belong to a different world. Copy is evidence-led and first-person. Counts, vendors, and deployments do the persuading; the interface stays quiet enough for them to be read. French is the default voice and English is a complete mirror, not a fallback.",
+    "keyCharacteristics": [
+      "One continuous report sheet with a fixed case-file header and a left index rail.",
+      "Warm manila and paper surfaces against navy ink and steel metadata, with one red signal.",
+      "Sharp corners, 1px rules, punched margins, and monospaced record labels.",
+      "Compressed uppercase display type balanced by generous reading type.",
+      "Bilingual FR/EN parity, keyboard-visible focus, and a full dark inversion of the same paper world.",
+      "No invented evidence: the only shipping rasters are the two logo cutouts derived from the user's originals."
+    ],
+    "rules": [
+      {"name": "The One Signal Rule", "body": "Red is never a surface fill on the page. It marks state, verification, or a chosen action; if more than a small fraction of the viewport is red, the hierarchy has failed.", "section": "colors"},
+      {"name": "The Paper Swap Rule", "body": "Dark mode is a full inversion of the same material system, not a tinted light mode. Every surface, text, rule, selection, scrollbar, and focus color swaps together; no element keeps a light-theme surface by accident.", "section": "colors"},
+      {"name": "The Ruled Voice Rule", "body": "Display type may shout; metadata may whisper; body copy must remain comfortably readable. Functional microtext never drops below 11px, and sentence-bearing notes stay at 12px or larger.", "section": "typography"},
+      {"name": "The Single Sheet Rule", "body": "The page is one continuous document. Do not break it into a grid of cards, floating tiles, or separate panels; use ruled sections and typographic hierarchy to separate ideas.", "section": "layout"},
+      {"name": "The Flat File Rule", "body": "Inside the sheet, surfaces are flat. Tinted paper, hairlines, and typography create hierarchy; inner cards and stacked shadows do not.", "section": "elevation"},
+      {"name": "The No Pill Rule", "body": "Nothing interactive or informational is rounded into a pill. A rectangle with a 1px edge is the default shape; the only exceptions are the 6px status dots.", "section": "shapes"}
+    ],
+    "dos": [
+      "Do build every section on the ruled sheet: 1px rules, paper tints, and monospaced filing labels.",
+      "Do keep the hero display uppercase, condensed, balanced, and between 3.3 and 5.5rem on desktop.",
+      "Do use Signal Red only for active state, verification, field indices, and primary hover.",
+      "Do use color-mix() tints of existing tokens for washes, hover fills, and placeholders.",
+      "Do keep FR/EN strings in mirrored data-fr/data-en attributes and keep those elements text-only.",
+      "Do preserve the fixed header, the sticky index rail, and the single report-sheet composition.",
+      "Do raise sentence-bearing small copy to 12px; reserve 11px for functional labels and metadata.",
+      "Do keep all motion removable under prefers-reduced-motion: reduce while leaving content visible.",
+      "Do keep every fact traceable to PRODUCT.md and every raster attached to its provenance."
+    ],
+    "donts": [
+      "Don't introduce rounded cards, pill buttons, glass panels, gradient text, or floating stat tiles.",
+      "Don't turn the page into a centered hero, card grid, or dashboard.",
+      "Don't use red as a large surface fill or decorative wash.",
+      "Don't add shadows inside the sheet; the sheet itself is the only large elevation.",
+      "Don't use gray text on the manila or paper surfaces; tint secondary text from the surface hue or use Ledger Steel.",
+      "Don't swap a system font for Alumni Sans, Albert Sans, or JetBrains Mono.",
+      "Don't add certification badges, project screenshots, client logos, testimonials, or live links that do not exist.",
+      "Don't present the contact form as a delivery mechanism; it is a client-side demonstration only.",
+      "Don't hide content behind animation; the page must read without JavaScript."
+    ]
+  }
+}

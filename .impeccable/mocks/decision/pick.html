@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@400;500;600&family=Alumni+Sans:wght@200..800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--round:a169ae44;--paper:#f1ede2;--ink:#213448;--steel:#547792;--light:#94b4c1;--signal:#c65a2e;--rule:rgba(33,52,72,.22);--mono:"JetBrains Mono",monospace;--sans:"Albert Sans",sans-serif;--display:"Alumni Sans",sans-serif}
+*{box-sizing:border-box}html,body{height:100%}body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);overflow:hidden}
+body::before{content:"";position:fixed;inset:0;background-image:linear-gradient(var(--rule) 1px,transparent 1px),linear-gradient(90deg,var(--rule) 1px,transparent 1px);background-size:24px 24px;opacity:.38;pointer-events:none}
+.sheet{position:relative;height:100%;padding:22px 28px 26px;display:grid;grid-template-rows:74px minmax(0,1fr) 132px;gap:0}
+.top{display:grid;grid-template-columns:1.4fr 1fr;align-items:start;border-bottom:2px solid var(--ink);padding-bottom:12px}
+.mark{display:flex;align-items:baseline;gap:16px}.mark b{font-family:var(--display);font-weight:400;font-size:24px;letter-spacing:.04em}.mark span{font-family:var(--mono);font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:var(--steel)}
+.index{display:flex;justify-content:flex-end;gap:22px;font-family:var(--mono);font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:var(--steel)}
+.index a{color:inherit;text-decoration:none}.index a:first-child{color:var(--ink);border-bottom:1px solid var(--ink)}
+.drawing{position:relative;display:grid;grid-template-columns:190px minmax(0,1fr) 200px;gap:26px;padding-top:18px;min-height:0}
+.left{display:flex;flex-direction:column;gap:20px}
+h1{font-family:var(--display);font-weight:200;font-size:82px;line-height:.82;letter-spacing:-.02em;margin:0;max-width:6.4ch}
+.lede{font-size:14px;line-height:1.55;max-width:26ch;color:rgba(33,52,72,.78);margin:0}
+.legend{border-top:1px solid var(--ink);padding-top:10px;font-family:var(--mono);font-size:8px;line-height:1.9;letter-spacing:.07em;text-transform:uppercase;color:var(--steel)}
+.legend b{display:inline-block;width:8px;height:8px;margin-right:7px;background:var(--ink);vertical-align:middle}.legend .orange{background:var(--signal)}.legend .dash{background:transparent;border:1px dashed var(--steel)}
+.canvas{position:relative;min-width:0;min-height:0;border:1px solid var(--ink);background:rgba(255,255,255,.14);overflow:hidden}
+.canvas::before{content:"AS-BUILT / REV 03";position:absolute;top:10px;left:12px;font-family:var(--mono);font-size:8px;letter-spacing:.1em;color:var(--steel)}
+.canvas svg{position:absolute;inset:0;width:100%;height:100%}
+.schedule{border-left:1px solid var(--rule);padding-left:18px;display:flex;flex-direction:column;gap:14px}
+.schedule h2{font-family:var(--mono);font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:var(--steel);font-weight:500;margin:0 0 4px}
+.row{display:grid;grid-template-columns:1fr auto;gap:10px;border-bottom:1px solid var(--rule);padding-bottom:8px;font-size:11px;line-height:1.35}
+.row span{color:rgba(33,52,72,.62)}.row b{font-family:var(--mono);font-size:10px;font-weight:500;text-align:right}
+.callout{background:var(--ink);color:var(--paper);padding:12px;margin-top:auto}
+.callout small{display:block;font-family:var(--mono);font-size:8px;letter-spacing:.1em;text-transform:uppercase;color:var(--light);margin-bottom:7px}
+.callout a{display:inline-flex;gap:8px;color:var(--paper);font-family:var(--mono);font-size:9px;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;border-bottom:1px solid var(--signal);padding-bottom:3px}
+.title-block{display:grid;grid-template-columns:1.15fr .85fr .7fr;border:2px solid var(--ink);margin-top:12px}
+.title-block>div{padding:10px 14px;border-right:1px solid var(--ink)}.title-block>div:last-child{border-right:0}
+.title-block small{display:block;font-family:var(--mono);font-size:8px;letter-spacing:.1em;text-transform:uppercase;color:var(--steel);margin-bottom:5px}
+.title-block b{font-family:var(--display);font-weight:400;font-size:26px;line-height:1;letter-spacing:.02em}
+.title-block span{font-size:11px;line-height:1.4;color:rgba(33,52,72,.76)}
+.stamp{display:inline-block;border:2px solid var(--signal);color:var(--signal);font-family:var(--mono);font-size:9px;letter-spacing:.1em;text-transform:uppercase;padding:4px 7px;transform:rotate(-2deg);margin-top:7px}
+@media (max-width:900px){body{overflow:auto}.sheet{height:auto;min-height:100%;grid-template-rows:auto;padding:16px}.top{grid-template-columns:1fr;gap:12px}.index{justify-content:flex-start;flex-wrap:wrap;gap:12px}.drawing{grid-template-columns:1fr;gap:18px}.canvas{min-height:320px}.schedule{border-left:0;border-top:1px solid var(--rule);padding-left:0;padding-top:12px}.callout{margin-top:12px}h1{font-size:58px;max-width:8ch}.title-block{grid-template-columns:1fr}.title-block>div{border-right:0;border-bottom:1px solid var(--ink)}}
+</style>
+</head>
+<body>
+<div class="sheet">
+  <header class="top">
+    <div class="mark"><b>CÉDOPHE ZOHOUN</b><span>Network &amp; Cybersecurity Engineer / Accra, GH</span></div>
+    <nav class="index" aria-label="Drawing index"><a href="#sheet">Sheet 01</a><a href="#deployments">Deployments</a><a href="#record">Record</a><a href="#training">Training</a><a href="#contact">Contact</a></nav>
+  </header>
+  <main class="drawing">
+    <div class="left">
+      <h1>The network, as built.</h1>
+      <p class="lede">Enterprise firewalls, multi-site routing, cloud infrastructure and the engineers trained to run them.</p>
+      <div class="legend"><div><b></b>Physical link</div><div><b class="orange"></b>Protected path</div><div><b class="dash"></b>Managed branch</div><div><b></b>Verified site</div></div>
+    </div>
+    <div class="canvas">
+      <svg viewBox="0 0 760 520" fill="none" aria-hidden="true">
+        <g stroke="#547792" stroke-width="1.1" opacity=".55" stroke-dasharray="4 6">
+          <path d="M80 396H246V286H418V154H610"/><path d="M246 286V168H418"/><path d="M246 286V426H504V286H610"/><path d="M418 154V88H610"/><path d="M504 426V330H610"/>
+        </g>
+        <g stroke="#213448" stroke-width="1.4"><path d="M80 396H246V286H418V154H610"/><path d="M246 286V426H504V286H610"/></g>
+        <g stroke="#c65a2e" stroke-width="2.2"><path d="M80 396H246V286H418"/><path d="M418 286H610"/></g>
+        <g fill="#f1ede2" stroke="#213448" stroke-width="1.5">
+          <rect x="54" y="378" width="52" height="36"/><rect x="228" y="264" width="36" height="44"/><rect x="400" y="132" width="36" height="44"/><rect x="400" y="264" width="36" height="44"/><rect x="486" y="408" width="36" height="36"/><rect x="592" y="132" width="36" height="44"/><rect x="592" y="264" width="36" height="44"/>
+        </g>
+        <g fill="#c65a2e"><circle cx="80" cy="396" r="5"/><circle cx="246" cy="286" r="5"/><circle cx="418" cy="154" r="5"/><circle cx="418" cy="286" r="5"/><circle cx="610" cy="286" r="5"/></g>
+        <g font-family="JetBrains Mono, monospace" font-size="10" fill="#213448" letter-spacing=".08em">
+          <text x="40" y="438">ACCRA HQ / 500+</text><text x="196" y="250">CORE / PA</text><text x="380" y="118">EDGE / FG</text><text x="380" y="334">CLOUD / AWS</text><text x="478" y="462">BRANCH 08</text><text x="570" y="118">BRANCH 16</text><text x="570" y="334">USERS / 50+</text>
+        </g>
+        <g font-family="JetBrains Mono, monospace" font-size="9" fill="#547792" letter-spacing=".08em"><text x="40" y="56">SITE SURVEY / 16+ BRANCHES</text><text x="40" y="74">ROUTING / OSPF · BGP · IPSEC</text><text x="560" y="462">SCALE 1:1</text></g>
+        <g stroke="#c65a2e" stroke-width="1"><path d="M80 396L96 304H206" stroke-dasharray="2 4"/><path d="M610 286L650 214"/></g>
+        <g font-family="JetBrains Mono, monospace" font-size="9" fill="#c65a2e" letter-spacing=".08em"><text x="102" y="298">VERIFIED PATH</text><text x="655" y="208">UPLINK</text></g>
+      </svg>
+    </div>
+    <aside class="schedule">
+      <div><h2>Current scope</h2><div class="row"><span>Palo Alto NGFW</span><b>500+</b></div><div class="row"><span>FortiGate sites</span><b>16+</b></div><div class="row"><span>Engineers trained</span><b>50+</b></div><div class="row"><span>Field time</span><b>3+ yrs</b></div></div>
+      <div><h2>Certifications</h2><div class="row"><span>CCNP Enterprise</span><b>2024</b></div><div class="row"><span>CCNA</span><b>2023</b></div><div class="row"><span>AZ-104</span><b>2024</b></div><div class="row"><span>NSE 3</span><b>2024</b></div></div>
+      <div class="callout"><small>Open a channel</small><a href="#contact">Contact Cédophe →</a></div>
+    </aside>
+  </main>
+  <div class="title-block">
+    <div><small>Project</small><b>SECURE NETWORK / AS-BUILT</b><span>Portfolio of Cédophe Zohoun</span></div>
+    <div><small>Drawn by</small><b>CEDOPHE ZOHOUN</b><span>Network &amp; Cybersecurity Engineer</span></div>
+    <div><small>Status</small><b>VERIFIED</b><span class="stamp">Field record</span><span>cedophe@gmail.com</span></div>
+  </div>
+</div>
+</body>
+</html>

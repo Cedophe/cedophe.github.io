@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@400;500;600&family=Alumni+Sans:wght@200..800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--round:a169ae44;--paper:#f3ecdc;--paper-deep:#e8dfcb;--manila:#d4bf90;--ink:#1d2c3b;--steel:#547792;--signal:#b43b2f;--line:rgba(29,44,59,.24);--mono:"JetBrains Mono",monospace;--sans:"Albert Sans",sans-serif;--display:"Alumni Sans",sans-serif}
+*{box-sizing:border-box}html,body{height:100%}body{margin:0;background:var(--manila);color:var(--ink);font-family:var(--sans);overflow:hidden}body::before{content:"";position:fixed;inset:0;background:repeating-linear-gradient(90deg,rgba(29,44,59,.035) 0 1px,transparent 1px 5px),repeating-linear-gradient(0deg,rgba(255,255,255,.12) 0 1px,transparent 1px 4px);pointer-events:none;mix-blend-mode:multiply}
+.file{position:relative;height:100%;padding:26px 34px 30px;display:grid;grid-template-columns:176px minmax(0,1fr) 300px;grid-template-rows:54px minmax(0,1fr);gap:0 22px}
+.top{grid-column:1/-1;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--ink);padding-bottom:14px}
+.case-id,.stamp,.meta,.tab,.label,.cta,.foot{font-family:var(--mono);text-transform:uppercase;letter-spacing:.12em}
+.case-id{font-size:11px;font-weight:500}.case-id b{font-weight:600}.stamp{border:2px solid var(--signal);color:var(--signal);font-size:12px;font-weight:600;padding:6px 10px;transform:rotate(-3deg);opacity:.9}
+.rail{padding-top:26px;display:flex;flex-direction:column;gap:8px}
+.tab{display:flex;align-items:center;justify-content:space-between;font-size:10px;font-weight:500;padding:12px 12px 12px 14px;border:1px solid var(--line);background:var(--paper-deep);text-decoration:none;color:var(--ink)}
+.tab span{font-size:14px;line-height:1}.tab.active{background:var(--paper);border-color:var(--ink);transform:translateX(8px);box-shadow:-8px 0 0 var(--paper)}
+.rail-note{margin-top:auto;font-family:var(--mono);font-size:9px;line-height:1.7;letter-spacing:.08em;text-transform:uppercase;color:rgba(29,44,59,.62);border-top:1px solid var(--line);padding-top:12px}
+.report{background:var(--paper);border:1px solid var(--ink);position:relative;padding:34px 40px 26px;display:grid;grid-template-columns:minmax(0,1fr) 270px;grid-template-rows:auto 1fr;gap:22px 34px;box-shadow:8px 8px 0 rgba(29,44,59,.12)}
+.report::before{content:"";position:absolute;left:14px;top:0;bottom:0;border-left:1px solid rgba(180,59,47,.25)}
+.label{font-size:9px;font-weight:500;color:var(--steel);margin-bottom:14px}
+h1{font-family:var(--display);font-weight:300;font-size:96px;line-height:.86;letter-spacing:-.025em;margin:0 0 18px;max-width:8ch;text-wrap:balance}
+.lede{font-size:16px;line-height:1.55;max-width:42ch;color:rgba(29,44,59,.82);margin:0 0 22px}
+.actions{display:flex;align-items:center;gap:18px}
+.cta{display:inline-flex;align-items:center;gap:10px;background:var(--ink);color:var(--paper);font-size:10px;font-weight:600;padding:13px 16px;text-decoration:none;border:1px solid var(--ink)}
+.cta.alt{background:transparent;color:var(--ink)}
+.exhibit{grid-column:1;border-top:1px solid var(--ink);padding-top:12px;min-height:0;display:flex;flex-direction:column}
+.exhibit-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:6px}
+.exhibit-head b{font-family:var(--mono);font-size:9px;letter-spacing:.1em;font-weight:600}.exhibit-head span{font-family:var(--mono);font-size:8px;letter-spacing:.08em;color:var(--steel)}
+.diagram{width:100%;height:190px;display:block}
+.side{grid-column:2;grid-row:1/3;border-left:1px solid var(--line);padding-left:20px;display:flex;flex-direction:column;gap:20px;min-height:0}
+.meta{font-size:9px;letter-spacing:.08em;display:grid;grid-template-columns:1fr auto;gap:9px 12px;text-transform:none}
+.meta span{color:rgba(29,44,59,.58)}.meta b{font-weight:600;text-align:right}
+.note{font-size:11px;line-height:1.55;color:rgba(29,44,59,.76);border-top:1px solid var(--line);padding-top:12px}
+.note strong{font-weight:600}
+.search{font-family:var(--mono);font-size:9px;letter-spacing:.08em;text-transform:uppercase;border:1px solid var(--line);padding:10px;display:flex;justify-content:space-between;color:rgba(29,44,59,.62)}
+.redact{margin-top:auto;background:var(--ink);color:var(--paper);font-family:var(--mono);font-size:9px;letter-spacing:.08em;padding:10px 12px;display:flex;justify-content:space-between;align-items:center;cursor:grab}
+.redact i{display:block;width:44px;height:3px;background:var(--signal);box-shadow:0 0 0 1px rgba(243,236,220,.28)}
+.foot{position:absolute;bottom:8px;right:34px;font-size:8px;color:rgba(29,44,59,.5);letter-spacing:.1em}
+@media (max-width:900px){body{overflow:auto}.file{height:auto;min-height:100%;grid-template-columns:1fr;grid-template-rows:auto;padding:18px}.top{grid-column:1}.rail{flex-direction:row;flex-wrap:wrap;padding-top:16px}.tab.active{transform:none;box-shadow:none}.rail-note{display:none}.report{grid-template-columns:1fr;padding:24px}.side{grid-column:1;grid-row:auto;border-left:0;border-top:1px solid var(--line);padding-left:0;padding-top:16px}.exhibit{grid-column:1}h1{font-size:64px}.foot{position:static;margin-top:12px}}
+</style>
+</head>
+<body>
+<div class="file">
+  <div class="top">
+    <div class="case-id"><b>CASE FILE 03</b> / CÉDOPHE ZOHOUN / ACCRA, GH</div>
+    <div class="stamp">Active record</div>
+  </div>
+  <nav class="rail" aria-label="Case file tabs">
+    <a class="tab active" href="#profile">Profile <span>01</span></a>
+    <a class="tab" href="#work">Deployments <span>02</span></a>
+    <a class="tab" href="#record">Service record <span>03</span></a>
+    <a class="tab" href="#training">Training <span>04</span></a>
+    <a class="tab" href="#contact">Contact <span>05</span></a>
+    <div class="rail-note">Filed under network operations and security engineering. Last verified 2026.</div>
+  </nav>
+  <main class="report">
+    <div>
+      <div class="label">Subject / network &amp; cybersecurity engineer</div>
+      <h1>I build networks that hold.</h1>
+      <p class="lede">Enterprise firewalls, multi-site routing and cloud infrastructure across West Africa — plus the engineers who keep them running.</p>
+      <div class="actions">
+        <a class="cta" href="#cv">Download CV <span>↧</span></a>
+        <a class="cta alt" href="#contact">Open channel <span>→</span></a>
+      </div>
+    </div>
+    <aside class="side">
+      <div>
+        <div class="label">Record summary</div>
+        <div class="meta">
+          <span>Field time</span><b>3+ years</b>
+          <span>Sites managed</span><b>16+</b>
+          <span>Users protected</span><b>500+</b>
+          <span>Engineers trained</span><b>50+</b>
+          <span>Base</span><b>Accra, Ghana</b>
+        </div>
+      </div>
+      <div class="note"><strong>Current assignment.</strong> IMPROTECH, 2023–present. Palo Alto and FortiGate deployments, FortiManager across 16 branches, 3CX VoIP, AWS and Azure.</div>
+      <div class="search">Search the file <span>⌕</span></div>
+      <div class="redact"><span>Exhibit A / redacted deployment</span><i></i></div>
+    </aside>
+    <div class="exhibit">
+      <div class="exhibit-head"><b>Exhibit A / multi-site backbone</b><span>Palo Alto · FortiGate · Cisco · AWS</span></div>
+      <svg class="diagram" viewBox="0 0 620 190" fill="none" aria-hidden="true">
+        <path d="M54 96H170M170 96V48H292M170 96V144H292M292 48H420M292 144H420M420 48V96H548M420 144V96" stroke="#1d2c3b" stroke-width="1.2"/>
+        <path d="M54 96H170M170 96V48H292M170 96V144H292M292 48H420M292 144H420M420 48V96H548M420 144V96" stroke="#547792" stroke-width="1.2" stroke-dasharray="3 5" opacity=".8"/>
+        <g fill="#f3ecdc" stroke="#1d2c3b" stroke-width="1.3">
+          <rect x="22" y="84" width="32" height="24"/><rect x="170" y="36" width="16" height="24"/><rect x="170" y="132" width="16" height="24"/><rect x="292" y="36" width="16" height="24"/><rect x="292" y="132" width="16" height="24"/><rect x="420" y="36" width="16" height="24"/><rect x="420" y="132" width="16" height="24"/><rect x="548" y="84" width="32" height="24"/>
+        </g>
+        <g fill="#b43b2f"><circle cx="54" cy="96" r="4"/><circle cx="420" cy="96" r="5"/><circle cx="548" cy="96" r="4"/></g>
+        <g font-family="JetBrains Mono, monospace" font-size="9" fill="#1d2c3b" letter-spacing=".08em">
+          <text x="18" y="126">ACCRA HQ</text><text x="182" y="28">EDGE / PA</text><text x="182" y="172">EDGE / FG</text><text x="302" y="28">BRANCH 01</text><text x="302" y="172">BRANCH 12</text><text x="428" y="28">BRANCH 16</text><text x="428" y="172">CLOUD / AWS</text><text x="524" y="126">USERS 500+</text>
+        </g>
+        <g font-family="JetBrains Mono, monospace" font-size="8" fill="#547792" letter-spacing=".08em"><text x="54" y="20">TOPOLOGY NOT TO SCALE / VERIFIED 2026</text><text x="54" y="184">IPSEC / OSPF / VLAN / GLOBALPROTECT</text></g>
+      </svg>
+    </div>
+    <div class="foot">Record 03 / page 01 / Cédophe Zohoun</div>
+  </main>
+</div>
+</body>
+</html>

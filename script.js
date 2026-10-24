@@ -3,6 +3,7 @@
 
   const root = document.documentElement;
   const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const themeColor = document.querySelector('meta[name="theme-color"]');
 
   const META = {
     title: {
@@ -16,89 +17,108 @@
   };
 
   const MESSAGES = {
-    success: {
-      fr: "Merci ! Votre message a bien été pris en compte (démo).",
-      en: "Thanks! Your message has been received (demo).",
+    valid: {
+      fr: "Formulaire valide — démonstration uniquement. Écrivez à cedophe@gmail.com pour envoyer un message.",
+      en: "Form valid — demo only. Email cedophe@gmail.com to send a message.",
     },
-    error: {
-      fr: "Merci de remplir tous les champs correctement.",
-      en: "Please fill in all fields correctly.",
+    invalid: {
+      fr: "Merci de renseigner votre nom, un email valide et un message de 10 caractères minimum.",
+      en: "Please enter your name, a valid email and a message of at least 10 characters.",
     },
   };
 
   const COPY_OK = { fr: "Copié !", en: "Copied!" };
 
+  const getLangValue = (element, prefix, fallback = "") => {
+    const key = `${currentLang === "en" ? "en" : "fr"}${prefix}`;
+    return element.dataset[key] || fallback;
+  };
+
   /* ---------- Theme ---------- */
   const themeToggle = document.getElementById("theme-toggle");
 
   const setTheme = (theme) => {
-    root.dataset.theme = theme;
+    const next = theme === "dark" ? "dark" : "light";
+    root.dataset.theme = next;
+    if (themeColor) themeColor.setAttribute("content", next === "dark" ? "#182631" : "#f3ecdc");
     try {
-      localStorage.setItem("theme", theme);
+      localStorage.setItem("theme", next);
     } catch (error) {}
   };
 
+  setTheme(root.dataset.theme);
+
   if (themeToggle) {
     themeToggle.addEventListener("click", () => {
-      setTheme(root.dataset.theme === "light" ? "dark" : "light");
+      setTheme(root.dataset.theme === "dark" ? "light" : "dark");
     });
   }
 
   /* ---------- Language ---------- */
   const langButtons = Array.from(document.querySelectorAll("[data-set-lang]"));
+  let currentLang = "fr";
 
   const applyLang = (lang) => {
-    const l = lang === "en" ? "en" : "fr";
-    root.lang = l;
+    const next = lang === "en" ? "en" : "fr";
+    currentLang = next;
+    root.lang = next;
 
     document.querySelectorAll("[data-en], [data-fr]").forEach((element) => {
-      const value = l === "en" ? element.dataset.en : element.dataset.fr;
+      const value = next === "en" ? element.dataset.en : element.dataset.fr;
       if (typeof value === "string") element.textContent = value;
     });
 
     document.querySelectorAll("[data-en-aria], [data-fr-aria]").forEach((element) => {
-      const value = l === "en" ? element.dataset.enAria : element.dataset.frAria;
+      const value = next === "en" ? element.dataset.enAria : element.dataset.frAria;
       if (typeof value === "string") element.setAttribute("aria-label", value);
     });
 
     document.querySelectorAll("[data-en-ph], [data-fr-ph]").forEach((element) => {
-      const value = l === "en" ? element.dataset.enPh : element.dataset.frPh;
+      const value = next === "en" ? element.dataset.enPh : element.dataset.frPh;
       if (typeof value === "string") element.setAttribute("placeholder", value);
     });
 
-    document.title = META.title[l];
+    document.title = META.title[next];
     const description = document.querySelector('meta[name="description"]');
-    if (description) description.setAttribute("content", META.description[l]);
+    if (description) description.setAttribute("content", META.description[next]);
+
+    const statusNode = document.getElementById("form-status");
+    if (statusNode && statusNode.dataset.state) {
+      statusNode.textContent =
+        statusNode.dataset.state === "valid" ? MESSAGES.valid[next] : MESSAGES.invalid[next];
+    }
 
     try {
-      localStorage.setItem("lang", l);
+      localStorage.setItem("lang", next);
     } catch (error) {}
 
     langButtons.forEach((button) => {
-      button.setAttribute("aria-pressed", String(button.dataset.setLang === l));
+      button.setAttribute("aria-pressed", String(button.dataset.setLang === next));
     });
 
-    return l;
+    return next;
   };
 
-  let currentLang = "fr";
   try {
     currentLang = localStorage.getItem("lang") === "en" ? "en" : "fr";
   } catch (error) {}
-  currentLang = applyLang(currentLang);
+  applyLang(currentLang);
 
   langButtons.forEach((button) => {
-    button.addEventListener("click", () => applyLang(button.dataset.setLang));
+    button.addEventListener("click", () => {
+      applyLang(button.dataset.setLang);
+    });
   });
 
-  /* ---------- Header state + back to top ---------- */
+  /* ---------- Header + back to top ---------- */
   const header = document.getElementById("site-header");
   const backTop = document.getElementById("back-top");
+  const contactSection = document.getElementById("contact");
 
   const onScroll = () => {
     const y = window.scrollY;
     if (header) header.classList.toggle("is-scrolled", y > 12);
-    if (backTop) backTop.classList.toggle("show", y > 300);
+    if (backTop) backTop.classList.toggle("show", y > 500);
   };
 
   let scrollRaf = 0;
@@ -119,6 +139,16 @@
     backTop.addEventListener("click", () => {
       window.scrollTo({ top: 0, behavior: reducedMotion ? "auto" : "smooth" });
     });
+  }
+
+  if (backTop && contactSection && "IntersectionObserver" in window) {
+    const endObserver = new IntersectionObserver(
+      ([entry]) => {
+        backTop.classList.toggle("at-end", entry.isIntersecting);
+      },
+      { threshold: 0 }
+    );
+    endObserver.observe(contactSection);
   }
 
   /* ---------- Mobile menu ---------- */
@@ -150,7 +180,7 @@
     });
 
     window.addEventListener("resize", () => {
-      if (window.innerWidth > 860) closeMenu();
+      if (window.innerWidth > 980) closeMenu();
     });
   }
 
@@ -167,17 +197,20 @@
           const link = spyLinks.get(`#${entry.target.id}`);
           if (!link) return;
           spyLinks.forEach((item) => {
-            item.classList.toggle("active", item === link);
+            const active = item === link;
+            item.classList.toggle("active", active);
+            if (active) item.setAttribute("aria-current", "location");
+            else item.removeAttribute("aria-current");
           });
         });
       },
-      { rootMargin: "-40% 0px -55% 0px", threshold: 0 }
+      { rootMargin: "-38% 0px -56% 0px", threshold: 0 }
     );
 
     document.querySelectorAll("main section[id]").forEach((section) => spy.observe(section));
   }
 
-  /* ---------- Stat counters ---------- */
+  /* ---------- Record counters ---------- */
   const counters = Array.from(document.querySelectorAll("[data-count]"));
 
   const runCounter = (element) => {
@@ -187,7 +220,7 @@
       element.textContent = `${target}${suffix}`;
       return;
     }
-    const duration = 1200;
+    const duration = 900;
     const start = performance.now();
     const step = (now) => {
       const progress = Math.min((now - start) / duration, 1);
@@ -198,21 +231,27 @@
     window.requestAnimationFrame(step);
   };
 
-  if (counters.length && "IntersectionObserver" in window && !reducedMotion) {
-    const counterObserver = new IntersectionObserver(
-      (entries, observer) => {
-        entries.forEach((entry) => {
-          if (!entry.isIntersecting) return;
-          runCounter(entry.target);
-          observer.unobserve(entry.target);
-        });
-      },
-      { threshold: 0.6 }
-    );
-    counters.forEach((counter) => counterObserver.observe(counter));
+  if (counters.length) {
+    if ("IntersectionObserver" in window && !reducedMotion) {
+      const counterObserver = new IntersectionObserver(
+        (entries, observer) => {
+          entries.forEach((entry) => {
+            if (!entry.isIntersecting) return;
+            runCounter(entry.target);
+            observer.unobserve(entry.target);
+          });
+        },
+        { threshold: 0.6 }
+      );
+      counters.forEach((counter) => counterObserver.observe(counter));
+    } else {
+      counters.forEach(runCounter);
+    }
   }
 
   /* ---------- Copy to clipboard ---------- */
+  const copyStatus = document.getElementById("copy-status");
+
   const fallbackCopy = (text) => {
     const textarea = document.createElement("textarea");
     textarea.value = text;
@@ -227,18 +266,25 @@
   document.querySelectorAll("[data-copy]").forEach((button) => {
     button.addEventListener("click", async () => {
       const text = button.dataset.copy;
+      const label = button.querySelector("[data-fr], [data-en]");
+
       try {
         await navigator.clipboard.writeText(text);
       } catch (error) {
         fallbackCopy(text);
       }
-      const previous = button.getAttribute("aria-label");
+
+      button.classList.add("is-copied");
       button.setAttribute("aria-label", COPY_OK[currentLang]);
-      button.style.color = "var(--text)";
-      setTimeout(() => {
-        button.setAttribute("aria-label", previous || "");
-        button.style.color = "";
-      }, 1400);
+      if (label) label.textContent = COPY_OK[currentLang];
+      if (copyStatus) copyStatus.textContent = COPY_OK[currentLang];
+
+      window.setTimeout(() => {
+        button.classList.remove("is-copied");
+        button.setAttribute("aria-label", getLangValue(button, "Aria"));
+        if (label) label.textContent = getLangValue(label, "", label.textContent);
+        if (copyStatus) copyStatus.textContent = "";
+      }, 1800);
     });
   });
 
@@ -247,14 +293,49 @@
   const formStatus = document.getElementById("form-status");
 
   if (form && formStatus) {
+    const fields = {
+      name: form.elements.namedItem("name"),
+      email: form.elements.namedItem("email"),
+      message: form.elements.namedItem("message"),
+    };
+
+    const markField = (field, valid) => {
+      if (!field) return;
+      if (valid) field.removeAttribute("aria-invalid");
+      else field.setAttribute("aria-invalid", "true");
+    };
+
+    Object.values(fields).forEach((field) => {
+      if (!field) return;
+      field.addEventListener("input", () => field.removeAttribute("aria-invalid"));
+    });
+
     form.addEventListener("submit", (event) => {
       event.preventDefault();
-      const name = form.elements.name.value.trim();
-      const email = form.elements.email.value.trim();
-      const message = form.elements.message.value.trim();
-      const valid = name && /.+@.+\..+/.test(email) && message.length >= 10;
-      formStatus.textContent = valid ? MESSAGES.success[currentLang] : MESSAGES.error[currentLang];
-      if (valid) form.reset();
+      const name = fields.name ? fields.name.value.trim() : "";
+      const email = fields.email ? fields.email.value.trim() : "";
+      const message = fields.message ? fields.message.value.trim() : "";
+      const validName = name.length > 0;
+      const validEmail = /.+@.+\..+/.test(email);
+      const validMessage = message.length >= 10;
+
+      markField(fields.name, validName);
+      markField(fields.email, validEmail);
+      markField(fields.message, validMessage);
+
+      const valid = validName && validEmail && validMessage;
+      formStatus.dataset.state = valid ? "valid" : "invalid";
+      formStatus.textContent = valid ? MESSAGES.valid[currentLang] : MESSAGES.invalid[currentLang];
+
+      if (valid) {
+        form.reset();
+        formStatus.focus();
+      } else {
+        const firstInvalid = [fields.name, fields.email, fields.message].find((field) =>
+          field ? !field.value.trim() || (field === fields.email && !validEmail) || (field === fields.message && field.value.trim().length < 10) : false
+        );
+        if (firstInvalid) firstInvalid.focus();
+      }
     });
   }
 })();
