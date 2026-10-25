@@ -40,7 +40,7 @@
   const setTheme = (theme) => {
     const next = theme === "dark" ? "dark" : "light";
     root.dataset.theme = next;
-    if (themeColor) themeColor.setAttribute("content", next === "dark" ? "#182631" : "#f3ecdc");
+    if (themeColor) themeColor.setAttribute("content", next === "dark" ? "#0f0d20" : "#f7f7fa");
     try {
       localStorage.setItem("theme", next);
     } catch (error) {}
@@ -184,17 +184,52 @@
     });
   }
 
+  /* ---------- Signal ribbon ---------- */
+  const heroVisual = document.querySelector(".hero-visual");
+  const finePointer = window.matchMedia("(pointer: fine)").matches;
+
+  if (heroVisual && finePointer && !reducedMotion) {
+    let ribbonFrame = 0;
+    let ribbonX = 0;
+    let ribbonY = 0;
+
+    const drawRibbon = () => {
+      ribbonFrame = 0;
+      heroVisual.style.setProperty("--ribbon-x", ribbonX.toFixed(3));
+      heroVisual.style.setProperty("--ribbon-y", ribbonY.toFixed(3));
+    };
+
+    const queueRibbon = () => {
+      if (!ribbonFrame) ribbonFrame = window.requestAnimationFrame(drawRibbon);
+    };
+
+    heroVisual.addEventListener("pointermove", (event) => {
+      const bounds = heroVisual.getBoundingClientRect();
+      ribbonX = ((event.clientX - bounds.left) / bounds.width) * 2 - 1;
+      ribbonY = ((event.clientY - bounds.top) / bounds.height) * 2 - 1;
+      queueRibbon();
+    });
+
+    heroVisual.addEventListener("pointerleave", () => {
+      ribbonX = 0;
+      ribbonY = 0;
+      queueRibbon();
+    });
+  }
+
   /* ---------- Scroll spy ---------- */
   const spyLinks = new Map(
     Array.from(document.querySelectorAll("[data-spy-link]")).map((link) => [link.hash, link])
   );
+  const spyAliases = { certifications: "#experience" };
 
   if ("IntersectionObserver" in window && spyLinks.size) {
     const spy = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (!entry.isIntersecting) return;
-          const link = spyLinks.get(`#${entry.target.id}`);
+          const link =
+            spyLinks.get(`#${entry.target.id}`) || spyLinks.get(spyAliases[entry.target.id]);
           if (!link) return;
           spyLinks.forEach((item) => {
             const active = item === link;

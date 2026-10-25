@@ -1,292 +1,267 @@
 ---
-name: Cédophe ZOHOUN — Case File Portfolio
-description: A bilingual network engineer's portfolio presented as an open incident file.
+name: Cédophe ZOHOUN — Network Prospectus
+description: A bilingual network engineer's proof, set as a late-modern civic prospectus.
 colors:
-  signal-red: "#a9362b"
-  signal-bright: "#b43b2f"
-  steel-blue: "#3f6179"
-  desk-manila: "#b7a67e"
-  folder-tab: "#d4bf90"
-  folder-deep: "#c4ae7b"
-  report-paper: "#f3ecdc"
-  paper-shade: "#e9e0cd"
-  ink-navy: "#1d2c3b"
-  ink-soft: "#465768"
-  steel-line: "#8ca4b2"
-  dark-desk: "#0c141b"
-  dark-folder: "#1a2a35"
-  dark-folder-deep: "#14212b"
-  dark-paper: "#182631"
-  dark-paper-shade: "#203441"
-  dark-ink: "#f0e7d5"
-  dark-ink-soft: "#c5c5b7"
-  dark-steel: "#9ab6c4"
-  dark-steel-line: "#547792"
-  dark-signal: "#f08a6e"
-  dark-signal-bright: "#e2785e"
+  ground: "#f7f7fa"
+  surface: "#ffffff"
+  ink: "#1b1547"
+  ink-soft: "#4b5165"
+  ink-muted: "#616577"
+  violet: "#6b5ce7"
+  violet-deep: "#5b4fd6"
+  action: "#6b5ce7"
+  action-hover: "#5a4bd6"
+  action-ink: "#ffffff"
+  teal: "#7fd8d0"
+  lilac: "#c9b8f0"
+  hairline: "#e6e7ee"
+  hairline-strong: "#d5d7e3"
+  alert: "#a73554"
+  dark-ground: "#0f0d20"
+  dark-surface: "#15122b"
+  dark-ink: "#f7f7fa"
+  dark-ink-soft: "#b8b4d0"
+  dark-ink-muted: "#948fb0"
+  dark-violet: "#9b8cff"
+  dark-violet-deep: "#8b7cf0"
+  dark-hairline: "#2a2545"
+  dark-hairline-strong: "#3a3360"
+  dark-alert: "#ff9aae"
 typography:
   display:
-    fontFamily: "Alumni Sans, Arial Narrow, Helvetica Neue, sans-serif"
-    fontSize: "clamp(3.3rem, 6.2vw, 5.5rem)"
-    fontWeight: 600
-    lineHeight: 0.82
-    letterSpacing: "-0.025em"
+    fontFamily: "Albert Sans, Helvetica Neue, Arial, sans-serif"
+    fontSize: "clamp(3rem, 8vw, 5.5rem)"
+    fontWeight: 500
+    lineHeight: 0.98
+    letterSpacing: "-0.04em"
   section-title:
-    fontFamily: "Alumni Sans, Arial Narrow, Helvetica Neue, sans-serif"
-    fontSize: "clamp(2.2rem, 4.2vw, 3.6rem)"
-    fontWeight: 600
-    lineHeight: 0.9
-    letterSpacing: "-0.02em"
+    fontFamily: "Albert Sans, Helvetica Neue, Arial, sans-serif"
+    fontSize: "clamp(2.2rem, 4.6vw, 3.5rem)"
+    fontWeight: 500
+    lineHeight: 1
+    letterSpacing: "-0.04em"
   heading:
-    fontFamily: "Alumni Sans, Arial Narrow, Helvetica Neue, sans-serif"
-    fontSize: "clamp(1.5rem, 2.4vw, 2rem)"
-    fontWeight: 600
-    lineHeight: 1.05
-    letterSpacing: "-0.01em"
+    fontFamily: "Albert Sans, Helvetica Neue, Arial, sans-serif"
+    fontSize: "clamp(1.25rem, 2.2vw, 1.75rem)"
+    fontWeight: 500
+    lineHeight: 1.25
+    letterSpacing: "-0.02em"
+  lead:
+    fontFamily: "Albert Sans, Helvetica Neue, Arial, sans-serif"
+    fontSize: "clamp(1.02rem, 1.4vw, 1.18rem)"
+    fontWeight: 400
+    lineHeight: 1.62
+    letterSpacing: "normal"
   body:
     fontFamily: "Albert Sans, Helvetica Neue, Arial, sans-serif"
     fontSize: "1rem"
     fontWeight: 400
-    lineHeight: 1.68
+    lineHeight: 1.6
     letterSpacing: "normal"
-  body-large:
-    fontFamily: "Albert Sans, Helvetica Neue, Arial, sans-serif"
-    fontSize: "1.14rem"
-    fontWeight: 400
-    lineHeight: 1.62
   label:
     fontFamily: "JetBrains Mono, Courier New, monospace"
     fontSize: "0.6875rem"
     fontWeight: 400
-    lineHeight: 1.5
-    letterSpacing: "0.06em"
+    lineHeight: 1.4
+    letterSpacing: "0.08em"
   note:
     fontFamily: "JetBrains Mono, Courier New, monospace"
-    fontSize: "0.75rem"
+    fontSize: "0.625rem"
     fontWeight: 400
-    lineHeight: 1.6
-    letterSpacing: "0.03em"
+    lineHeight: 1.5
+    letterSpacing: "0.04em"
 rounded:
   none: "0px"
-  dot: "50%"
-spacing:
-  hairline: "4px"
-  tight: "8px"
-  row: "14px"
-  group: "18px"
-  section: "clamp(50px, 7vw, 84px)"
+  control: "8px"
+  panel: "12px"
+  circle: "50%"
 components:
   button-primary:
-    backgroundColor: "{colors.ink-navy}"
-    textColor: "{colors.report-paper}"
-    rounded: "{rounded.none}"
-    padding: "11px 16px"
+    backgroundColor: "{colors.action}"
+    textColor: "{colors.action-ink}"
+    rounded: "{rounded.control}"
+    padding: "11px 18px"
     height: "46px"
   button-primary-hover:
-    backgroundColor: "{colors.signal-red}"
-    textColor: "{colors.report-paper}"
-    rounded: "{rounded.none}"
-    padding: "11px 16px"
+    backgroundColor: "{colors.action-hover}"
+    textColor: "{colors.action-ink}"
+    rounded: "{rounded.control}"
+    padding: "11px 18px"
     height: "46px"
   button-secondary:
     backgroundColor: "transparent"
-    textColor: "{colors.ink-navy}"
-    rounded: "{rounded.none}"
-    padding: "11px 16px"
+    textColor: "{colors.violet}"
+    rounded: "{rounded.control}"
+    padding: "11px 18px"
     height: "46px"
   button-secondary-hover:
-    backgroundColor: "{colors.ink-navy}"
-    textColor: "{colors.report-paper}"
-    rounded: "{rounded.none}"
-    padding: "11px 16px"
+    backgroundColor: "{colors.action}"
+    textColor: "{colors.action-ink}"
+    rounded: "{rounded.control}"
+    padding: "11px 18px"
     height: "46px"
-  copy-button:
+  nav-tab:
     backgroundColor: "transparent"
     textColor: "{colors.ink-soft}"
     rounded: "{rounded.none}"
+    padding: "8px 0"
+  nav-tab-active:
+    backgroundColor: "transparent"
+    textColor: "{colors.ink}"
+    rounded: "{rounded.none}"
+    padding: "8px 0"
+  copy-button:
+    backgroundColor: "transparent"
+    textColor: "{colors.ink-soft}"
+    rounded: "{rounded.control}"
     padding: "6px 8px"
     height: "34px"
   field:
-    backgroundColor: "transparent"
-    textColor: "{colors.ink-navy}"
+    backgroundColor: "{colors.ground}"
+    textColor: "{colors.ink}"
+    rounded: "{rounded.control}"
+    padding: "12px 14px"
+  credential-cell:
+    backgroundColor: "{colors.surface}"
+    textColor: "{colors.ink}"
     rounded: "{rounded.none}"
-    padding: "8px 0"
-    height: "40px"
-  nav-tab:
-    backgroundColor: "transparent"
-    textColor: "{colors.ink-navy}"
-    rounded: "{rounded.none}"
-    padding: "11px 8px"
-  nav-tab-active:
-    backgroundColor: "{colors.report-paper}"
-    textColor: "{colors.ink-navy}"
-    rounded: "{rounded.none}"
-    padding: "11px 8px"
+    padding: "24px"
 ---
 
-# Design System: Cédophe ZOHOUN — Case File Portfolio
+# Design System: Cédophe ZOHOUN — Network Prospectus
 
 ## Overview
 
-**Creative North Star: "The Working Incident File"**
+**Creative North Star: "The Network Prospectus"**
 
-The site is an open case file on a manila desk, not a portfolio template. A fixed file header, a tabbed index rail, and one continuous report sheet carry the entire story. The visitor should feel they are reading a record that was already in use: stamped headers, ruled registers, typed measurements, punched margins, and a red signal used for status rather than decoration.
+The portfolio is a late-modern civic prospectus: one continuous document that explains a working network engineer with the clarity of a public-service report and the presence of a design annual. It is not a case file, a cyber dashboard, or a simulation of paper. The ground is a cool bone-white field, the argument is set in ink navy, and a single violet signal carries action, current position, and verified status.
 
-The world is physical and restrained. Manila board and cream paper establish the surface hierarchy; navy ink carries the argument; steel blue handles metadata and measurement; signal red marks the active tab, the verified credential, and the next action. Depth comes from paper and folder layering, not from floating cards. Rounded containers, soft glass, gradient text, and centered hero scaffolding belong to a different world.
-
-Copy is evidence-led and first-person. Counts, vendors, and deployments do the persuading; the interface stays quiet enough for them to be read. French is the default voice and English is a complete mirror, not a fallback.
+The page is structured like a prospectus, not a landing page. A sticky 72px header holds the identity and the section index; the hero pairs a two-line statement with one authored silk ribbon; the rest of the record is ruled into full-width bands for profile, capabilities, deployments, experience, credentials, and contact. Hairlines, index numerals, and monospaced metadata do the organizing. There are no lifted cards, paper textures, or decorative shadows. Dark mode is the same prospectus after hours: a deep-indigo ground with the same hierarchy, not a separate theme.
 
 **Key Characteristics:**
-- One continuous report sheet with a fixed case-file header and a left index rail.
-- Warm manila and paper surfaces against navy ink and steel metadata, with one red signal.
-- Sharp corners, 1px rules, punched margins, and monospaced record labels.
-- Compressed uppercase display type balanced by generous reading type.
-- Bilingual FR/EN parity, keyboard-visible focus, and a full dark inversion of the same paper world.
-- No invented evidence: the only shipping rasters are the two logo cutouts derived from the user's originals.
+- One continuous ruled document with a sticky header and a left-aligned hero, never a centered landing-page shell.
+- A single violet signal for actions, current section, focus, and verified status; teal and lilac appear only inside the ribbon and route figure.
+- Albert Sans at 400/500 for display, reading, and headings; JetBrains Mono for file metadata, labels, and measurements.
+- Flat surfaces, 1px hairlines, 12px panels, 8px controls, and no casts or simulated material.
+- A complete FR/EN mirror, a pre-paint theme switch, and a dark mode that inverts the same tokens.
+- No invented evidence. The only shipping rasters are the two processed logo cutouts; the ribbon and CZ favicon are SVG.
 
-**Asset provenance.** `assets/logo-dark.png` (132×142, palette-tinted cutout for the light theme) and `assets/logo-light.png` (132×142, palette-tinted cutout for the dark theme) are processed from the user's 1024×1024 originals `assets/logo for white background.png` and `assets/logo for black background.png` respectively. The originals are retained untouched and are never shipped as page imagery. `assets/favicon.svg` is the CZ badge used for 16px favicon legibility. No certification badges, project screenshots, client logos, or testimonial portraits exist.
+**Asset provenance.** `assets/logo-dark.png` (132×142, palette-tinted cutout for the light theme) and `assets/logo-light.png` (132×142, palette-tinted cutout for the dark theme) are processed from the user's 1024×1024 originals, `assets/logo for white background.png` and `assets/logo for black background.png`. The originals remain untouched and are never shipped as page imagery. `assets/favicon.svg` is the CZ badge used for favicon legibility. There are no certification badges, project screenshots, client logos, or testimonial portraits.
 
 ## Colors
 
-The palette behaves like a physical file: warm board and paper for surfaces, ink and steel for reading and measurement, one red for signal.
+The palette is a cool document field with one committed violet signal and one ribbon spectrum. Neutral, ink, and hairline values carry almost the entire page; the ribbon is the only place where multiple colors run together.
 
 ### Primary
-- **Signal Red** (`colors.signal-red`): Active rail tab, status dots, verified-credential checks, field numbers, and the primary hover state. Its scarcity is the point.
-- **Signal Ember** (`colors.signal-bright`): The warmer hover/active companion to Signal Red, used sparingly in the same roles.
+- **Signal Violet** (`colors.violet`, #6b5ce7): Section folios, deployment numerals, active nav underline, link hover, credential seals and checks, focus rings, and the ribbon's deepest stop. It marks position and verifies action.
+- **Deep Violet** (`colors.violet-deep`, #5b4fd6): The darker end of the ribbon and the secondary hover tone; never a large background.
+- **Action Violet** (`colors.action`, #6b5ce7): Filled primary buttons and the copied state. Hover uses **Action Hover** (`colors.action-hover`, #5a4bd6) with **Action Ink** (`colors.action-ink`, #ffffff). On dark, the action stays violet while text links move to **Night Violet** (`colors.dark-violet`, #9b8cff) for legibility.
+- **Error Rose** (`colors.alert`, #a73554): Form error borders, invalid field tint, and invalid status only. Dark uses **Night Rose** (`colors.dark-alert`, #ff9aae). It is never a decorative accent.
 
 ### Secondary
-- **Ledger Steel** (`colors.steel-blue`): Secondary metadata, rail captions, issuer names, schematic details, and body notes. It is a reading color, never a background accent.
-- **Rule Steel** (`colors.steel-line`): The lighter structural blue used for rules and dividers when a softer line is needed.
+- **Signal Teal** (`colors.teal`, #7fd8d0) and **Soft Lilac** (`colors.lilac`, #c9b8f0): The ribbon's opening and middle stops and the route figure's gradient. They are illustration colors, not UI accents.
 
 ### Neutral
-- **Manila Desk** (`colors.desk-manila`): The outer page surface and scrollbar track.
-- **Folder Tab** (`colors.folder-tab`): The index rail, footer, and folder tabs.
-- **Folder Fold** (`colors.folder-deep`): The darker manila used for depth and alternate folder surfaces.
-- **Report Paper** (`colors.report-paper`): The main sheet and the active tab fill.
-- **Paper Shade** (`colors.paper-shade`): Tinted form panels and secondary paper surfaces.
-- **Ink Navy** (`colors.ink-navy`): Primary text, filled buttons, strong rules, and the light-theme focus base.
-- **Ink Soft** (`colors.ink-soft`): Body copy, ledes, and secondary reading text.
+- **Prospectus Ground** (`colors.ground`, #f7f7fa): The page field and recessed form fields.
+- **Sheet White** (`colors.surface`, #ffffff): The header, facts band, credential register, and contact form.
+- **Ink Navy** (`colors.ink`, #1b1547): Body and display text; the core object in the hero illustration.
+- **Soft Ink** (`colors.ink-soft`, #4b5165): Reading copy and secondary navigation.
+- **Muted Ink** (`colors.ink-muted`, #616577): Metadata labels, issuer names, and quiet notes.
+- **Hairline** (`colors.hairline`, #e6e7ee) and **Strong Hairline** (`colors.hairline-strong`, #d5d7e3): Rules, dividers, field borders, and the role separator.
+- **Night Ground** (`colors.dark-ground`, #0f0d20), **Night Sheet** (`colors.dark-surface`, #15122b), **Night Ink** (`colors.dark-ink`, #f7f7fa), **Night Soft Ink** (`colors.dark-ink-soft`, #b8b4d0), **Night Muted Ink** (`colors.dark-ink-muted`, #948fb0), and the dark hairlines are one inversion of the same roles.
 
-### Dark inversion
-- **Night Desk**, **Night Folder**, **Night Fold**, **Night Paper**, and **Night Paper Shade** replace the manila/paper family.
-- **Paper Ink** and **Paper Ink Soft** replace the navy reading family.
-- **Night Steel** and **Night Rule** replace the metadata family.
-- **Night Signal** and **Night Ember** replace the red signal with a coral that holds contrast on dark paper.
+### Named Rules
+**The One Signal Rule.** Violet may occupy no more than roughly a tenth of any viewport. It belongs to action, current position, focus, and verification; if it starts coloring whole sections, the page has lost its hierarchy.
 
-**The One Signal Rule.** Red is never a surface fill on the page. It marks state, verification, or a chosen action; if more than a small fraction of the viewport is red, the hierarchy has failed.
+**The Unpainted Document Rule.** There is no paper fiber, grain, desk, folder, stamp, or cast shadow. Depth comes from ground-versus-sheet value and 1px rules. The page is a document, not a photograph of one.
 
-**The Paper Swap Rule.** Dark mode is a full inversion of the same material system, not a tinted light mode. Every surface, text, rule, selection, scrollbar, and focus color swaps together; no element keeps a light-theme surface by accident.
+**The Day/Night Prospectus Rule.** Dark mode is a full inversion of the same sheet, ink, hairline, and signal roles. It is not a tint, a neon skin, or a second brand.
 
 ## Typography
 
-**Display Font:** Alumni Sans (with Arial Narrow, Helvetica Neue, sans-serif)
+**Display Font:** Albert Sans (with Helvetica Neue, Arial, sans-serif)
 **Body Font:** Albert Sans (with Helvetica Neue, Arial, sans-serif)
 **Label/Mono Font:** JetBrains Mono (with Courier New, monospace)
 
-**Character:** A condensed, slightly editorial display face gives the file its stamped authority; Albert Sans keeps long bilingual passages human and readable; JetBrains Mono turns metadata into typed evidence. The pairing is field report, not tech costume: mono is reserved for labels, measurements, navigation, and machine-readable detail.
+**Character:** Albert Sans is a modern geometric-humanist sans with enough restraint for a public document and enough presence for a 5.5rem statement. JetBrains Mono is the file voice: small, tracked, and factual. The pairing reads as a contemporary civic prospectus, not a terminal costume.
 
 ### Hierarchy
-- **Display** (600, `clamp(3.3rem, 6.2vw, 5.5rem)`, 0.82): The hero statement only. Uppercase, tightly tracked, balanced, and allowed to dominate the first viewport.
-- **Section title** (600, `clamp(2.2rem, 4.2vw, 3.6rem)`, 0.9): Section openings such as “Registre des compétences” and “États de service.” Uppercase with a compact Fiche/Annexe folio opposite.
-- **Heading** (600, `clamp(1.5rem, 2.4vw, 2rem)`, 1.05): Deployment titles, service employers, and credential names.
-- **Body** (400, `1rem`, 1.68, max 66ch): Reading copy. The hero lede and first profile paragraph use the larger `1.14rem` step.
-- **Label** (400, `0.6875rem`, 1.5, uppercase, 0.05–0.14em tracking): Rail labels, tab numbers, field labels, record keys, and other functional metadata. Never sentence-length copy.
-- **Note** (400, `0.75rem`, 1.6): Captions, demo-form disclosure, footer copy, and other sentence-bearing small text. This is the minimum for prose.
+- **Display** (500, `clamp(3rem, 8vw, 5.5rem)`, 0.98, −0.04em): The two-line hero statement only. The second line is Signal Violet.
+- **Section Title** (500, `clamp(2.2rem, 4.6vw, 3.5rem)`, 1, −0.04em): The six band headings, set left with a mono folio at the right.
+- **Heading** (500, `clamp(1.25rem, 2.2vw, 1.75rem)`, 1.25, −0.02em): Deployments, employers, credential names, and register categories.
+- **Lead** (400, `clamp(1.02rem, 1.4vw, 1.18rem)`, 1.62): The hero deck and section introductions.
+- **Body** (400, 1rem, 1.6): Reading copy at 53–72ch depending on the band; never full-width on desktop.
+- **Label** (400, 0.6875rem, 1.4, 0.08em, uppercase): Folios, role lines, fact keys, channel labels, and field indexes.
+- **Note** (400, 0.625rem, 1.5, 0.04em, uppercase): Copy controls, footer, and the smallest metadata.
 
-**The Ruled Voice Rule.** Display type may shout; metadata may whisper; body copy must remain comfortably readable. Functional microtext never drops below 11px, and sentence-bearing notes stay at 12px or larger.
+### Named Rules
+**The Metadata Is Not Body Copy Rule.** JetBrains Mono is for labels, measurements, and controls. It never sets a paragraph, because the page is technical without making the reader decode a terminal.
+
+**The One Display Voice Rule.** Albert Sans carries both display and reading. Do not introduce a second display face to manufacture editorial contrast; scale, weight, and the violet line do that work.
 
 ## Layout
 
-The desktop shell is a fixed 74px file header above a `1520px` maximum-width workspace. A `214px` sticky index rail (`190px` below 1180px) sits at left; the report sheet fills the remaining width and casts its shadow onto the desk. A 1px red punched margin runs down the sheet’s left edge.
+The page is a single 1180px content rail inside a full-bleed ground. A sticky 72px header uses a three-column grid: identity at the left, centered section index, controls and the violet action at the right. The hero is a 0.96/1.04 split: statement, role, deck, and actions on the left; the ribbon, ghosted topology, and core object on the right. A five-cell facts band with a stack disclosure sits below, followed by a five-stage route figure.
 
-The sheet uses generous sectional padding, `clamp(50px, 7vw, 84px)`, with 1px rules separating every record. Content grids are asymmetric: the hero is roughly 1.4:0.6; profile and summary are 1.3:0.7; contact is 0.9:1.1. Body measures stay near 66ch, and the hero measure near 58ch.
+Bands run `clamp(64px, 8vw, 108px)` vertically and use hairline rules rather than card walls. Section heads put the title on the left and the mono folio on the right; the certifications register is four columns, the timeline is a date/body split, and contact is a 0.82/1.18 split between channels and form. The rhythm gives more space above a heading than below it, and the page ends with a quiet footer rather than a second call to action.
 
-Responsive behavior:
-- **≤1180px:** the rail narrows to 190px; the hero and register columns compress while keeping their asymmetry.
-- **≤980px:** the rail becomes a burger dropdown; the shell is single-column; the report sheet loses its red margin line; the header keeps brand, language, theme, and menu.
-- **≤860px:** profile, contact, and other two-column grids stack; the deployment marker moves above its body.
-- **≤620px:** compact header, 36×39px logo, 40×40px icon buttons, single-column sections, stacked contact channels, and full-width action buttons.
-- **≤380px:** the hero drops to 2.8rem and section titles tighten to 2rem.
-
-**The Single Sheet Rule.** The page is one continuous document. Do not break it into a grid of cards, floating tiles, or separate panels; use ruled sections and typographic hierarchy to separate ideas.
+At 1180px the header gap and hero gap tighten. At 980px the section index becomes a dropdown under the sticky header, the hero becomes one column, the ribbon follows the text, the facts and credentials become two columns, and contact stacks. At 860px the route turns vertical, the brand role is removed, and the back-to-top control disappears. At 620px the header is 64px and compact, hero actions go full width, the channels move to a stacked label/value grid, credentials become one compact column with the seal at the left, and copy buttons become icon-only. At 380px the hero statement tightens and the section head stacks the folio under the title.
 
 ## Elevation & Depth
 
-The world is mostly flat. Depth is physical: a report sheet resting on a desk, a folder tab lifted above the sheet, a header that gains a shadow only after the page moves.
+Flat by default. There are no box shadows in the product UI; the only `box-shadow` is the 4px ground-colored ring that separates a route marker from its line. Depth is tonal and linear: Sheet White against Prospectus Ground, a 1px header border, a 12px panel border, and the overlap of the facts band and route figure. The hero core object is a flat dark rectangle with a 1px edge, not a floating card.
 
-### Shadow Vocabulary
-- **Report sheet** (`0 22px 54px rgba(29, 44, 59, 0.17), 0 2px 0 rgba(29, 44, 59, 0.08)`): The one large elevation in the light theme. It makes the paper read as a physical object.
-- **Rail lift** (`0 12px 26px rgba(29, 44, 59, 0.13)`): A shallow shadow under the folder index.
-- **Scrolled header** (`0 12px 28px rgba(13, 23, 31, 0.14)`): Appears only when the fixed header has left the top of the page.
-- **Dark report sheet** (`0 24px 66px rgba(0, 0, 0, 0.42), 0 2px 0 rgba(0, 0, 0, 0.2)`): The dark-theme equivalent, with a heavier ambient falloff.
-
-**The Flat File Rule.** Inside the sheet, surfaces are flat. Tinted paper, hairlines, and typography create hierarchy; inner cards and stacked shadows do not.
+### Named Rules
+**The Flat Prospectus Rule.** If an element needs a shadow to be understood, the hierarchy is wrong. Use a hairline, a surface change, or more space instead. A state change may use color and a 2px focus outline; it may not use a cast.
 
 ## Shapes
 
-The system is orthogonal. Corners are square (`0px`); pills and rounded cards are absent. Structure comes from 1px rules, full-width register rows, punched margins, and the folder tab silhouette.
+Panels use a 12px radius; fields, buttons, and copy controls use 8px; rules are exactly 1px. Credential seals are 46px circles, the hero core object is a 16px-radius rectangle, and the route markers are small circles on a straight line. The only organic form on the page is the silk ribbon; it is an illustration, not a container shape.
 
-Recurring geometry:
-- 1px steel/navy rules separate rows and sections.
-- A 6px red square precedes folio labels; a 6px red dot marks active status.
-- Deployment exhibits use a 64×64px square outline rotated `-2deg` around a large display letter.
-- The report sheet carries a red punched margin at left and sits above the desk on a single soft shadow.
-- Status dots are the only circular form (`50%`), and they are always small.
-
-**The No Pill Rule.** Nothing interactive or informational is rounded into a pill. A rectangle with a 1px edge is the default shape; the only exceptions are the 6px status dots.
+**The No-Costume Geometry Rule.** Do not add diagonal cuts, chamfers, blobs, or many-vertex clip paths. The document is orthogonal; the ribbon is the one curve.
 
 ## Components
 
 ### Buttons
-- **Shape:** Sharp rectangle (`0px`), 1px border, minimum height 46px, 11px mono uppercase label with 0.08em tracking.
-- **Primary:** Ink fill with paper text; download icon on the left. Hover swaps to Signal Red with paper text. Focus uses the global 2px signal outline with 3px offset.
-- **Secondary:** Transparent with an ink border and ink text; hover fills ink with paper text. The arrow sits on the right.
-- **Mobile:** Primary buttons center their contents; both actions become full-width at ≤620px.
-
-### Inputs / Fields
-- **Style:** Transparent field over paper, no radius, no full box. A single 1px rule forms the bottom edge; 1rem Albert Sans carries the value. Labels are 11px mono uppercase with a red two-digit index.
-- **Focus:** The bottom rule becomes Signal Red with a 1px signal shadow; the global focus-visible ring remains available.
-- **Error:** `aria-invalid="true"` turns the bottom rule red and tints the field with a 6% signal wash.
-- **Placeholder:** A 72% ink/paper mix, deliberately readable rather than ghost-gray.
-- **Disclosure:** The demo form states in 12px mono uppercase that sending happens by email or phone; it never implies a backend.
+- **Shape:** 8px radius, 46px minimum height, 11px 18px padding, 9px icon gap.
+- **Primary:** Action Violet fill, white label, 500 weight. Hover darkens to Action Hover; focus is a 2px violet outline with a 3px offset.
+- **Secondary:** Transparent with a 1px violet border and violet label. Hover fills with Action Violet and flips the label to white. This is the CV action, never the primary contact action.
+- **Copy:** 34px high, 8px radius, hairline border, mono label; the copied state fills violet and announces “Copié !” / “Copied!”. On mobile it collapses to a 34px icon button.
 
 ### Navigation
-- **Desktop rail:** A sticky manila folder with a 1px border, 214px wide, labelled `Index 00—05`. Rows are 11px mono uppercase on a 24px number + label grid. Hover tints the folder; the active row lifts onto a paper fill with a 2px red edge and sets `aria-current="location"`.
-- **Mobile:** At ≤980px the rail becomes a burger dropdown under the fixed header. Escape closes it; resizing above 980px also closes it.
-- **Header:** Fixed, 94% paper over folder, with a 3px inset signal top rule. Brand, file ID, language pair, theme toggle, and burger form one row.
+- **Desktop:** Centered inline links at 0.875rem/500; active gets Ink Navy plus a 2px violet underline; hover and focus shift to violet. The right cluster holds the FR/EN segment, theme toggle, and the one violet contact action.
+- **Mobile:** Below 980px the links become a full-width dropdown directly under the sticky header, on the header surface, with a 1px bottom rule and 44px rows. The burger flips to a close state; Escape, a link click, or resizing above 980px closes it.
+- **Rule:** The section index never includes certifications; the credentials band is reached from the experience band.
 
-### Section Head + Folio
-A display section title sits left; a mono folio sits right with a 6px red square and a record label (`Fiche 02`, `Annexe 04`, `Pièces A—C`). The folio is a filing reference, not a decorative eyebrow. On mobile it wraps under the title without losing the square mark.
+### Inputs / Fields
+- **Style:** 1px hairline border, 8px radius, Prospectus Ground fill, 12px 14px padding, mono index above the field label.
+- **Focus:** 2px violet outline at a 3px offset; the border also shifts to violet. Invalid fields use Error Rose with a faint rose tint and set `aria-invalid`.
+- **Status:** Mono status line below the form; valid is violet, invalid is Error Rose. The form is explicitly a demo and does not pretend to deliver.
 
-### Record Summary
-A left-ruled aside with an 11px mono title, five `<dt>/<dd>` rows, and a declassify disclosure. Rows are 1px separated; keys are steel, values are ink. On mobile the aside follows the hero copy and the declassify control becomes full-width.
+### Cards / Containers
+- **Facts band:** Sheet White, 12px radius, 1px hairline, five equal cells divided by 1px rules, then a full-width stack disclosure. Below 980px it becomes two columns, with the fifth cell spanning the row.
+- **Credential register:** One 12px panel with four equal columns separated by 1px rules. Each credential is a 46px typographic seal, name, issuer, and a violet check with “Obtenu.” At 980px it becomes two columns; at 620px each card becomes a compact two-column grid, seal left.
+- **Contact form:** Sheet White, 12px panel, 1px hairline, no shadow. The panel is a working surface, not a floating modal.
 
-### Evidence Rows
-Credential rows use a 3-column grid: name + issuer, square credential code, and a red check + “Obtenu/Obtained.” Deployment rows use a lettered exhibit marker, title, paragraph, a ruled route line (`INTERNET → PA NGFW → 500+ UTILISATEURS`), and a slash-separated stack. These rows are the page’s proof; keep them factual.
-
-### Copy Control
-A small ruled button with a 12px copy icon and 11px mono label. Hover fills ink; copied state fills Signal Red. On copy, the label becomes “Copié/Copied” and an `aria-live` status reports the result.
+### Signature Component: Signal Ribbon
+The hero illustration is an inline SVG: a teal–lilac–violet silk ribbon crossing a ghosted topology, with one dark core object. On fine pointers it answers the cursor with a small parallax; under reduced motion and on touch it stays still. It is the only authored illustration and the only place where teal and lilac appear together. Do not repeat it as a section divider or background.
 
 ## Do's and Don'ts
 
 ### Do:
-- **Do** build every section on the ruled sheet: 1px rules, paper tints, and monospaced filing labels.
-- **Do** keep the hero display uppercase, condensed, balanced, and between 3.3 and 5.5rem on desktop.
-- **Do** use Signal Red only for active state, verification, field indices, and primary hover.
-- **Do** use `color-mix()` tints of existing tokens for washes, hover fills, and placeholders.
-- **Do** keep FR/EN strings in mirrored `data-fr`/`data-en` attributes and keep those elements text-only.
-- **Do** preserve the fixed header, the sticky index rail, and the single report-sheet composition.
-- **Do** raise sentence-bearing small copy to 12px; reserve 11px for functional labels and metadata.
-- **Do** keep all motion removable under `prefers-reduced-motion: reduce` while leaving content visible.
-- **Do** keep every fact traceable to PRODUCT.md and every raster attached to its provenance.
+- **Do** keep violet to action, current position, focus, and verification; sample the screen and keep it near or below 10%.
+- **Do** use 1px hairlines, ground-versus-sheet value, and space for hierarchy (12px panels, 8px controls, 1px rules).
+- **Do** set display and body in Albert Sans at 400/500; set labels and measurements in JetBrains Mono at 0.625–0.6875rem.
+- **Do** preserve the 1180px rail, the 72px/64px header, and the left-aligned 48/52 hero.
+- **Do** invert the same tokens for dark mode: Night Ground, Night Sheet, Night Ink, Night Violet.
+- **Do** keep every user-visible string paired FR/EN and every icon in the authored SVG sprite.
+- **Do** keep the contact action primary and the CV secondary until `assets/cv.pdf` exists.
 
 ### Don't:
-- **Don't** introduce rounded cards, pill buttons, glass panels, gradient text, or floating stat tiles.
-- **Don't** turn the page into a centered hero, card grid, or dashboard.
-- **Don't** use red as a large surface fill or decorative wash.
-- **Don't** add shadows inside the sheet; the sheet itself is the only large elevation.
-- **Don't** use gray text on the manila or paper surfaces; tint secondary text from the surface hue or use Ledger Steel.
-- **Don't** swap a system font for Alumni Sans, Albert Sans, or JetBrains Mono.
-- **Don't** add certification badges, project screenshots, client logos, testimonials, or live links that do not exist.
-- **Don't** present the contact form as a delivery mechanism; it is a client-side demonstration only.
-- **Don't** hide content behind animation; the page must read without JavaScript.
+- **Don't** add paper, grain, desk, folder, stamp, tape, or cast-shadow effects; this is a prospectus, not a case file.
+- **Don't** use gradient text, glass, blur, neon glows, or a second illustration system.
+- **Don't** turn bands into equal icon cards, nested cards, or a dashboard of tiles.
+- **Don't** use teal or lilac as UI accents; they belong to the ribbon and route figure.
+- **Don't** set paragraphs in mono, or introduce Alumni Sans, a condensed display face, or a system display face.
+- **Don't** invent certification badges, project screenshots, client logos, testimonials, or a CV. The credential seals are typographic and the form is labeled a demo.
+- **Don't** add a shadow to a panel or button; use a hairline, a surface change, or a state color.

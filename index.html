@@ -5,11 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cédophe ZOHOUN — Ingénieur Réseaux &amp; Cybersécurité</title>
   <meta name="description" content="Ingénieur Réseaux &amp; Cybersécurité basé à Accra, Ghana. Pare-feux enterprise, infrastructures cloud et formation d'ingénieurs réseau en Afrique de l'Ouest.">
-  <meta name="theme-color" content="#f3ecdc">
+  <meta name="theme-color" content="#f7f7fa">
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,400;0,500;0,600;1,400&amp;family=Alumni+Sans:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@400;500&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
   <script>
     (function () {
       var t = "light";
@@ -24,7 +24,9 @@
 
   <svg class="sprite" aria-hidden="true" focusable="false">
     <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h15"/><path d="m13 6 6 6-6 6"/></symbol>
+    <symbol id="i-down" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v15"/><path d="m5 12 7 7 7-7"/></symbol>
     <symbol id="i-download" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M4 21h16"/></symbol>
+    <symbol id="i-external" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4h6v6"/><path d="M20 4 10 14"/><path d="M20 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1h5"/></symbol>
     <symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="5" width="19" height="14"/><path d="m3 7 9 6 9-6"/></symbol>
     <symbol id="i-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v2.6a1.9 1.9 0 0 1-2.1 1.9 18.9 18.9 0 0 1-8.3-2.9 18.4 18.4 0 0 1-5.6-5.6A18.9 18.9 0 0 1 3.1 4.2 1.9 1.9 0 0 1 5 2h2.6a1.9 1.9 0 0 1 1.9 1.6c.1 1 .4 1.9.7 2.8a1.9 1.9 0 0 1-.4 2L8.6 9.6a15 15 0 0 0 5.8 5.8l1.2-1.2a1.9 1.9 0 0 1 2-.4c.9.3 1.8.6 2.8.7a1.9 1.9 0 0 1 1.6 1.4z"/></symbol>
     <symbol id="i-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M19.5 10.4c0 5.2-7.5 11.1-7.5 11.1S4.5 15.6 4.5 10.4a7.5 7.5 0 0 1 15 0z"/><circle cx="12" cy="10.4" r="2.6"/></symbol>
@@ -38,19 +40,25 @@
   <header class="site-header" id="site-header">
     <div class="header-inner">
       <a class="brand" href="#home" aria-label="Cédophe, retour à l'accueil" data-fr-aria="Cédophe, retour à l'accueil" data-en-aria="Cédophe, back to home">
-        <img class="brand-logo logo-light" src="assets/logo-light.png" width="44" height="47" alt="" loading="eager">
-        <img class="brand-logo logo-dark" src="assets/logo-dark.png" width="44" height="47" alt="" loading="eager">
+        <img class="brand-logo logo-light" src="assets/logo-light.png" width="40" height="43" alt="" loading="eager">
+        <img class="brand-logo logo-dark" src="assets/logo-dark.png" width="40" height="43" alt="" loading="eager">
         <span class="brand-text">
           <span class="brand-name">Cédophe.</span>
           <span class="brand-role" data-fr="Réseaux &amp; cybersécurité" data-en="Networks &amp; cybersecurity">Réseaux &amp; cybersécurité</span>
         </span>
       </a>
 
-      <p class="file-id">
-        <span data-fr="Dossier" data-en="Case file">Dossier</span>
-        <strong>CZ-2026 / 03</strong>
-        <span class="file-status"><span class="status-dot" aria-hidden="true"></span><span data-fr="Actif" data-en="Active">Actif</span></span>
-      </p>
+      <nav class="site-nav" id="nav-menu" aria-label="Sommaire" data-fr-aria="Sommaire" data-en-aria="Contents">
+        <p class="nav-caption" aria-hidden="true"><span data-fr="Sommaire" data-en="Contents">Sommaire</span></p>
+        <ul>
+          <li><a href="#home" data-spy-link><span data-fr="Accueil" data-en="Home">Accueil</span></a></li>
+          <li><a href="#about" data-spy-link><span data-fr="Profil" data-en="Profile">Profil</span></a></li>
+          <li><a href="#skills" data-spy-link><span data-fr="Compétences" data-en="Capabilities">Compétences</span></a></li>
+          <li><a href="#projects" data-spy-link><span data-fr="Déploiements" data-en="Deployments">Déploiements</span></a></li>
+          <li><a href="#experience" data-spy-link><span data-fr="Parcours" data-en="Experience">Parcours</span></a></li>
+          <li><a href="#contact" data-spy-link><span data-fr="Contact" data-en="Contact">Contact</span></a></li>
+        </ul>
+      </nav>
 
       <div class="header-controls">
         <div class="lang-switch" role="group" aria-label="Langue" data-fr-aria="Langue" data-en-aria="Language">
@@ -61,6 +69,10 @@
           <svg class="icon-sun" aria-hidden="true"><use href="#i-sun"/></svg>
           <svg class="icon-moon" aria-hidden="true"><use href="#i-moon"/></svg>
         </button>
+        <a class="btn btn-primary header-cta" href="#contact">
+          <span data-fr="Ouvrir un canal" data-en="Open a channel">Ouvrir un canal</span>
+          <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg>
+        </a>
         <button class="burger" type="button" id="burger" aria-expanded="false" aria-controls="nav-menu" aria-label="Menu" data-fr-aria="Menu" data-en-aria="Menu">
           <span></span><span></span><span></span>
         </button>
@@ -68,400 +80,424 @@
     </div>
   </header>
 
-  <div class="shell">
-    <aside class="file-rail" id="nav-menu">
-      <nav class="rail-nav" aria-label="Index du dossier" data-fr-aria="Index du dossier" data-en-aria="Case file index">
-        <p class="rail-caption"><span data-fr="Index" data-en="Index">Index</span> <span aria-hidden="true">00—05</span></p>
-        <ul>
-          <li><a href="#home" data-spy-link><span class="tab-no">00</span><span data-fr="Couverture" data-en="Cover">Couverture</span></a></li>
-          <li><a href="#about" data-spy-link><span class="tab-no">01</span><span data-fr="Profil" data-en="Profile">Profil</span></a></li>
-          <li><a href="#skills" data-spy-link><span class="tab-no">02</span><span data-fr="Compétences" data-en="Capabilities">Compétences</span></a></li>
-          <li><a href="#projects" data-spy-link><span class="tab-no">03</span><span data-fr="Déploiements" data-en="Deployments">Déploiements</span></a></li>
-          <li><a href="#experience" data-spy-link><span class="tab-no">04</span><span data-fr="États de service" data-en="Service record">États de service</span></a></li>
-          <li><a href="#contact" data-spy-link><span class="tab-no">05</span><span data-fr="Contact" data-en="Contact">Contact</span></a></li>
-        </ul>
-      </nav>
-      <div class="rail-foot">
-        <span class="rail-place" data-fr="Accra, Ghana" data-en="Accra, Ghana">Accra, Ghana</span>
-        <span class="rail-meta">GMT / CZ-26</span>
+  <main class="prospectus" id="main">
+    <section class="hero" id="home" aria-labelledby="hero-title">
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <h1 id="hero-title">
+            <span data-fr="Des réseaux" data-en="Networks">Des réseaux</span>
+            <span class="hero-accent" data-fr="qui tiennent." data-en="that hold.">qui tiennent.</span>
+          </h1>
+          <p class="hero-role"><span>Cédophe ZOHOUN</span> <span aria-hidden="true">/</span> <span data-fr="Ingénieur Réseaux &amp; Cybersécurité" data-en="Network &amp; Cybersecurity Engineer">Ingénieur Réseaux &amp; Cybersécurité</span></p>
+          <p class="hero-lede" data-fr="À Accra, je déploie des pare-feux, des interconnexions multi-sites et des infrastructures cloud pour des organisations en Afrique de l'Ouest — puis je forme les équipes qui les exploitent." data-en="In Accra, I deploy firewalls, multi-site interconnects and cloud infrastructure for organisations across West Africa — then train the teams who run them.">À Accra, je déploie des pare-feux, des interconnexions multi-sites et des infrastructures cloud pour des organisations en Afrique de l'Ouest — puis je forme les équipes qui les exploitent.</p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#contact">
+              <span data-fr="Ouvrir un canal" data-en="Open a channel">Ouvrir un canal</span>
+              <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg>
+            </a>
+            <a class="btn btn-secondary" href="assets/cv.pdf">
+              <svg class="icon" aria-hidden="true"><use href="#i-download"/></svg>
+              <span data-fr="Télécharger le CV" data-en="Download CV">Télécharger le CV</span>
+            </a>
+          </div>
+
+          <p class="hero-credentials">
+            <span data-fr="Titres vérifiés" data-en="Verified credentials">Titres vérifiés</span>
+            <span aria-hidden="true">/</span>
+            <span>CCNP Enterprise</span>
+            <span aria-hidden="true">·</span>
+            <span>CCNA</span>
+            <span aria-hidden="true">·</span>
+            <span>AZ-104</span>
+            <span aria-hidden="true">·</span>
+            <span>NSE 3</span>
+          </p>
+        </div>
+
+        <div class="hero-visual" aria-hidden="true">
+          <svg class="signal-ribbon" viewBox="0 0 720 680" preserveAspectRatio="xMidYMid slice" focusable="false">
+            <defs>
+              <linearGradient id="ribbon-gradient" x1="660" y1="50" x2="160" y2="650" gradientUnits="userSpaceOnUse">
+                <stop offset="0" stop-color="var(--teal)"/>
+                <stop offset="0.46" stop-color="var(--lilac)"/>
+                <stop offset="1" stop-color="var(--violet-deep)"/>
+              </linearGradient>
+              <linearGradient id="ribbon-sheen" x1="640" y1="90" x2="210" y2="590" gradientUnits="userSpaceOnUse">
+                <stop offset="0" stop-color="var(--ribbon-sheen)" stop-opacity="0.76"/>
+                <stop offset="0.5" stop-color="var(--ribbon-sheen)" stop-opacity="0.22"/>
+                <stop offset="1" stop-color="var(--ribbon-sheen)" stop-opacity="0"/>
+              </linearGradient>
+            </defs>
+
+            <g class="hero-topology">
+              <path d="M84 204 184 132 292 196 214 292 84 204Z"/>
+              <path d="M292 196 414 146 524 228 452 324 334 296 292 196Z"/>
+              <path d="M524 228 626 178 664 292 560 366 452 324"/>
+              <path d="M84 204 214 292 334 296 452 324 560 366 664 292"/>
+              <path d="M184 132 334 296"/>
+              <path d="M214 292 84 474 220 548 334 296"/>
+              <path d="M560 366 626 512 486 574 334 296"/>
+              <path d="M220 548 486 574"/>
+              <circle cx="84" cy="204" r="4"/>
+              <circle cx="184" cy="132" r="4"/>
+              <circle cx="292" cy="196" r="4"/>
+              <circle cx="214" cy="292" r="4"/>
+              <circle cx="414" cy="146" r="4"/>
+              <circle cx="524" cy="228" r="4"/>
+              <circle cx="452" cy="324" r="4"/>
+              <circle cx="626" cy="178" r="4"/>
+              <circle cx="664" cy="292" r="4"/>
+              <circle cx="560" cy="366" r="4"/>
+              <circle cx="334" cy="296" r="4"/>
+              <circle cx="84" cy="474" r="4"/>
+              <circle cx="220" cy="548" r="4"/>
+              <circle cx="486" cy="574" r="4"/>
+              <circle cx="626" cy="512" r="4"/>
+            </g>
+
+            <g class="hero-ribbon">
+              <path class="ribbon-body" d="M632 38C708 174 532 232 486 302c-58 88 104 138 34 230-64 84-272 62-342 166" fill="none" stroke="url(#ribbon-gradient)" stroke-width="74" stroke-linecap="round"/>
+              <path class="ribbon-light" d="M634 66c58 110-92 162-132 226-55 88 96 142 28 224-58 70-232 62-312 152" fill="none" stroke="url(#ribbon-sheen)" stroke-width="16" stroke-linecap="round"/>
+              <path class="ribbon-edge" d="M626 22c72 126-94 204-146 278-52 76 102 136 30 230-64 84-260 64-332 160" fill="none" stroke="var(--ribbon-sheen)" stroke-opacity="0.28" stroke-width="1.4" stroke-linecap="round"/>
+            </g>
+
+            <g class="hero-core">
+              <rect x="66" y="494" width="238" height="108" rx="16" fill="var(--core)" stroke="var(--core-edge)" stroke-width="1"/>
+              <circle cx="272" cy="520" r="4" fill="var(--teal)"/>
+              <path d="M84 548h202" stroke="var(--core-line)" stroke-width="1" opacity="0.4"/>
+              <rect x="84" y="568" width="22" height="10" rx="2" fill="var(--core-port)"/>
+              <rect x="116" y="568" width="22" height="10" rx="2" fill="var(--core-port)"/>
+              <rect x="148" y="568" width="22" height="10" rx="2" fill="var(--core-port)"/>
+              <rect x="180" y="568" width="22" height="10" rx="2" fill="var(--core-port)"/>
+              <rect x="212" y="568" width="22" height="10" rx="2" fill="var(--core-port)"/>
+              <rect x="244" y="568" width="22" height="10" rx="2" fill="var(--core-port)"/>
+            </g>
+          </svg>
+        </div>
       </div>
-    </aside>
 
-    <main class="report" id="main">
-      <section class="hero" id="home" aria-labelledby="hero-title">
-        <div class="doc-meta">
-          <span data-fr="Dossier CZ-2026" data-en="Case file CZ-2026">Dossier CZ-2026</span>
-          <span data-fr="Rév. 03 / Accra" data-en="Rev. 03 / Accra">Rév. 03 / Accra</span>
-          <span class="doc-status"><span class="status-dot" aria-hidden="true"></span><span data-fr="Dossier actif" data-en="Active record">Dossier actif</span></span>
-        </div>
+      <div class="facts-band">
+        <h2 class="sr-only" id="facts-title" data-fr="Prospectus en bref" data-en="Prospectus at a glance">Prospectus en bref</h2>
+        <dl class="facts" aria-labelledby="facts-title">
+          <div><dt data-fr="Sujet" data-en="Subject">Sujet</dt><dd>Cédophe Zohoun</dd></div>
+          <div><dt data-fr="Fonction" data-en="Role">Fonction</dt><dd data-fr="Ingénieur réseaux &amp; cybersécurité" data-en="Network &amp; cybersecurity engineer">Ingénieur réseaux &amp; cybersécurité</dd></div>
+          <div><dt data-fr="Base" data-en="Base">Base</dt><dd data-fr="Accra, Ghana" data-en="Accra, Ghana">Accra, Ghana</dd></div>
+          <div><dt data-fr="Depuis" data-en="Since">Depuis</dt><dd>2023</dd></div>
+          <div><dt data-fr="Portée" data-en="Scope">Portée</dt><dd><span data-fr="500+ utilisateurs · 16+ sites" data-en="500+ users · 16+ sites">500+ utilisateurs · 16+ sites</span></dd></div>
+        </dl>
+        <details class="stack-disclosure">
+          <summary>
+            <span data-fr="Stack en production" data-en="Production stack">Stack en production</span>
+            <span class="disclosure-mark" aria-hidden="true"></span>
+          </summary>
+          <ul>
+            <li>Palo Alto NGFW</li>
+            <li>FortiGate / FortiManager</li>
+            <li>GlobalProtect</li>
+            <li>Threat Prevention</li>
+            <li>AWS / Azure</li>
+            <li>3CX / SIP</li>
+          </ul>
+        </details>
+      </div>
 
-        <div class="hero-grid">
-          <div class="hero-copy">
-            <h1 id="hero-title" data-fr="Des réseaux qui tiennent." data-en="Networks that hold.">Des réseaux qui tiennent.</h1>
-            <p class="hero-role"><span>Cédophe ZOHOUN</span> <span aria-hidden="true">/</span> <span data-fr="Ingénieur Réseaux &amp; Cybersécurité" data-en="Network &amp; Cybersecurity Engineer">Ingénieur Réseaux &amp; Cybersécurité</span></p>
-            <p class="hero-lede" data-fr="À Accra, je déploie des pare-feux, des interconnexions multi-sites et des infrastructures cloud pour des organisations en Afrique de l'Ouest — puis je forme les équipes qui les exploitent." data-en="In Accra, I deploy firewalls, multi-site interconnects and cloud infrastructure for organisations across West Africa — then train the teams who run them.">À Accra, je déploie des pare-feux, des interconnexions multi-sites et des infrastructures cloud pour des organisations en Afrique de l'Ouest — puis je forme les équipes qui les exploitent.</p>
-
-            <div class="hero-actions">
-              <a class="btn btn-primary" href="assets/cv.pdf">
-                <svg class="icon" aria-hidden="true"><use href="#i-download"/></svg>
-                <span data-fr="Télécharger le CV" data-en="Download CV">Télécharger le CV</span>
-              </a>
-              <a class="btn btn-secondary" href="#contact">
-                <span data-fr="Ouvrir un canal" data-en="Open a channel">Ouvrir un canal</span>
-                <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg>
-              </a>
-            </div>
-
-            <p class="hero-credentials">
-              <span data-fr="Titres vérifiés" data-en="Verified credentials">Titres vérifiés</span>
-              <span aria-hidden="true">/</span>
-              <span>CCNP Enterprise</span>
-              <span aria-hidden="true">·</span>
-              <span>CCNA</span>
-              <span aria-hidden="true">·</span>
-              <span>AZ-104</span>
-              <span aria-hidden="true">·</span>
-              <span>NSE 3</span>
-            </p>
-          </div>
-
-          <aside class="record-summary" aria-labelledby="record-title">
-            <h2 class="summary-title" id="record-title" data-fr="Fiche signalétique" data-en="Record summary">Fiche signalétique</h2>
-            <dl>
-              <div><dt data-fr="Sujet" data-en="Subject">Sujet</dt><dd>Cédophe Zohoun</dd></div>
-              <div><dt data-fr="Fonction" data-en="Role">Fonction</dt><dd data-fr="Ingénieur réseaux &amp; cybersécurité" data-en="Network &amp; cybersecurity engineer">Ingénieur réseaux &amp; cybersécurité</dd></div>
-              <div><dt data-fr="Base" data-en="Base">Base</dt><dd data-fr="Accra, Ghana" data-en="Accra, Ghana">Accra, Ghana</dd></div>
-              <div><dt data-fr="Depuis" data-en="Since">Depuis</dt><dd>2023</dd></div>
-              <div><dt data-fr="Portée" data-en="Scope">Portée</dt><dd><span data-fr="500+ utilisateurs · 16+ sites" data-en="500+ users · 16+ sites">500+ utilisateurs · 16+ sites</span></dd></div>
-            </dl>
-
-            <details class="declassify">
-              <summary>
-                <span class="redaction" data-fr="Déclassifier l'annexe" data-en="Declassify the annex">Déclassifier l'annexe</span>
-                <span class="declassify-mark" aria-hidden="true">+</span>
-              </summary>
-              <div class="declassify-body">
-                <p data-fr="Stack en production" data-en="Production stack">Stack en production</p>
-                <ul>
-                  <li>Palo Alto NGFW</li>
-                  <li>FortiGate / FortiManager</li>
-                  <li>GlobalProtect</li>
-                  <li>Threat Prevention</li>
-                  <li>AWS / Azure</li>
-                  <li>3CX / SIP</li>
-                </ul>
-              </div>
-            </details>
-          </aside>
-        </div>
-
-        <figure class="exhibit" aria-labelledby="exhibit-title">
-          <figcaption class="exhibit-head">
-            <span id="exhibit-title" data-fr="Pièce A / Architecture multi-sites" data-en="Exhibit A / Multi-site architecture">Pièce A / Architecture multi-sites</span>
-            <span class="exhibit-key" data-fr="Schéma / hors échelle" data-en="Schematic / not to scale">Schéma / hors échelle</span>
-          </figcaption>
-          <ol class="route" aria-label="Architecture multi-sites représentative" data-fr-aria="Architecture multi-sites représentative" data-en-aria="Representative multi-site architecture">
-            <li class="route-stop">
-              <span class="route-marker" aria-hidden="true"></span>
-              <span class="route-label" data-fr="Siège" data-en="Headquarters">Siège</span>
-              <span class="route-value">Accra HQ</span>
-              <span class="route-detail">500+ <span data-fr="utilisateurs" data-en="users">utilisateurs</span></span>
-            </li>
-            <li class="route-stop">
-              <span class="route-marker" aria-hidden="true"></span>
-              <span class="route-label" data-fr="Périmètre" data-en="Perimeter">Périmètre</span>
-              <span class="route-value">Palo Alto NGFW</span>
-              <span class="route-detail">Threat Prevention / URL Filtering</span>
-            </li>
-            <li class="route-stop">
-              <span class="route-marker" aria-hidden="true"></span>
-              <span class="route-label" data-fr="Étendue" data-en="Footprint">Étendue</span>
-              <span class="route-value">16+ <span data-fr="agences" data-en="branches">agences</span></span>
-              <span class="route-detail">FortiGate / FortiManager</span>
-            </li>
-            <li class="route-stop">
-              <span class="route-marker" aria-hidden="true"></span>
-              <span class="route-label" data-fr="Cloud" data-en="Cloud">Cloud</span>
-              <span class="route-value">AWS / Azure</span>
-              <span class="route-detail">VPC / VNet / IAM</span>
-            </li>
-            <li class="route-stop">
-              <span class="route-marker" aria-hidden="true"></span>
-              <span class="route-label" data-fr="Voix" data-en="Voice">Voix</span>
-              <span class="route-value">3CX PBX</span>
-              <span class="route-detail">SIP / Yealink / Snom</span>
-            </li>
-          </ol>
-          <p class="exhibit-note" data-fr="Schéma représentatif. Ne correspond pas à un schéma client confidentiel." data-en="Representative schematic. Not a confidential client diagram.">Schéma représentatif. Ne correspond pas à un schéma client confidentiel.</p>
-        </figure>
-
-        <div class="doc-foot">
-          <span data-fr="Fin de la couverture" data-en="End of cover">Fin de la couverture</span>
-          <a href="#about"><span data-fr="Lire le profil" data-en="Read the profile">Lire le profil</span> <span aria-hidden="true">↓</span></a>
-        </div>
-      </section>
-
-      <section class="section" id="about" aria-labelledby="about-title">
-        <header class="section-head">
-          <h2 id="about-title" data-fr="Le profil" data-en="The profile">Le profil</h2>
-          <p class="folio"><span data-fr="Fiche" data-en="Sheet">Fiche</span> 01</p>
-        </header>
-        <div class="section-grid">
-          <div class="prose">
-            <p data-fr="Basé à Accra, je travaille chez IMPROTECH où je déploie des solutions réseau et sécurité enterprise pour des clients en Afrique de l'Ouest. Pare-feux Palo Alto, politiques FortiGate, routage Cisco, cloud AWS et Azure : j'aime les infrastructures qui tiennent quand personne ne regarde." data-en="Based in Accra, I work at IMPROTECH, deploying enterprise network and security solutions for clients across West Africa. Palo Alto firewalls, FortiGate policies, Cisco routing, AWS and Azure cloud: I like infrastructure that holds when no one is watching.">Basé à Accra, je travaille chez IMPROTECH où je déploie des solutions réseau et sécurité enterprise pour des clients en Afrique de l'Ouest. Pare-feux Palo Alto, politiques FortiGate, routage Cisco, cloud AWS et Azure : j'aime les infrastructures qui tiennent quand personne ne regarde.</p>
-            <p data-fr="Quand je ne suis pas dans le terminal, je forme des ingénieurs — CCNA, CCNP et AWS Cloud Practitioner. 50+ apprenants formés, et le travail continue." data-en="When I'm not in the terminal, I train engineers — CCNA, CCNP and AWS Cloud Practitioner. 50+ learners trained, and the work continues.">Quand je ne suis pas dans le terminal, je forme des ingénieurs — CCNA, CCNP et AWS Cloud Practitioner. 50+ apprenants formés, et le travail continue.</p>
-            <p class="prose-note" data-fr="Ingénieur de terrain, formateur, bilingue. La preuve avant la promesse." data-en="Field engineer, trainer, bilingual. Proof before promise.">Ingénieur de terrain, formateur, bilingue. La preuve avant la promesse.</p>
-          </div>
-          <aside class="field-notes" aria-labelledby="figures-title">
-            <h3 class="field-title" id="figures-title" data-fr="Chiffres du dossier" data-en="Record figures">Chiffres du dossier</h3>
-            <ul class="figures">
-              <li><span class="figure-number" data-count="3" data-suffix="+">3+</span><span class="figure-label" data-fr="Années d'expérience" data-en="Years of experience">Années d'expérience</span></li>
-              <li><span class="figure-number" data-count="50" data-suffix="+">50+</span><span class="figure-label" data-fr="Ingénieurs formés" data-en="Engineers trained">Ingénieurs formés</span></li>
-              <li><span class="figure-number" data-count="16" data-suffix="+">16+</span><span class="figure-label" data-fr="Sites gérés" data-en="Sites managed">Sites gérés</span></li>
-            </ul>
-            <dl class="field-meta">
-              <div><dt data-fr="Langues" data-en="Languages">Langues</dt><dd data-fr="Français / Anglais" data-en="French / English">Français / Anglais</dd></div>
-              <div><dt data-fr="Marchés" data-en="Markets">Marchés</dt><dd data-fr="Bénin / Ghana / Afrique de l'Ouest" data-en="Benin / Ghana / West Africa">Bénin / Ghana / Afrique de l'Ouest</dd></div>
-            </dl>
-          </aside>
-        </div>
-      </section>
-
-      <section class="section" id="skills" aria-labelledby="skills-title">
-        <header class="section-head">
-          <h2 id="skills-title" data-fr="Registre des compétences" data-en="Capability register">Registre des compétences</h2>
-          <p class="folio"><span data-fr="Fiche" data-en="Sheet">Fiche</span> 02</p>
-        </header>
-        <p class="section-lede" data-fr="Ce que je déploie, exploite et enseigne." data-en="What I deploy, operate and teach.">Ce que je déploie, exploite et enseigne.</p>
-
-        <div class="register">
-          <div class="reg-row">
-            <span class="reg-index">01</span>
-            <h3 data-fr="Sécurité &amp; pare-feu" data-en="Security &amp; firewall">Sécurité &amp; pare-feu</h3>
-            <ul class="reg-items">
-              <li>Palo Alto</li><li>FortiGate</li><li>GlobalProtect</li><li>Threat Prevention</li><li>URL Filtering</li><li>IPsec / SSL</li><li>Nmap</li><li>Wireshark</li>
-            </ul>
-          </div>
-          <div class="reg-row">
-            <span class="reg-index">02</span>
-            <h3 data-fr="Réseau" data-en="Networking">Réseau</h3>
-            <ul class="reg-items">
-              <li>OSPF</li><li>EIGRP</li><li>BGP</li><li>VLANs</li><li>STP</li><li>MPLS</li><li>NAT</li><li data-fr="Répartition de charge" data-en="Load balancing">Répartition de charge</li><li>VPN</li>
-            </ul>
-          </div>
-          <div class="reg-row">
-            <span class="reg-index">03</span>
-            <h3>Cloud</h3>
-            <ul class="reg-items">
-              <li>AWS / EC2</li><li>S3</li><li>Lambda</li><li>IAM</li><li>VPC</li><li>CloudFormation</li><li>Azure / VM</li><li>VNet</li><li>NSG</li><li>Entra ID</li><li>RBAC</li><li>Monitor</li>
-            </ul>
-          </div>
-          <div class="reg-row">
-            <span class="reg-index">04</span>
-            <h3 data-fr="Automatisation" data-en="Automation">Automatisation</h3>
-            <ul class="reg-items"><li>Python</li><li>Bash</li><li>Ansible</li><li>Docker</li></ul>
-          </div>
-          <div class="reg-row">
-            <span class="reg-index">05</span>
-            <h3 data-fr="Équipements" data-en="Equipment">Équipements</h3>
-            <ul class="reg-items"><li>Cisco</li><li>FortiGate</li><li>Palo Alto</li><li>MikroTik</li><li>Ubiquiti UniFi</li><li>Aruba</li></ul>
-          </div>
-          <div class="reg-row">
-            <span class="reg-index">06</span>
-            <h3>VoIP</h3>
-            <ul class="reg-items"><li>3CX PBX</li><li>SIP Trunking</li><li>Yealink</li><li>Snom</li></ul>
-          </div>
-        </div>
-      </section>
-
-      <section class="section" id="projects" aria-labelledby="projects-title">
-        <header class="section-head">
-          <h2 id="projects-title" data-fr="Déploiements" data-en="Deployments">Déploiements</h2>
-          <p class="folio"><span data-fr="Pièces" data-en="Exhibits">Pièces</span> A—C</p>
-        </header>
-        <p class="section-lede" data-fr="Trois interventions, trois traces vérifiables." data-en="Three deployments, three verifiable traces.">Trois interventions, trois traces vérifiables.</p>
-
-        <div class="deployments">
-          <article class="deployment">
-            <div class="dep-marker">
-              <span class="dep-letter" aria-hidden="true">A</span>
-              <span class="dep-kicker" data-fr="Pièce A" data-en="Exhibit A">Pièce A</span>
-            </div>
-            <div class="dep-body">
-              <h3 data-fr="Palo Alto NGFW — Université Technique d'Accra" data-en="Palo Alto NGFW — Accra Technical University">Palo Alto NGFW — Université Technique d'Accra</h3>
-              <p data-fr="Déploiement complet d'un pare-feu pour 500+ utilisateurs. Configuration des politiques de sécurité, Threat Prevention, URL Filtering et GlobalProtect VPN." data-en="Full firewall deployment for 500+ users. Configured security policies, Threat Prevention, URL Filtering and GlobalProtect VPN.">Déploiement complet d'un pare-feu pour 500+ utilisateurs. Configuration des politiques de sécurité, Threat Prevention, URL Filtering et GlobalProtect VPN.</p>
-              <p class="dep-path"><span data-fr="Internet" data-en="Internet">Internet</span><span aria-hidden="true">→</span><span>PA NGFW</span><span aria-hidden="true">→</span><span data-fr="500+ utilisateurs" data-en="500+ users">500+ utilisateurs</span></p>
-              <ul class="dep-stack"><li>Palo Alto</li><li>NGFW</li><li>VPN</li><li data-fr="Sécurité" data-en="Security">Sécurité</li></ul>
-            </div>
-          </article>
-
-          <article class="deployment">
-            <div class="dep-marker">
-              <span class="dep-letter" aria-hidden="true">B</span>
-              <span class="dep-kicker" data-fr="Pièce B" data-en="Exhibit B">Pièce B</span>
-            </div>
-            <div class="dep-body">
-              <h3 data-fr="FortiGate multi-sites — 16 agences" data-en="FortiGate multi-site — 16 branches">FortiGate multi-sites — 16 agences</h3>
-              <p data-fr="Supervision centralisée de FortiGate via FortiManager sur 16+ agences. Dépannage VPN, routage, politiques de sécurité et monitoring en temps réel." data-en="Centralised FortiGate supervision via FortiManager across 16+ branches. VPN troubleshooting, routing, security policies and real-time monitoring.">Supervision centralisée de FortiGate via FortiManager sur 16+ agences. Dépannage VPN, routage, politiques de sécurité et monitoring en temps réel.</p>
-              <p class="dep-path"><span data-fr="Siège" data-en="HQ">Siège</span><span aria-hidden="true">→</span><span>FortiManager</span><span aria-hidden="true">→</span><span data-fr="16+ agences" data-en="16+ branches">16+ agences</span></p>
-              <ul class="dep-stack"><li>FortiGate</li><li>FortiManager</li><li>IPsec</li><li data-fr="Multi-site" data-en="Multi-site">Multi-site</li></ul>
-            </div>
-          </article>
-
-          <article class="deployment">
-            <div class="dep-marker">
-              <span class="dep-letter" aria-hidden="true">C</span>
-              <span class="dep-kicker" data-fr="Pièce C" data-en="Exhibit C">Pièce C</span>
-            </div>
-            <div class="dep-body">
-              <h3 data-fr="Outil d'inventaire réseau Python" data-en="Python network inventory tool">Outil d'inventaire réseau Python</h3>
-              <p data-fr="Script d'inventaire automatisé pour ~50 équipements réseau. Ping et SSH pour collecter hostname, MAC, et générer un rapport complet automatiquement." data-en="Automated documentation script for ~50 network devices. Uses ping and SSH to collect hostname, MAC, and generate a full inventory report automatically.">Script d'inventaire automatisé pour ~50 équipements réseau. Ping et SSH pour collecter hostname, MAC, et générer un rapport complet automatiquement.</p>
-              <p class="dep-path"><span>Ping</span><span aria-hidden="true">+</span><span>SSH</span><span aria-hidden="true">→</span><span data-fr="inventaire" data-en="inventory">inventaire</span><span aria-hidden="true">→</span><span data-fr="rapport" data-en="report">rapport</span></p>
-              <ul class="dep-stack"><li>Python</li><li>SSH</li><li data-fr="Automatisation" data-en="Automation">Automatisation</li><li data-fr="Réseau" data-en="Networking">Réseau</li></ul>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <section class="section" id="experience" aria-labelledby="experience-title">
-        <header class="section-head">
-          <h2 id="experience-title" data-fr="États de service" data-en="Service record">États de service</h2>
-          <p class="folio"><span data-fr="Fiche" data-en="Sheet">Fiche</span> 04</p>
-        </header>
-
-        <ol class="service">
-          <li>
-            <p class="service-date" data-fr="2023 — Aujourd'hui" data-en="2023 — Present">2023 — Aujourd'hui</p>
-            <div class="service-body">
-              <h3>IMPROTECH <span class="service-loc">· Accra, Ghana</span></h3>
-              <p class="service-role" data-fr="Ingénieur Réseaux &amp; Cybersécurité" data-en="Network &amp; Cybersecurity Engineer">Ingénieur Réseaux &amp; Cybersécurité</p>
-              <p class="service-desc" data-fr="Déploiements de pare-feux enterprise (Palo Alto, FortiGate), gestion réseau multi-sites, administration VoIP et formation technique." data-en="Enterprise firewall deployments (Palo Alto, FortiGate), multi-site network management, VoIP administration and technical training delivery.">Déploiements de pare-feux enterprise (Palo Alto, FortiGate), gestion réseau multi-sites, administration VoIP et formation technique.</p>
-            </div>
+      <figure class="route-band" aria-labelledby="route-title">
+        <figcaption class="route-head">
+          <span id="route-title" data-fr="Figure 01 / Architecture multi-sites" data-en="Figure 01 / Multi-site architecture">Figure 01 / Architecture multi-sites</span>
+          <span data-fr="Schéma représentatif / hors échelle" data-en="Representative schematic / not to scale">Schéma représentatif / hors échelle</span>
+        </figcaption>
+        <ol class="route" aria-label="Architecture multi-sites représentative" data-fr-aria="Architecture multi-sites représentative" data-en-aria="Representative multi-site architecture">
+          <li class="route-stop">
+            <span class="route-marker" aria-hidden="true"></span>
+            <span class="route-label" data-fr="Siège" data-en="Headquarters">Siège</span>
+            <span class="route-value">Accra HQ</span>
+            <span class="route-detail">500+ <span data-fr="utilisateurs" data-en="users">utilisateurs</span></span>
           </li>
-          <li>
-            <p class="service-date">2021 — 2023</p>
-            <div class="service-body">
-              <h3><span data-fr="Autonome" data-en="Self-directed">Autonome</span> <span class="service-loc" data-fr="· Bénin → Ghana" data-en="· Benin → Ghana">· Bénin → Ghana</span></h3>
-              <p class="service-role" data-fr="Parcours certifications &amp; immersion anglais" data-en="Certification path &amp; English immersion">Parcours certifications &amp; immersion anglais</p>
-              <p class="service-desc" data-fr="Préparation autonome intensive aux certifications CCNA, CCNP et AWS tout en m'adaptant à un environnement anglophone." data-en="Intensive autonomous preparation for CCNA, CCNP and AWS certifications while transitioning to an English-speaking environment.">Préparation autonome intensive aux certifications CCNA, CCNP et AWS tout en m'adaptant à un environnement anglophone.</p>
-            </div>
+          <li class="route-stop">
+            <span class="route-marker" aria-hidden="true"></span>
+            <span class="route-label" data-fr="Périmètre" data-en="Perimeter">Périmètre</span>
+            <span class="route-value">Palo Alto NGFW</span>
+            <span class="route-detail">Threat Prevention / URL Filtering</span>
           </li>
-          <li>
-            <p class="service-date" data-fr="Mars — Juin 2021" data-en="March — June 2021">Mars — Juin 2021</p>
-            <div class="service-body">
-              <h3><span data-fr="Ministère de l'Économie et des Finances" data-en="Ministry of Economy and Finance">Ministère de l'Économie et des Finances</span> <span class="service-loc">· Bénin</span></h3>
-              <p class="service-role" data-fr="Stagiaire support informatique" data-en="IT support intern">Stagiaire support informatique</p>
-              <p class="service-desc" data-fr="Support technique niveau 1/2 pour 200+ agents. Matériel, logiciels, comptes utilisateurs et maintenance système." data-en="Level 1/2 technical support for 200+ government agents. Hardware, software, user accounts and system maintenance.">Support technique niveau 1/2 pour 200+ agents. Matériel, logiciels, comptes utilisateurs et maintenance système.</p>
-            </div>
+          <li class="route-stop">
+            <span class="route-marker" aria-hidden="true"></span>
+            <span class="route-label" data-fr="Étendue" data-en="Footprint">Étendue</span>
+            <span class="route-value">16+ <span data-fr="agences" data-en="branches">agences</span></span>
+            <span class="route-detail">FortiGate / FortiManager</span>
+          </li>
+          <li class="route-stop">
+            <span class="route-marker" aria-hidden="true"></span>
+            <span class="route-label" data-fr="Cloud" data-en="Cloud">Cloud</span>
+            <span class="route-value">AWS / Azure</span>
+            <span class="route-detail">VPC / VNet / IAM</span>
+          </li>
+          <li class="route-stop">
+            <span class="route-marker" aria-hidden="true"></span>
+            <span class="route-label" data-fr="Voix" data-en="Voice">Voix</span>
+            <span class="route-value">3CX PBX</span>
+            <span class="route-detail">SIP / Yealink / Snom</span>
           </li>
         </ol>
-        <p class="section-link"><a href="#certifications"><span data-fr="Consulter les certifications" data-en="View the credentials">Consulter les certifications</span> <span aria-hidden="true">↓</span></a></p>
-      </section>
+        <p class="route-note" data-fr="Schéma représentatif. Ne correspond pas à un schéma client confidentiel." data-en="Representative schematic. Not a confidential client diagram.">Schéma représentatif. Ne correspond pas à un schéma client confidentiel.</p>
+      </figure>
 
-      <section class="section" id="certifications" aria-labelledby="certifications-title">
-        <header class="section-head">
-          <h2 id="certifications-title" data-fr="Titres et certifications" data-en="Credentials">Titres et certifications</h2>
-          <p class="folio"><span data-fr="Annexe" data-en="Annex">Annexe</span> 04</p>
-        </header>
-        <ul class="credentials">
-          <li>
-            <div><h3>CCNP Enterprise 350-401</h3><p class="issuer">Cisco</p></div>
-            <p class="cred-code">CC</p>
-            <p class="cred-status"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span data-fr="Obtenu" data-en="Obtained">Obtenu</span></p>
-          </li>
-          <li>
-            <div><h3>CCNA</h3><p class="issuer">Cisco</p></div>
-            <p class="cred-code">CC</p>
-            <p class="cred-status"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span data-fr="Obtenu" data-en="Obtained">Obtenu</span></p>
-          </li>
-          <li>
-            <div><h3>AZ-104 Azure Administrator</h3><p class="issuer">Microsoft</p></div>
-            <p class="cred-code">AZ</p>
-            <p class="cred-status"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span data-fr="Obtenu" data-en="Obtained">Obtenu</span></p>
-          </li>
-          <li>
-            <div><h3>NSE 3 Network Security Expert</h3><p class="issuer">Fortinet</p></div>
-            <p class="cred-code">NSE</p>
-            <p class="cred-status"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span data-fr="Obtenu" data-en="Obtained">Obtenu</span></p>
-          </li>
-        </ul>
-      </section>
+      <div class="hero-next">
+        <a href="#about"><span data-fr="Lire le profil" data-en="Read the profile">Lire le profil</span> <svg class="icon" aria-hidden="true"><use href="#i-down"/></svg></a>
+      </div>
+    </section>
 
-      <section class="section contact-section" id="contact" aria-labelledby="contact-title">
-        <header class="section-head">
-          <h2 id="contact-title" data-fr="Ouvrir un canal" data-en="Open a channel">Ouvrir un canal</h2>
-          <p class="folio"><span data-fr="Fiche" data-en="Sheet">Fiche</span> 05</p>
-        </header>
-        <div class="contact-grid">
-          <div class="contact-copy">
-            <p class="section-lede" data-fr="Une mission, un poste, une formation ? Écrivez-moi directement." data-en="A role, a deployment, a training request? Reach me directly.">Une mission, un poste, une formation ? Écrivez-moi directement.</p>
-            <div class="channels">
-              <div class="channel">
-                <span class="channel-label">Email</span>
-                <a class="channel-value" href="mailto:cedophe@gmail.com">cedophe@gmail.com</a>
-                <button class="copy-btn" type="button" data-copy="cedophe@gmail.com" aria-label="Copier l'email" data-fr-aria="Copier l'email" data-en-aria="Copy email">
-                  <svg class="icon" aria-hidden="true"><use href="#i-copy"/></svg>
-                  <span data-fr="Copier" data-en="Copy">Copier</span>
-                </button>
-              </div>
-              <div class="channel">
-                <span class="channel-label" data-fr="Téléphone" data-en="Phone">Téléphone</span>
-                <a class="channel-value" href="tel:+233593647918">+233 593 647 918</a>
-                <button class="copy-btn" type="button" data-copy="+233 593 647 918" aria-label="Copier le numéro" data-fr-aria="Copier le numéro" data-en-aria="Copy phone number">
-                  <svg class="icon" aria-hidden="true"><use href="#i-copy"/></svg>
-                  <span data-fr="Copier" data-en="Copy">Copier</span>
-                </button>
-              </div>
-              <div class="channel">
-                <span class="channel-label" data-fr="Localisation" data-en="Location">Localisation</span>
-                <span class="channel-value">Accra, Ghana</span>
-                <span class="channel-note">GMT</span>
-              </div>
-            </div>
-            <p class="sr-only" id="copy-status" role="status" aria-live="polite"></p>
-          </div>
-
-          <form class="contact-form" id="contact-form" novalidate>
-            <div class="form-head">
-              <p class="form-title" data-fr="Formulaire de prise de contact" data-en="Contact form">Formulaire de prise de contact</p>
-              <p class="form-note" data-fr="Formulaire de démonstration. L'envoi se fait par email ou téléphone." data-en="Demo form. Send by email or phone.">Formulaire de démonstration. L'envoi se fait par email ou téléphone.</p>
-            </div>
-            <div class="form-field">
-              <label for="f-name"><span class="field-no">01</span><span data-fr="Nom" data-en="Name">Nom</span></label>
-              <input id="f-name" name="name" type="text" autocomplete="name" required data-fr-ph="Votre nom" data-en-ph="Your name" placeholder="Votre nom">
-            </div>
-            <div class="form-field">
-              <label for="f-email"><span class="field-no">02</span><span>Email</span></label>
-              <input id="f-email" name="email" type="email" autocomplete="email" required data-fr-ph="votre@email.com" data-en-ph="you@example.com" placeholder="votre@email.com">
-            </div>
-            <div class="form-field">
-              <label for="f-message"><span class="field-no">03</span><span data-fr="Message" data-en="Message">Message</span></label>
-              <textarea id="f-message" name="message" rows="4" required minlength="10" data-fr-ph="Votre message…" data-en-ph="Your message…" placeholder="Votre message…"></textarea>
-            </div>
-            <button class="btn btn-primary btn-block" type="submit">
-              <span data-fr="Vérifier le formulaire" data-en="Validate the form">Vérifier le formulaire</span>
-              <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg>
-            </button>
-            <p class="form-status" id="form-status" role="status" aria-live="polite" tabindex="-1"></p>
-          </form>
+    <section class="band" id="about" aria-labelledby="about-title">
+      <header class="section-head">
+        <h2 id="about-title" data-fr="Le profil" data-en="The profile">Le profil</h2>
+        <p class="folio"><span data-fr="Section" data-en="Section">Section</span> 01</p>
+      </header>
+      <div class="about-grid">
+        <div class="prose">
+          <p data-fr="Basé à Accra, je travaille chez IMPROTECH où je déploie des solutions réseau et sécurité enterprise pour des clients en Afrique de l'Ouest. Pare-feux Palo Alto, politiques FortiGate, routage Cisco, cloud AWS et Azure : j'aime les infrastructures qui tiennent quand personne ne regarde." data-en="Based in Accra, I work at IMPROTECH, deploying enterprise network and security solutions for clients across West Africa. Palo Alto firewalls, FortiGate policies, Cisco routing, AWS and Azure cloud: I like infrastructure that holds when no one is watching.">Basé à Accra, je travaille chez IMPROTECH où je déploie des solutions réseau et sécurité enterprise pour des clients en Afrique de l'Ouest. Pare-feux Palo Alto, politiques FortiGate, routage Cisco, cloud AWS et Azure : j'aime les infrastructures qui tiennent quand personne ne regarde.</p>
+          <p data-fr="Quand je ne suis pas dans le terminal, je forme des ingénieurs — CCNA, CCNP et AWS Cloud Practitioner. 50+ apprenants formés, et le travail continue." data-en="When I'm not in the terminal, I train engineers — CCNA, CCNP and AWS Cloud Practitioner. 50+ learners trained, and the work continues.">Quand je ne suis pas dans le terminal, je forme des ingénieurs — CCNA, CCNP et AWS Cloud Practitioner. 50+ apprenants formés, et le travail continue.</p>
+          <p class="prose-note" data-fr="Ingénieur de terrain, formateur, bilingue. La preuve avant la promesse." data-en="Field engineer, trainer, bilingual. Proof before promise.">Ingénieur de terrain, formateur, bilingue. La preuve avant la promesse.</p>
         </div>
-      </section>
-    </main>
-  </div>
+        <aside class="figures" aria-labelledby="figures-title">
+          <h3 class="figures-title" id="figures-title" data-fr="Chiffres du prospectus" data-en="Prospectus figures">Chiffres du prospectus</h3>
+          <ul class="figures-list">
+            <li><span class="figure-number" data-count="3" data-suffix="+">3+</span><span class="figure-label" data-fr="Années d'expérience" data-en="Years of experience">Années d'expérience</span></li>
+            <li><span class="figure-number" data-count="50" data-suffix="+">50+</span><span class="figure-label" data-fr="Ingénieurs formés" data-en="Engineers trained">Ingénieurs formés</span></li>
+            <li><span class="figure-number" data-count="16" data-suffix="+">16+</span><span class="figure-label" data-fr="Sites gérés" data-en="Sites managed">Sites gérés</span></li>
+          </ul>
+          <dl class="field-meta">
+            <div><dt data-fr="Langues" data-en="Languages">Langues</dt><dd data-fr="Français / Anglais" data-en="French / English">Français / Anglais</dd></div>
+            <div><dt data-fr="Marchés" data-en="Markets">Marchés</dt><dd data-fr="Bénin / Ghana / Afrique de l'Ouest" data-en="Benin / Ghana / West Africa">Bénin / Ghana / Afrique de l'Ouest</dd></div>
+          </dl>
+        </aside>
+      </div>
+    </section>
+
+    <section class="band" id="skills" aria-labelledby="skills-title">
+      <header class="section-head">
+        <h2 id="skills-title" data-fr="Compétences" data-en="Capabilities">Compétences</h2>
+        <p class="folio"><span data-fr="Section" data-en="Section">Section</span> 02</p>
+      </header>
+      <p class="band-lede" data-fr="Ce que je déploie, exploite et enseigne." data-en="What I deploy, operate and teach.">Ce que je déploie, exploite et enseigne.</p>
+
+      <div class="register">
+        <div class="register-row">
+          <span class="register-index" aria-hidden="true">01</span>
+          <h3 data-fr="Sécurité &amp; pare-feu" data-en="Security &amp; firewall">Sécurité &amp; pare-feu</h3>
+          <ul class="register-items">
+            <li>Palo Alto</li><li>FortiGate</li><li>GlobalProtect</li><li>Threat Prevention</li><li>URL Filtering</li><li>IPsec / SSL</li><li>Nmap</li><li>Wireshark</li>
+          </ul>
+        </div>
+        <div class="register-row">
+          <span class="register-index" aria-hidden="true">02</span>
+          <h3 data-fr="Réseau" data-en="Networking">Réseau</h3>
+          <ul class="register-items">
+            <li>OSPF</li><li>EIGRP</li><li>BGP</li><li>VLANs</li><li>STP</li><li>MPLS</li><li>NAT</li><li data-fr="Répartition de charge" data-en="Load balancing">Répartition de charge</li><li>VPN</li>
+          </ul>
+        </div>
+        <div class="register-row">
+          <span class="register-index" aria-hidden="true">03</span>
+          <h3>Cloud</h3>
+          <ul class="register-items">
+            <li>AWS / EC2</li><li>S3</li><li>Lambda</li><li>IAM</li><li>VPC</li><li>CloudFormation</li><li>Azure / VM</li><li>VNet</li><li>NSG</li><li>Entra ID</li><li>RBAC</li><li>Monitor</li>
+          </ul>
+        </div>
+        <div class="register-row">
+          <span class="register-index" aria-hidden="true">04</span>
+          <h3 data-fr="Automatisation" data-en="Automation">Automatisation</h3>
+          <ul class="register-items"><li>Python</li><li>Bash</li><li>Ansible</li><li>Docker</li></ul>
+        </div>
+        <div class="register-row">
+          <span class="register-index" aria-hidden="true">05</span>
+          <h3 data-fr="Équipements" data-en="Equipment">Équipements</h3>
+          <ul class="register-items"><li>Cisco</li><li>FortiGate</li><li>Palo Alto</li><li>MikroTik</li><li>Ubiquiti UniFi</li><li>Aruba</li></ul>
+        </div>
+        <div class="register-row">
+          <span class="register-index" aria-hidden="true">06</span>
+          <h3>VoIP</h3>
+          <ul class="register-items"><li>3CX PBX</li><li>SIP Trunking</li><li>Yealink</li><li>Snom</li></ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="band" id="projects" aria-labelledby="projects-title">
+      <header class="section-head">
+        <h2 id="projects-title" data-fr="Déploiements" data-en="Deployments">Déploiements</h2>
+        <p class="folio"><span data-fr="Section" data-en="Section">Section</span> 03</p>
+      </header>
+      <p class="band-lede" data-fr="Trois interventions, trois traces vérifiables." data-en="Three deployments, three verifiable traces.">Trois interventions, trois traces vérifiables.</p>
+
+      <div class="deployments">
+        <article class="deployment">
+          <span class="deployment-index" aria-hidden="true">01</span>
+          <div class="deployment-body">
+            <h3 data-fr="Palo Alto NGFW — Université Technique d'Accra" data-en="Palo Alto NGFW — Accra Technical University">Palo Alto NGFW — Université Technique d'Accra</h3>
+            <p data-fr="Déploiement complet d'un pare-feu pour 500+ utilisateurs. Configuration des politiques de sécurité, Threat Prevention, URL Filtering et GlobalProtect VPN." data-en="Full firewall deployment for 500+ users. Configured security policies, Threat Prevention, URL Filtering and GlobalProtect VPN.">Déploiement complet d'un pare-feu pour 500+ utilisateurs. Configuration des politiques de sécurité, Threat Prevention, URL Filtering et GlobalProtect VPN.</p>
+            <p class="deployment-path"><span data-fr="Internet" data-en="Internet">Internet</span><span aria-hidden="true">→</span><span>PA NGFW</span><span aria-hidden="true">→</span><span data-fr="500+ utilisateurs" data-en="500+ users">500+ utilisateurs</span></p>
+            <ul class="deployment-stack"><li>Palo Alto</li><li>NGFW</li><li>VPN</li><li data-fr="Sécurité" data-en="Security">Sécurité</li></ul>
+          </div>
+        </article>
+
+        <article class="deployment">
+          <span class="deployment-index" aria-hidden="true">02</span>
+          <div class="deployment-body">
+            <h3 data-fr="FortiGate multi-sites — 16 agences" data-en="FortiGate multi-site — 16 branches">FortiGate multi-sites — 16 agences</h3>
+            <p data-fr="Supervision centralisée de FortiGate via FortiManager sur 16+ agences. Dépannage VPN, routage, politiques de sécurité et monitoring en temps réel." data-en="Centralised FortiGate supervision via FortiManager across 16+ branches. VPN troubleshooting, routing, security policies and real-time monitoring.">Supervision centralisée de FortiGate via FortiManager sur 16+ agences. Dépannage VPN, routage, politiques de sécurité et monitoring en temps réel.</p>
+            <p class="deployment-path"><span data-fr="Siège" data-en="HQ">Siège</span><span aria-hidden="true">→</span><span>FortiManager</span><span aria-hidden="true">→</span><span data-fr="16+ agences" data-en="16+ branches">16+ agences</span></p>
+            <ul class="deployment-stack"><li>FortiGate</li><li>FortiManager</li><li>IPsec</li><li data-fr="Multi-site" data-en="Multi-site">Multi-site</li></ul>
+          </div>
+        </article>
+
+        <article class="deployment">
+          <span class="deployment-index" aria-hidden="true">03</span>
+          <div class="deployment-body">
+            <h3 data-fr="Outil d'inventaire réseau Python" data-en="Python network inventory tool">Outil d'inventaire réseau Python</h3>
+            <p data-fr="Script d'inventaire automatisé pour ~50 équipements réseau. Ping et SSH pour collecter hostname, MAC, et générer un rapport complet automatiquement." data-en="Automated documentation script for ~50 network devices. Uses ping and SSH to collect hostname, MAC, and generate a full inventory report automatically.">Script d'inventaire automatisé pour ~50 équipements réseau. Ping et SSH pour collecter hostname, MAC, et générer un rapport complet automatiquement.</p>
+            <p class="deployment-path"><span>Ping</span><span aria-hidden="true">+</span><span>SSH</span><span aria-hidden="true">→</span><span data-fr="inventaire" data-en="inventory">inventaire</span><span aria-hidden="true">→</span><span data-fr="rapport" data-en="report">rapport</span></p>
+            <ul class="deployment-stack"><li>Python</li><li>SSH</li><li data-fr="Automatisation" data-en="Automation">Automatisation</li><li data-fr="Réseau" data-en="Networking">Réseau</li></ul>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="band" id="experience" aria-labelledby="experience-title">
+      <header class="section-head">
+        <h2 id="experience-title" data-fr="Parcours" data-en="Experience">Parcours</h2>
+        <p class="folio"><span data-fr="Section" data-en="Section">Section</span> 04</p>
+      </header>
+
+      <ol class="timeline">
+        <li>
+          <p class="timeline-date" data-fr="2023 — Aujourd'hui" data-en="2023 — Present">2023 — Aujourd'hui</p>
+          <div class="timeline-body">
+            <h3><span>IMPROTECH</span> <span class="timeline-loc">· Accra, Ghana</span></h3>
+            <p class="timeline-role" data-fr="Ingénieur Réseaux &amp; Cybersécurité" data-en="Network &amp; Cybersecurity Engineer">Ingénieur Réseaux &amp; Cybersécurité</p>
+            <p class="timeline-desc" data-fr="Déploiements de pare-feux enterprise (Palo Alto, FortiGate), gestion réseau multi-sites, administration VoIP et formation technique." data-en="Enterprise firewall deployments (Palo Alto, FortiGate), multi-site network management, VoIP administration and technical training delivery.">Déploiements de pare-feux enterprise (Palo Alto, FortiGate), gestion réseau multi-sites, administration VoIP et formation technique.</p>
+          </div>
+        </li>
+        <li>
+          <p class="timeline-date">2021 — 2023</p>
+          <div class="timeline-body">
+            <h3><span data-fr="Autonome" data-en="Self-directed">Autonome</span> <span class="timeline-loc" data-fr="· Bénin → Ghana" data-en="· Benin → Ghana">· Bénin → Ghana</span></h3>
+            <p class="timeline-role" data-fr="Parcours certifications &amp; immersion anglais" data-en="Certification path &amp; English immersion">Parcours certifications &amp; immersion anglais</p>
+            <p class="timeline-desc" data-fr="Préparation autonome intensive aux certifications CCNA, CCNP et AWS tout en m'adaptant à un environnement anglophone." data-en="Intensive autonomous preparation for CCNA, CCNP and AWS certifications while transitioning to an English-speaking environment.">Préparation autonome intensive aux certifications CCNA, CCNP et AWS tout en m'adaptant à un environnement anglophone.</p>
+          </div>
+        </li>
+        <li>
+          <p class="timeline-date" data-fr="Mars — Juin 2021" data-en="March — June 2021">Mars — Juin 2021</p>
+          <div class="timeline-body">
+            <h3><span data-fr="Ministère de l'Économie et des Finances" data-en="Ministry of Economy and Finance">Ministère de l'Économie et des Finances</span> <span class="timeline-loc">· Bénin</span></h3>
+            <p class="timeline-role" data-fr="Stagiaire support informatique" data-en="IT support intern">Stagiaire support informatique</p>
+            <p class="timeline-desc" data-fr="Support technique niveau 1/2 pour 200+ agents. Matériel, logiciels, comptes utilisateurs et maintenance système." data-en="Level 1/2 technical support for 200+ government agents. Hardware, software, user accounts and system maintenance.">Support technique niveau 1/2 pour 200+ agents. Matériel, logiciels, comptes utilisateurs et maintenance système.</p>
+          </div>
+        </li>
+      </ol>
+      <p class="section-link"><a href="#certifications"><span data-fr="Consulter les certifications" data-en="View the credentials">Consulter les certifications</span> <svg class="icon" aria-hidden="true"><use href="#i-down"/></svg></a></p>
+    </section>
+
+    <section class="band" id="certifications" aria-labelledby="certifications-title">
+      <header class="section-head">
+        <h2 id="certifications-title" data-fr="Certifications" data-en="Credentials">Certifications</h2>
+        <p class="folio"><span data-fr="Section" data-en="Section">Section</span> 05</p>
+      </header>
+      <ul class="credentials">
+        <li class="credential">
+          <span class="credential-seal" aria-hidden="true">CC</span>
+          <div><h3>CCNP Enterprise 350-401</h3><p class="issuer">Cisco</p></div>
+          <p class="credential-status"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span data-fr="Obtenu" data-en="Obtained">Obtenu</span></p>
+        </li>
+        <li class="credential">
+          <span class="credential-seal" aria-hidden="true">CC</span>
+          <div><h3>CCNA</h3><p class="issuer">Cisco</p></div>
+          <p class="credential-status"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span data-fr="Obtenu" data-en="Obtained">Obtenu</span></p>
+        </li>
+        <li class="credential">
+          <span class="credential-seal" aria-hidden="true">AZ</span>
+          <div><h3>AZ-104 Azure Administrator</h3><p class="issuer">Microsoft</p></div>
+          <p class="credential-status"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span data-fr="Obtenu" data-en="Obtained">Obtenu</span></p>
+        </li>
+        <li class="credential">
+          <span class="credential-seal" aria-hidden="true">NSE</span>
+          <div><h3>NSE 3 Network Security Expert</h3><p class="issuer">Fortinet</p></div>
+          <p class="credential-status"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span data-fr="Obtenu" data-en="Obtained">Obtenu</span></p>
+        </li>
+      </ul>
+    </section>
+
+    <section class="band contact-section" id="contact" aria-labelledby="contact-title">
+      <header class="section-head">
+        <h2 id="contact-title" data-fr="Ouvrir un canal" data-en="Open a channel">Ouvrir un canal</h2>
+        <p class="folio"><span data-fr="Section" data-en="Section">Section</span> 06</p>
+      </header>
+      <div class="contact-grid">
+        <div class="contact-copy">
+          <p class="band-lede" data-fr="Une mission, un poste, une formation ? Écrivez-moi directement." data-en="A role, a deployment, a training request? Reach me directly.">Une mission, un poste, une formation ? Écrivez-moi directement.</p>
+          <div class="channels">
+            <div class="channel">
+              <span class="channel-label">Email</span>
+              <a class="channel-value" href="mailto:cedophe@gmail.com">cedophe@gmail.com</a>
+              <button class="copy-btn" type="button" data-copy="cedophe@gmail.com" aria-label="Copier l'email" data-fr-aria="Copier l'email" data-en-aria="Copy email">
+                <svg class="icon" aria-hidden="true"><use href="#i-copy"/></svg>
+                <span data-fr="Copier" data-en="Copy">Copier</span>
+              </button>
+            </div>
+            <div class="channel">
+              <span class="channel-label" data-fr="Téléphone" data-en="Phone">Téléphone</span>
+              <a class="channel-value" href="tel:+233593647918">+233 593 647 918</a>
+              <button class="copy-btn" type="button" data-copy="+233 593 647 918" aria-label="Copier le numéro" data-fr-aria="Copier le numéro" data-en-aria="Copy phone number">
+                <svg class="icon" aria-hidden="true"><use href="#i-copy"/></svg>
+                <span data-fr="Copier" data-en="Copy">Copier</span>
+              </button>
+            </div>
+            <div class="channel">
+              <span class="channel-label" data-fr="Localisation" data-en="Location">Localisation</span>
+              <span class="channel-value">Accra, Ghana</span>
+              <span class="channel-note">GMT</span>
+            </div>
+          </div>
+          <p class="sr-only" id="copy-status" role="status" aria-live="polite"></p>
+        </div>
+
+        <form class="contact-form" id="contact-form" novalidate>
+          <div class="form-head">
+            <p class="form-title" data-fr="Formulaire de prise de contact" data-en="Contact form">Formulaire de prise de contact</p>
+            <p class="form-note" data-fr="Formulaire de démonstration. L'envoi se fait par email ou téléphone." data-en="Demo form. Send by email or phone.">Formulaire de démonstration. L'envoi se fait par email ou téléphone.</p>
+          </div>
+          <div class="form-field">
+            <label for="f-name"><span class="field-no">01</span><span data-fr="Nom" data-en="Name">Nom</span></label>
+            <input id="f-name" name="name" type="text" autocomplete="name" required data-fr-ph="Votre nom" data-en-ph="Your name" placeholder="Votre nom">
+          </div>
+          <div class="form-field">
+            <label for="f-email"><span class="field-no">02</span><span>Email</span></label>
+            <input id="f-email" name="email" type="email" autocomplete="email" required data-fr-ph="votre@email.com" data-en-ph="you@example.com" placeholder="votre@email.com">
+          </div>
+          <div class="form-field">
+            <label for="f-message"><span class="field-no">03</span><span data-fr="Message" data-en="Message">Message</span></label>
+            <textarea id="f-message" name="message" rows="4" required minlength="10" data-fr-ph="Votre message…" data-en-ph="Your message…" placeholder="Votre message…"></textarea>
+          </div>
+          <button class="btn btn-primary btn-block" type="submit">
+            <span data-fr="Vérifier le formulaire" data-en="Validate the form">Vérifier le formulaire</span>
+            <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg>
+          </button>
+          <p class="form-status" id="form-status" role="status" aria-live="polite" tabindex="-1"></p>
+        </form>
+      </div>
+    </section>
+  </main>
 
   <footer class="site-footer">
     <div class="footer-inner">
       <p class="footer-brand">Cédophe.</p>
-      <p class="footer-copy" data-fr="© 2026 Cédophe ZOHOUN. Dossier CZ-2026." data-en="© 2026 Cédophe ZOHOUN. Case file CZ-2026.">© 2026 Cédophe ZOHOUN. Dossier CZ-2026.</p>
+      <p class="footer-copy" data-fr="© 2026 Cédophe ZOHOUN. Prospectus réseau." data-en="© 2026 Cédophe ZOHOUN. Network prospectus.">© 2026 Cédophe ZOHOUN. Prospectus réseau.</p>
       <div class="footer-links">
-        <a href="https://www.linkedin.com/in/cedophe-zohoun-914872220/" target="_blank" rel="noopener">LinkedIn <span aria-hidden="true">↗</span></a>
-        <a href="https://github.com/Cedophe" target="_blank" rel="noopener">GitHub <span aria-hidden="true">↗</span></a>
+        <a href="https://www.linkedin.com/in/cedophe-zohoun-914872220/" target="_blank" rel="noopener">LinkedIn <svg class="icon" aria-hidden="true"><use href="#i-external"/></svg></a>
+        <a href="https://github.com/Cedophe" target="_blank" rel="noopener">GitHub <svg class="icon" aria-hidden="true"><use href="#i-external"/></svg></a>
       </div>
     </div>
   </footer>
 
   <button class="back-top" type="button" id="back-top" aria-label="Retour en haut" data-fr-aria="Retour en haut" data-en-aria="Back to top">
-    <span data-fr="Index" data-en="Index">Index</span>
+    <span data-fr="Haut" data-en="Top">Haut</span>
     <svg class="icon" aria-hidden="true"><use href="#i-up"/></svg>
   </button>
 
